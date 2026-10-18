@@ -1,0 +1,328 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;min-height:100%;height:auto!important;max-height:none!important;position:relative;}html{overflow-x:auto;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;}body{overflow-x:visible;overflow-y:visible;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;touch-action:auto;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}html{scrollbar-width:thin;scrollbar-color:rgba(172,137,126,.65) transparent;}::-webkit-scrollbar{width:10px;height:10px;}::-webkit-scrollbar-thumb{background:rgba(172,137,126,.55);border-radius:8px;}::-webkit-scrollbar-track{background:transparent;}::-webkit-scrollbar-corner{background:transparent;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#ff5708", "on-background": "#e5e1e4", "on-error": "#690005", "tertiary-fixed": "#d4e4fa", "primary": "#ffb59c", "on-secondary": "#472a00", "secondary-fixed": "#ffddb8", "on-primary-fixed": "#390c00", "surface-tint": "#ffb59c", "surface-bright": "#39393b", "tertiary": "#b9c8de", "on-surface": "#e5e1e4", "on-tertiary-container": "#1c2b3c", "secondary": "#ffb95f", "on-secondary-container": "#5b3800", "on-secondary-fixed-variant": "#653e00", "error": "#ffb4ab", "tertiary-fixed-dim": "#b9c8de", "surface-container-high": "#2a2a2c", "on-tertiary-fixed": "#0d1c2d", "surface-dim": "#131315", "surface-container": "#201f21", "on-tertiary-fixed-variant": "#39485a", "primary-fixed": "#ffdbcf", "on-primary": "#5c1900", "surface-container-lowest": "#0e0e10", "surface-container-low": "#1c1b1d", "error-container": "#93000a", "inverse-surface": "#e5e1e4", "secondary-container": "#ee9800", "on-error-container": "#ffdad6", "primary-fixed-dim": "#ffb59c", "inverse-primary": "#aa3600", "background": "#131315", "on-tertiary": "#233143", "outline-variant": "#5c4037", "secondary-fixed-dim": "#ffb95f", "on-primary-fixed-variant": "#822700", "on-secondary-fixed": "#2a1700", "inverse-on-surface": "#313032", "surface": "#131315", "outline": "#ac897e", "on-primary-container": "#511500", "tertiary-container": "#8392a6", "on-surface-variant": "#e5beb2", "surface-container-highest": "#353437", "surface-variant": "#353437" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-lg": "1.5rem", "space-xl": "2.5rem", "space-md": "1rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-xs": "0.25rem", "margin-mobile": "1.25rem", "margin": "3rem", "gutter-mobile": "1rem" }, "fontFamily": { "label-md": [ "Space Grotesk" ], "label-sm": [ "Space Grotesk" ], "label-lg": [ "Space Grotesk" ], "headline-lg": [ "Syne" ], "headline-xl-mobile": [ "Syne" ], "headline-sm": [ "Syne" ], "headline-lg-mobile": [ "Syne" ], "headline-md": [ "Syne" ], "headline-xl": [ "Syne" ], "body-lg": [ "Space Grotesk" ], "body-md": [ "Space Grotesk" ], "body-sm": [ "Space Grotesk" ] }, "fontSize": { "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "700" } ], "label-lg": [ "14px", { "lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "700" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-xl-mobile": [ "36px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "800" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-md": [ "28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "700" } ], "headline-xl": [ "56px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "body-lg": [ "18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "body-md": [ "15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" } ] } } } };</script>
+<style id="nav-responsive-css">
+/* Scroll: allow vertical + horizontal when content overflows; never trap the document */
+html,body{max-width:100%;height:auto!important;max-height:none!important;position:relative!important;}
+html{overflow-x:auto!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;touch-action:auto;}body{overflow-x:visible!important;overflow-y:visible!important;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;touch-action:auto;}
+img,video,canvas{max-width:100%;}
+[id^="threejs-container"]{touch-action:pan-y;}
+#cart-drawer.translate-x-full{pointer-events:none;}
+@media (max-width:767px){input,select,textarea{font-size:16px!important;}#nav-toggle,header button,header a[href].inline-flex,header a[href].flex{min-width:44px;min-height:44px;}main button,.cockpit-cta,[type=submit]{min-height:44px;}}
+  #mobile-nav-panel{max-height:0;opacity:0;overflow:hidden;visibility:hidden;transition:max-height .38s cubic-bezier(.4,0,.2,1),opacity .28s ease,visibility .28s;}
+  #mobile-nav-panel.is-open{max-height:min(80vh,640px);opacity:1;visibility:visible;overflow-y:auto;-webkit-overflow-scrolling:touch;touch-action:pan-y;overscroll-behavior:contain;}
+  #nav-backdrop{opacity:0;pointer-events:none!important;transition:opacity .3s ease;}
+  #nav-backdrop.is-open{opacity:1;pointer-events:auto!important;}
+  /* Lock background scroll only while mobile nav is open (html+body); keep panel scrollable */
+  html.nav-open{overflow:hidden!important;}body.nav-open{position:fixed!important;inset:0 auto auto 0;width:100%;overflow:hidden!important;overscroll-behavior:none;touch-action:auto;}
+  body.nav-open main,body.nav-open>footer{pointer-events:none;}
+  @media (min-width:768px){
+    #mobile-nav-panel,#nav-backdrop,#nav-toggle{display:none!important;}
+    html.nav-open{overflow:auto!important;}body.nav-open{position:relative!important;inset:auto;width:auto;overflow:visible!important;overscroll-behavior:auto;}
+    body.nav-open main,body.nav-open>footer{pointer-events:auto;}
+  }
+</style></head><body class="bg-background font-body-md text-on-surface min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.6)]"><div class="h-16 w-full px-margin-mobile lg:px-margin flex items-center justify-between"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group" data-path="showroom" href="index.html"><span class="material-symbols-outlined text-primary group-hover:-translate-x-1 transition-transform">arrow_back</span><span class="font-label-sm text-label-sm uppercase text-on-surface-variant group-hover:text-primary transition-colors hidden sm:inline-block tracking-widest">Return to Showroom / Homepage</span></a><div class="h-4 w-px bg-surface-container-highest hidden md:block"></div><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm uppercase text-on-background tracking-tight font-extrabold">Hamborghini</span><span class="font-label-sm text-label-sm uppercase bg-surface-container-high px-space-xs py-0.5 text-secondary tracking-widest hidden md:inline-block">Sant'Agata Gourmet</span></div></div><div class="hidden xl:flex items-center gap-space-md bg-surface-container-low/60 px-space-md py-1.5 rounded-lg"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm uppercase text-primary font-bold tracking-wider">650°F Optimal Sear</span></div><div class="h-3 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-sm text-secondary">lock</span><span class="font-label-sm text-label-sm uppercase tracking-wider">256-Bit Telemetric Encryption</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded-lg text-on-surface-variant"><span class="font-label-sm text-label-sm uppercase font-bold text-on-surface">IT / EUR</span><span class="material-symbols-outlined text-sm">tune</span></div><nav class="hidden md:flex items-center gap-space-md" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg"><a aria-current="page" class="uppercase transition-colors px-space-sm py-1 bg-primary-container text-on-primary-container font-bold rounded-lg" data-path="authentication" href="login_cockpit.html">Access Portal</a></nav><button type="button" id="nav-toggle" class="md:hidden inline-flex items-center justify-center w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface transition-colors" aria-controls="mobile-nav-panel" aria-expanded="false" aria-label="Open menu"><span class="material-symbols-outlined text-[20px]" id="nav-toggle-icon">menu</span></button></div></div><div id="nav-backdrop" class="fixed inset-0 top-16 z-40 bg-black/55 backdrop-blur-[2px] md:hidden" aria-hidden="true"></div><div id="mobile-nav-panel" class="relative z-50 md:hidden border-t border-surface-container-high bg-surface-container-lowest/95 backdrop-blur-xl" role="dialog" aria-label="Mobile navigation"><nav class="flex flex-col gap-space-xs px-margin-mobile py-space-md"><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high uppercase tracking-wider font-label-md text-label-md transition-colors" href="index.html">Home</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high uppercase tracking-wider font-label-md text-label-md transition-colors" href="menu_showroom.html">Menu / Showroom</a><a aria-current="page" class="block w-full px-space-md py-space-sm rounded bg-primary-container text-on-primary-container font-bold uppercase tracking-wider font-label-md text-label-md" href="login_cockpit.html">Access Portal</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high uppercase tracking-wider font-label-md text-label-md transition-colors" href="register_scuderia.html">Join Scuderia</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high uppercase tracking-wider font-label-md text-label-md transition-colors" href="forgot_password.html">Recover Access</a></nav></div></header><main class="w-full pt-16 flex-1 bg-surface-container-lowest relative"><div class="flex flex-col w-full">
+<!-- Dynamic Atmospheric Glow Background Grid -->
+<div class="relative w-full overflow-x-clip min-h-[calc(100vh-4rem)] flex items-stretch py-space-md lg:py-space-xl px-margin-mobile lg:px-margin bg-surface-container-lowest">
+<!-- Cinematic Directional Backlight / Ambient Flare -->
+<div class="absolute -top-40 -left-40 w-96 h-96 bg-primary-container/15 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="absolute -bottom-40 right-1/4 w-[32rem] h-[32rem] bg-secondary-container/10 rounded-full blur-[160px] pointer-events-none"></div>
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,87,8,0.03)_1px,transparent_1px)] bg-[size:28px_28px] opacity-40 pointer-events-none"></div>
+<!-- Main Chassis Dual-Column Bento Staging -->
+<div class="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg lg:gap-space-xl items-stretch">
+<!-- LEFT COLUMN: Culinary Hypercar Showcase (7 cols) -->
+<div class="order-2 lg:order-1 lg:col-span-7 flex flex-col justify-between relative rounded-xl overflow-hidden bg-surface-container-low/70 shadow-2xl backdrop-blur-md p-space-md lg:p-space-xl">
+<!-- Subtle Carbon Grain & Light Incidence Overlays -->
+<div class="absolute inset-0 bg-gradient-to-tr from-surface-container-lowest/90 via-surface-container-low/30 to-transparent pointer-events-none z-10"></div>
+<div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+<!-- Header Cluster: Telemetry & Spec Ribbon -->
+<div class="relative z-20 flex flex-wrap items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs bg-surface-container-highest/80 px-space-sm py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-bold">Chassis No. CTH-01 // 650°F Induction Sear</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm text-secondary">encrypted</span>
+<span class="">Protocol V12.4 Paddock Key</span>
+</div>
+</div>
+<!-- Center Visual Showcase: The Countach Carbon Wagyu -->
+<div class="relative z-20 my-auto py-space-sm">
+<div class="relative rounded-xl overflow-hidden group shadow-[0_20px_50px_rgba(0,0,0,0.85)] bg-surface-container-lowest">
+<!-- Hero Burger Presentation Image -->
+<img class="w-full h-56 sm:h-80 lg:h-96 lg:h-[420px] object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A hyper-luxurious gourmet burger named Countach Carbon Wagyu served on a black slate tray in a high-end moody steakhouse. Black activated charcoal brioche bun adorned with delicate 24-karat edible gold leaf on top, thick succulent Miyazaki A5 Wagyu beef patty cooked medium rare with melted aged raclette cheese cascading over caramelized onions and wild arugula. In the background, dark oak restaurant interior with a warm glowing fireplace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8c-c7bYMkMsldGH6aDXawL05qgRTJVElrTzvbN5mMglx__QXa-EzLqLzVN9txIoHUgv17RSeGxk4hT093c7xUzskhe6zFFke0QrHdQaCcQINQvpORJjYnb9JLDPMZN6-EKK-w3lSAiveXxsDqY9wAZtJDqhXMAZ4fDP4R504AnIzUWLqU1doRCNeoKmjFKtfH1pLtVW7R_NYK2NxjJutaMh_oNr_FpbQvGfuJVPK7XVGl-P6BYC7x" alt="Futuristic 3D CGI render of an ultra-luxury modern gourmet burger inspired by Italian supercars with glossy obsidian bun, aerodynamic vents, 24k gold leaf flakes, dripping molten saffron cheese, and carbon fiber pedestal.">
+<!-- Top Floating Carbon Tag -->
+<div class="absolute top-space-md left-space-md bg-surface-container-lowest/85 backdrop-blur-md px-space-md py-1.5 rounded flex items-center gap-space-sm shadow-lg">
+<span class="w-1.5 h-4 bg-primary-container rounded-sm"></span>
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-widest">Sant'Agata Bolognese Edition</span>
+</div>
+<!-- Bottom Floating Culinary Telemetry HUD -->
+<div class="absolute bottom-0 inset-x-0 p-space-md bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/80 to-transparent">
+<div class="grid grid-cols-3 gap-space-xs text-left">
+<div class="bg-surface-container-high/60 backdrop-blur-sm p-space-xs rounded">
+<div class="font-label-sm text-label-sm text-secondary uppercase font-bold">Grade BMS 11+</div>
+<div class="font-body-sm text-body-sm text-on-surface truncate">Miyazaki A5 Wagyu</div>
+</div>
+<div class="bg-surface-container-high/60 backdrop-blur-sm p-space-xs rounded">
+<div class="font-label-sm text-label-sm text-primary uppercase font-bold">Pure Carat</div>
+<div class="font-body-sm text-body-sm text-on-surface truncate">24K Edible Gold Leaf</div>
+</div>
+<div class="bg-surface-container-high/60 backdrop-blur-sm p-space-xs rounded">
+<div class="font-label-sm text-label-sm text-tertiary uppercase font-bold">Induction Core</div>
+<div class="font-body-sm text-body-sm text-on-surface truncate">Cast Iron 650°F Sear</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Transmission Ribbon: Pilot Quote & Telemetry Wave -->
+<div class="relative z-20 mt-space-md pt-space-sm border-t border-surface-container-highest/40 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">speed</span>
+<div>
+<p class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-tight text-sm sm:text-base leading-snug">
+                “The track is open. Your allocation is ready.”
+              </p>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">
+                Scuderia Hamborghini Chief Paddock Chef
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 self-end sm:self-auto bg-surface-container-lowest/60 px-space-sm py-1 rounded text-on-surface-variant">
+<span class="inline-block w-1 h-3 bg-secondary rounded-full animate-bounce"></span>
+<span class="inline-block w-1 h-4 bg-primary rounded-full animate-bounce" style="animation-delay: 150ms"></span>
+<span class="inline-block w-1 h-2 bg-secondary rounded-full animate-bounce" style="animation-delay: 300ms"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider ml-1 text-on-surface">Live Paddock Feed</span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Pilot Cockpit Authentication Terminal (5 cols) -->
+<div class="order-1 lg:order-2 lg:col-span-5 flex flex-col justify-center relative rounded-xl bg-surface-container-low/90 backdrop-blur-xl p-space-md sm:p-space-lg lg:p-space-xl shadow-2xl">
+<!-- Cockpit Header Shield & Title -->
+<div class="flex flex-col items-start gap-space-xs mb-space-lg">
+<div class="flex items-center justify-between w-full">
+<!-- Hamborghini Scuderia Shield -->
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center shadow-inner relative group">
+<div class="absolute inset-0 bg-primary-container/20 rounded-lg blur-sm group-hover:bg-primary-container/40 transition-colors"></div>
+<span class="material-symbols-outlined text-primary-container text-2xl relative z-10" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded bg-surface-container-highest/60 font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Secure Node 04
+            </div>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold mt-space-sm">
+            Pilot Telemetry Authentication
+          </span>
+<h1 class="font-headline-md text-headline-md text-on-surface uppercase tracking-tight">
+            Welcome Back, Legend.
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Your next unforgettable bite is waiting.
+          </p>
+</div>
+<!-- Dynamic Feedback Notification Box (Hidden by default, shown via JS) -->
+<div class="hidden mb-space-md p-space-sm rounded bg-error-container/80 text-on-error-container flex items-center gap-space-sm text-sm" id="authAlert">
+<span class="material-symbols-outlined text-error text-lg">error</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold" id="authAlertText">Authentication failure detected.</span>
+</div>
+<!-- Authentication Form with HUD Aesthetics -->
+<form class="space-y-space-md" id="loginForm" onsubmit="event.preventDefault(); handleTelemetryLogin();">
+<!-- Email / Pilot ID Input Field -->
+<div class="space-y-space-xs">
+<div class="flex justify-between items-center">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold" for="pilotEmail">
+                Pilot Telemetric ID / Email
+              </label>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Required</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-on-surface-variant/60 pointer-events-none text-xl">
+                mail
+              </span>
+<input autocomplete="email" class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md pl-11 pr-space-md py-3 rounded focus:outline-none focus:ring-2 focus:ring-primary-container transition-all placeholder:text-on-surface-variant/30" id="pilotEmail" placeholder="pilot@scuderia-hamborghini.it" required="" type="email">
+</div>
+<p class="hidden font-label-sm text-label-sm text-error uppercase tracking-wider mt-1" id="emailError">Please enter a valid Scuderia pilot email address.</p>
+</div>
+<!-- Password / Secret Access Token -->
+<div class="space-y-space-xs">
+<div class="flex justify-between items-center">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold" for="pilotKey">
+                Ignition Keyphrase / Passcode
+              </label>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">256-Bit Crypt</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-on-surface-variant/60 pointer-events-none text-xl">
+                key
+              </span>
+<input autocomplete="current-password" class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md pl-11 pr-12 py-3 rounded focus:outline-none focus:ring-2 focus:ring-primary-container transition-all placeholder:text-on-surface-variant/30" id="pilotKey" placeholder="••••••••••••••••" required="" type="password">
+<button aria-label="Toggle password visibility" class="absolute right-space-md text-on-surface-variant/70 hover:text-primary transition-colors flex items-center justify-center p-1" onclick="togglePasswordVisibility()" type="button">
+<span class="material-symbols-outlined text-xl" id="eyeIcon">visibility</span>
+</button>
+</div>
+<p class="hidden font-label-sm text-label-sm text-error uppercase tracking-wider mt-1" id="passwordError">Keyphrase must be at least 6 characters.</p>
+</div>
+<!-- Keyfob Cache & Forgot Key Row -->
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<input class="w-4 h-4 rounded bg-surface-container-lowest text-primary-container focus:ring-0 focus:ring-offset-0 cursor-pointer accent-primary-container" id="rememberKey" type="checkbox">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors">
+                Remember Pilot Keyfob
+              </span>
+</label>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-secondary hover:text-primary transition-colors" data-path="forgot-password" href="forgot_password.html">
+              Reset Key?
+            </a>
+</div>
+<!-- Primary CTA Button: SIGN IN // ENGAGE TELEMETRY -->
+<div class="pt-space-sm">
+<button class="w-full relative group overflow-hidden bg-primary-container hover:bg-secondary-container text-on-primary font-headline-sm text-headline-sm uppercase tracking-wider py-3.5 px-space-md rounded transition-all duration-300 shadow-[0_4px_25px_rgba(255,87,8,0.45)] hover:shadow-[0_4px_35px_rgba(238,152,0,0.6)] flex items-center justify-center gap-space-sm active:scale-[0.99]" id="submitButton" type="submit">
+<!-- Ambient button flare -->
+<span class="absolute top-0 right-0 w-8 h-full bg-white/20 skew-x-12 -translate-x-32 group-hover:translate-x-96 transition-transform duration-1000 ease-in-out pointer-events-none"></span>
+<span class="hidden material-symbols-outlined animate-spin text-xl" id="buttonSpinner">
+                progress_activity
+              </span>
+<span class="font-label-lg text-label-lg uppercase tracking-widest font-extrabold flex items-center gap-2" id="buttonText">
+                Sign In // Engage Telemetry
+                <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">bolt</span>
+</span>
+</button>
+</div>
+</form>
+<!-- Divider with Scuderia Monospace Stamp -->
+<div class="relative my-space-lg flex items-center justify-center">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full h-px bg-surface-container-highest"></div>
+</div>
+<span class="relative bg-surface-container-low px-space-md font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant/70">
+            Or Authenticate Via Secure Protocols
+          </span>
+</div>
+<!-- Social / Quantum Pass SSO Auth -->
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="flex items-center justify-center gap-space-xs bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm uppercase tracking-wider py-2.5 px-space-sm rounded transition-colors group" onclick="simulateSSO('Quantum Pass')" type="button">
+<span class="material-symbols-outlined text-primary text-base group-hover:rotate-45 transition-transform">all_inclusive</span>
+<span class="">Quantum Pass</span>
+</button>
+<button class="flex items-center justify-center gap-space-xs bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm uppercase tracking-wider py-2.5 px-space-sm rounded transition-colors group" onclick="simulateSSO('Google Scuderia')" type="button">
+<span class="material-symbols-outlined text-secondary text-base group-hover:scale-110 transition-transform">shield</span>
+<span class="">Google SSO</span>
+</button>
+</div>
+<!-- Bottom Paddock Registration Link -->
+<div class="mt-space-lg pt-space-md border-t border-surface-container-highest/60 text-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            New to the Paddock? 
+            <a class="font-label-sm text-label-sm uppercase tracking-wider text-primary hover:text-secondary font-bold underline underline-offset-4 ml-1 transition-colors" data-path="register" href="register_scuderia.html">
+              Join the Legend / Create Account →
+            </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function togglePasswordVisibility() {
+    const input = document.getElementById('pilotKey');
+    const icon = document.getElementById('eyeIcon');
+    if (input.type === 'password') {
+      input.type = 'text';
+      icon.innerText = 'visibility_off';
+    } else {
+      input.type = 'password';
+      icon.innerText = 'visibility';
+    }
+  }
+
+  function handleTelemetryLogin() {
+    const emailInput = document.getElementById('pilotEmail');
+    const passwordInput = document.getElementById('pilotKey');
+    const emailError = document.getElementById('emailError');
+    const passError = document.getElementById('passwordError');
+    const alertBox = document.getElementById('authAlert');
+    const alertText = document.getElementById('authAlertText');
+    const btnSpinner = document.getElementById('buttonSpinner');
+    const btnText = document.getElementById('buttonText');
+    const submitBtn = document.getElementById('submitButton');
+
+    // Reset warnings
+    emailError.classList.add('hidden');
+    passError.classList.add('hidden');
+    alertBox.classList.add('hidden');
+
+    let isValid = true;
+    const emailVal = emailInput.value.trim();
+    const passVal = passwordInput.value;
+
+    if (!emailVal || !emailVal.includes('@') || !emailVal.includes('.')) {
+      emailError.classList.remove('hidden');
+      isValid = false;
+    }
+
+    if (!passVal || passVal.length < 6) {
+      passError.classList.remove('hidden');
+      isValid = false;
+    }
+
+    if (!isValid) return;
+
+    // Simulate Launch Telemetry Authentication
+    btnSpinner.classList.remove('hidden');
+    btnText.innerHTML = 'Connecting Scuderia Node...';
+    submitBtn.disabled = true;
+    submitBtn.classList.add('opacity-80', 'cursor-not-allowed');
+
+    setTimeout(() => {
+      btnSpinner.classList.add('hidden');
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('opacity-80', 'cursor-not-allowed');
+      btnText.innerHTML = 'Sign In // Engage Telemetry <span class="material-symbols-outlined text-lg">bolt</span>';
+
+      // Simulation outcome display
+      alertBox.classList.remove('hidden', 'bg-error-container/80', 'text-on-error-container');
+      alertBox.classList.add('bg-secondary-container/90', 'text-on-secondary-container');
+      alertText.innerText = 'TELEMETRY CONFIRMED: Allocation Key Loaded. Transferring to Paddock...';
+      window.location.href = 'index.html';
+    }, 1200);
+  }
+
+  function simulateSSO(provider) {
+    const alertBox = document.getElementById('authAlert');
+    const alertText = document.getElementById('authAlertText');
+    alertBox.classList.remove('hidden', 'bg-error-container/80', 'text-on-error-container');
+    alertBox.classList.add('bg-surface-container-high', 'text-on-surface');
+    alertText.innerText = 'Initializing ' + provider + ' Handshake... Please wait.';
+  }
+</script></main><footer class="w-full bg-surface-container-lowest/90 backdrop-blur-md shadow-[0_-4px_20px_rgba(0,0,0,0.4)] py-space-md"><div class="w-full px-margin-mobile lg:px-margin flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><div class="flex items-center gap-space-md flex-wrap justify-center"><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="uppercase tracking-widest text-on-surface">FIA-Grade Data Privacy</span></div><div class="hidden md:block h-3 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-xs text-primary">verified_user</span><span class="uppercase tracking-widest">Encrypted Gourmet Protocol v4.8</span></div><div class="hidden md:block h-3 w-px bg-surface-container-highest"></div><span class="uppercase tracking-widest">© 2026 Automobili Hamborghini S.p.A.</span></div><div class="flex items-center gap-space-md uppercase tracking-widest"><a class="hover:text-primary transition-colors" href="our_story.html">Security Protocols</a><a class="hover:text-primary transition-colors" href="our_story.html">Legal Telemetry</a><a class="hover:text-primary transition-colors" href="vip_lounge.html">Chassis Allocation</a></div></div></footer>
+
+
+<script id="nav-responsive-js">
+(function(){/*scroll-unlock-init*/document.documentElement.classList.remove('nav-open');document.body.classList.remove('nav-open');var scrollLockY=0;
+  var toggle=document.getElementById("nav-toggle");
+  var panel=document.getElementById("mobile-nav-panel");
+  var backdrop=document.getElementById("nav-backdrop");
+  var icon=document.getElementById("nav-toggle-icon");
+  if(!toggle||!panel)return;
+  function setOpen(open){
+    toggle.setAttribute("aria-expanded",open?"true":"false");
+    toggle.setAttribute("aria-label",open?"Close menu":"Open menu");
+    panel.classList.toggle("is-open",open);
+    if(backdrop){
+      backdrop.classList.toggle("is-open",open);
+      backdrop.setAttribute("aria-hidden",open?"false":"true");
+    }
+    if(open){scrollLockY=window.scrollY||document.documentElement.scrollTop||0;document.documentElement.classList.add("nav-open");document.body.classList.add("nav-open");document.body.style.top=(-scrollLockY)+"px";}else{document.documentElement.classList.remove("nav-open");document.body.classList.remove("nav-open");document.body.style.removeProperty("top");document.body.style.removeProperty("position");document.documentElement.style.removeProperty("overflow");document.body.style.removeProperty("overflow");window.scrollTo(0,scrollLockY||0);}
+    if(icon)icon.textContent=open?"close":"menu";
+  }
+  function isOpen(){return toggle.getAttribute("aria-expanded")==="true";}
+  toggle.addEventListener("click",function(e){e.preventDefault();setOpen(!isOpen());});
+  if(backdrop)backdrop.addEventListener("click",function(){setOpen(false);});
+  panel.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){setOpen(false);});});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&isOpen())setOpen(false);});
+  window.addEventListener("resize",function(){
+    var bp=panel.classList.contains("md:hidden")?768:1024;
+    if(window.innerWidth>=bp&&isOpen())setOpen(false);
+  });
+})();
+</script></body></html>

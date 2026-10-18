@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;min-height:100%;height:auto!important;max-height:none!important;position:relative;}html{overflow-x:auto;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;}body{overflow-x:visible;overflow-y:visible;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;touch-action:auto;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}html{scrollbar-width:thin;scrollbar-color:rgba(172,137,126,.65) transparent;}::-webkit-scrollbar{width:10px;height:10px;}::-webkit-scrollbar-thumb{background:rgba(172,137,126,.55);border-radius:8px;}::-webkit-scrollbar-track{background:transparent;}::-webkit-scrollbar-corner{background:transparent;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-highest":"#353437","on-error-container":"#ffdad6","surface-bright":"#39393b","tertiary-fixed":"#d4e4fa","on-secondary":"#472a00","surface-variant":"#353437","on-error":"#690005","on-tertiary-fixed-variant":"#39485a","background":"#131315","secondary":"#ffb95f","primary-fixed-dim":"#ffb59c","on-primary-container":"#511500","on-secondary-fixed":"#2a1700","tertiary-fixed-dim":"#b9c8de","on-secondary-container":"#5b3800","primary-fixed":"#ffdbcf","secondary-container":"#ee9800","on-tertiary-container":"#1c2b3c","inverse-primary":"#aa3600","surface":"#131315","surface-dim":"#131315","surface-container-high":"#2a2a2c","surface-container-lowest":"#0e0e10","on-primary":"#5c1900","tertiary":"#b9c8de","on-secondary-fixed-variant":"#653e00","tertiary-container":"#8392a6","outline":"#ac897e","surface-container":"#201f21","on-primary-fixed":"#390c00","surface-tint":"#ffb59c","on-primary-fixed-variant":"#822700","on-surface":"#e5e1e4","surface-container-low":"#1c1b1d","on-tertiary-fixed":"#0d1c2d","on-tertiary":"#233143","on-background":"#e5e1e4","on-surface-variant":"#e5beb2","secondary-fixed":"#ffddb8","error-container":"#93000a","primary-container":"#ff5708","outline-variant":"#5c4037","secondary-fixed-dim":"#ffb95f","error":"#ffb4ab","inverse-surface":"#e5e1e4","inverse-on-surface":"#313032","primary":"#ffb59c"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-md":"1rem","space-xl":"2.5rem","gutter-mobile":"1rem","space-lg":"1.5rem","space-xs":"0.25rem","margin":"3rem","gutter":"1.5rem","space-sm":"0.5rem","margin-mobile":"1.25rem"},"fontFamily":{"body-lg":["Space Grotesk"],"body-md":["Space Grotesk"],"headline-xl":["Syne"],"body-sm":["Space Grotesk"],"label-sm":["Space Grotesk"],"label-md":["Space Grotesk"],"headline-sm":["Syne"],"headline-lg-mobile":["Syne"],"headline-xl-mobile":["Syne"],"headline-lg":["Syne"],"label-lg":["Space Grotesk"],"headline-md":["Syne"]},"fontSize":{"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["56px",{"lineHeight":"60px","letterSpacing":"-0.02em","fontWeight":"800"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.12em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.1em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl-mobile":["36px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"800"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"700"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"0em","fontWeight":"700"}]}}}};</script>
+<style id="nav-responsive-css">
+/* Scroll: allow vertical + horizontal when content overflows; never trap the document */
+html,body{max-width:100%;height:auto!important;max-height:none!important;position:relative!important;}
+html{overflow-x:auto!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;touch-action:auto;}body{overflow-x:visible!important;overflow-y:visible!important;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;touch-action:auto;}
+img,video,canvas{max-width:100%;}
+[id^="threejs-container"]{touch-action:pan-y;}
+#cart-drawer.translate-x-full{pointer-events:none;}
+@media (max-width:767px){input,select,textarea{font-size:16px!important;}#nav-toggle,header button,header a[href].inline-flex,header a[href].flex{min-width:44px;min-height:44px;}main button,.cockpit-cta,[type=submit]{min-height:44px;}}
+  #mobile-nav-panel{max-height:0;opacity:0;overflow:hidden;visibility:hidden;transition:max-height .38s cubic-bezier(.4,0,.2,1),opacity .28s ease,visibility .28s;}
+  #mobile-nav-panel.is-open{max-height:min(80vh,640px);opacity:1;visibility:visible;overflow-y:auto;-webkit-overflow-scrolling:touch;touch-action:pan-y;overscroll-behavior:contain;}
+  #nav-backdrop{opacity:0;pointer-events:none!important;transition:opacity .3s ease;}
+  #nav-backdrop.is-open{opacity:1;pointer-events:auto!important;}
+  /* Lock background scroll only while mobile nav is open (html+body); keep panel scrollable */
+  html.nav-open{overflow:hidden!important;}body.nav-open{position:fixed!important;inset:0 auto auto 0;width:100%;overflow:hidden!important;overscroll-behavior:none;touch-action:auto;}
+  body.nav-open main,body.nav-open>footer{pointer-events:none;}
+  @media (min-width:1024px){
+    #mobile-nav-panel,#nav-backdrop,#nav-toggle{display:none!important;}
+    html.nav-open{overflow:auto!important;}body.nav-open{position:relative!important;inset:auto;width:auto;overflow:visible!important;overscroll-behavior:auto;}
+    body.nav-open main,body.nav-open>footer{pointer-events:auto;}
+  }
+</style></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.6)]"><div class="h-16 sm:h-20 w-full px-margin-mobile lg:px-margin flex items-center justify-between gap-space-sm sm:gap-space-md"><div class="flex items-center gap-space-lg shrink-0"><a class="flex items-center gap-space-sm group" data-path="home" href="index.html"><img alt="Hamborghini Shield Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VEiYRHW1Qw2FJqH1AZC9JcV_02p0fRrLFuGWF4jkzxW_2Oc5tynzJfbDGni0SNCvfwZdQTPeJhJ2vNWvbxWFZmO8rFHJWah4QX45ZAWeZSCErqx6GCU6owhWiaC6i4x3YD5i9fcHR5pxRjkbay5fbd6JEdGc4HmAfXY4lHjpDrw2wA8T777KbDvOkNaxYo-3rI9EYBxro67IQKitMil4VDy63Po0BlHfr__Sqr6nvexLk3jE1ujkwm6TE"/><div class="flex flex-col"><span class="font-headline-sm text-[16px] sm:text-headline-sm uppercase tracking-wider text-on-surface group-hover:text-primary transition-colors leading-tight">HAMBORGHINI</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase hidden sm:inline">SANT'AGATA GOURMET</span></div></a></div><nav class="hidden lg:flex items-center gap-space-sm shrink-0" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded"><a aria-current="page" class="px-space-sm py-space-xs transition-colors uppercase tracking-wider bg-primary-container text-on-primary-container font-bold rounded" data-path="home" href="index.html">Home</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="menu-showroom" href="menu_showroom.html">Menu / Showroom</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="our-story" href="our_story.html">Our Story</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="pit-stop-locations" href="pit_stop_locations.html">Pit Stop Locations</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="vip-lounge" href="vip_lounge.html">VIP Lounge</a></nav><div class="flex items-center gap-space-xs sm:gap-space-md shrink-0"><a class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded hover:bg-surface-container-high hover:text-on-surface text-on-surface-variant transition-colors" data-path="cart-telemetry" href="checkout.html" aria-label="Cockpit Bay cart"><span class="material-symbols-outlined text-secondary text-[20px]">shopping_bag</span><div class="hidden sm:flex flex-col text-left"><span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Cockpit Bay</span><span class="font-label-md text-label-md font-bold text-on-surface">$64.00</span></div><span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold ml-space-xs">2</span></a><a class="hidden sm:inline-flex items-center gap-space-xs bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-md text-label-md uppercase font-bold px-space-md py-space-sm rounded transition-all shadow-[0_0_24px_rgba(255,87,8,0.35)]" data-path="burger-configurator" href="menu_showroom.html"><span class="material-symbols-outlined text-[18px]">tune</span><span class="hidden xl:inline">CONFIGURE &amp; ORDER NOW</span><span class="xl:hidden">ORDER</span></a><a class="w-8 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-primary-container transition-colors" href="login_cockpit.html" title="Access Portal"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></a><button type="button" id="nav-toggle" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" aria-controls="mobile-nav-panel" aria-expanded="false" aria-label="Open menu"><span class="material-symbols-outlined text-[22px]" id="nav-toggle-icon">menu</span></button></div></div><div id="nav-backdrop" class="fixed inset-0 top-16 sm:top-20 z-40 bg-black/55 backdrop-blur-[2px] lg:hidden" aria-hidden="true"></div><div id="mobile-nav-panel" class="relative z-50 lg:hidden border-t border-surface-container-high bg-surface-container-lowest/95 backdrop-blur-xl" role="dialog" aria-label="Mobile navigation"><nav class="flex flex-col gap-space-xs px-margin-mobile py-space-md" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded"><a aria-current="page" class="block w-full px-space-md py-space-sm rounded bg-primary-container text-on-primary-container font-bold uppercase tracking-wider font-label-md text-label-md" data-path="home" href="index.html">Home</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="menu-showroom" href="menu_showroom.html">Menu / Showroom</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="our-story" href="our_story.html">Our Story</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="pit-stop-locations" href="pit_stop_locations.html">Pit Stop Locations</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="vip-lounge" href="vip_lounge.html">VIP Lounge</a><div class="pt-space-sm mt-space-xs border-t border-surface-container-high flex flex-col gap-space-sm"><a class="inline-flex sm:hidden items-center justify-center gap-space-xs bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-md text-label-md uppercase font-bold px-space-md py-space-sm rounded transition-all shadow-[0_0_24px_rgba(255,87,8,0.35)]" data-path="burger-configurator" href="menu_showroom.html"><span class="material-symbols-outlined text-[18px]">tune</span><span>CONFIGURE &amp; ORDER NOW</span></a></div></nav></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Top Telemetry Micro Bar -->
+<div class="w-full bg-surface-container-lowest px-margin-mobile lg:px-margin py-space-xs flex flex-wrap items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>CHASSIS TEMP: <strong class="text-secondary font-bold">650°F OPTIMAL</strong></span>
+<span class="hidden md:inline">|</span>
+<span class="hidden md:flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-primary">speed</span> KINETIC ALLOCATION: <strong class="text-on-surface font-bold">BATCH #884 LIVE</strong></span>
+</div>
+<div class="flex items-center gap-space-lg">
+<span class="hidden sm:inline">PADDOCK LOCATION: <span class="text-on-surface">SECTOR 04 - SANT'AGATA</span></span>
+<a class="text-primary hover:text-secondary transition-colors underline decoration-primary/40 underline-offset-4" href="#showroom">VIEW FLEET ROSTER ↓</a>
+</div>
+</div>
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-surface-container-lowest px-margin-mobile lg:px-margin py-space-xl min-h-[480px] sm:min-h-[560px] md:min-h-[640px] flex items-center">
+<!-- Atmospheric Lighting & Gradients -->
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-primary-container/15 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-secondary-container/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Column: Manifesto & Launch Controls -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-2 self-start bg-surface-container-high px-space-sm py-1 rounded">
+<span class="w-1.5 h-3.5 bg-primary-container rounded-xs"></span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary">ATELIER DI GOURMET AUTOMOBILI</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl font-extrabold uppercase tracking-tight text-on-surface">
+          BORN TO GRILL.<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary-container">BUILT TO THRILL.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          The atelier where hypercar performance meets Michelin-tier culinary craft. High-velocity flame-seared Wagyu, aerodynamic brioche craft, and bespoke gastronomy crafted to deliver maximum culinary downforce.
+        </p>
+<!-- Dynamic Spec Bar -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm bg-surface-container-low p-space-sm rounded max-w-xl border border-surface-container-high/60"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">SEAR TEMP</span><span class="font-headline-sm text-headline-sm font-bold text-secondary">650°F</span><span class="font-body-sm text-body-sm text-on-surface-variant">4.2s Maillard Lock</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">MARBLING</span><span class="font-headline-sm text-headline-sm font-bold text-primary">BMS 11+</span><span class="font-body-sm text-body-sm text-on-surface-variant">38.4% Lipid Ratio</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">AERO DRAG</span><span class="font-headline-sm text-headline-sm font-bold text-on-surface">Cd 0.28</span><span class="font-body-sm text-body-sm text-on-surface-variant">Vented Brioche Hood</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">DOWNFORCE</span><span class="font-headline-sm text-headline-sm font-bold text-primary-container">220g / 0-60</span><span class="font-body-sm text-body-sm text-on-surface-variant">3-Bite Dynamic Peak</span></div></div>
+<!-- Launch Buttons -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center gap-space-xs bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-lg text-label-lg uppercase px-space-lg py-space-sm rounded transition-all shadow-[0_0_24px_rgba(255,87,8,0.4)]" href="#showroom">
+<span class="material-symbols-outlined text-[20px]">local_fire_department</span>
+<span class="">CONFIGURE YOUR SPEC</span>
+</a>
+<button class="inline-flex items-center gap-space-xs bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg uppercase px-space-lg py-space-sm rounded transition-colors" onclick="openInspectModal('aventabeef')">
+<span class="material-symbols-outlined text-secondary text-[20px]">visibility</span>
+<span class="">INSPECT PLATTER COMBO</span>
+</button>
+</div>
+</div>
+<!-- Right Column: Interactive 3D Canvas Showcase & Telemetry HUD -->
+<div class="lg:col-span-6 relative flex flex-col items-center">
+<!-- Floating HUD Overlays -->
+<div class="w-full relative rounded-xl bg-surface-container-low p-space-sm shadow-2xl overflow-hidden">
+<div class="flex items-center justify-between pb-space-xs px-space-xs">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">AERODYNAMIC TELEMETRY VISUALIZER</span>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span class="">AXIS: X/Y/Z</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface">360° LIVE</span>
+</div>
+</div>
+<!-- 3D Scene Viewport -->
+<div class="relative w-full h-[280px] sm:h-[360px] lg:h-[440px] rounded bg-surface-container-lowest overflow-hidden flex items-center justify-center">
+<!-- STITCH_THREEJS_START:ANIMATION_48 class="w-full h-full bg-transparent" -->
+<div class="w-full h-full bg-transparent" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_48" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_48');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  // Three.js Interactive 3D Hamborghini Burger Experience
+const width = container.clientWidth || 550;
+const height = container.clientHeight || 440;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
+camera.position.set(0, 1.2, 5.2);
+
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'high-performance' });
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.3;
+container.appendChild(renderer.domElement);
+
+// Studio Lighting tuned for automotive carbon & gourmet food highlights
+const ambientLight = new THREE.AmbientLight(0xfff3e0, 1.3);
+scene.add(ambientLight);
+
+const keyLight = new THREE.DirectionalLight(0xffb74d, 3.2);
+keyLight.position.set(4, 6, 4);
+keyLight.castShadow = true;
+keyLight.shadow.mapSize.width = 1024;
+keyLight.shadow.mapSize.height = 1024;
+scene.add(keyLight);
+
+const rimLight = new THREE.DirectionalLight(0xff5500, 3.0);
+rimLight.position.set(-5, 3, -3);
+scene.add(rimLight);
+
+const topLight = new THREE.DirectionalLight(0xffffff, 2.2);
+topLight.position.set(0, 7, 2);
+scene.add(topLight);
+
+const underGlow = new THREE.PointLight(0xff5708, 2.5, 6);
+underGlow.position.set(0, -1.2, 0);
+scene.add(underGlow);
+
+// Master Group
+const burgerGroup = new THREE.Group();
+burgerGroup.position.y = -0.05;
+scene.add(burgerGroup);
+
+const particlesGroup = new THREE.Group();
+scene.add(particlesGroup);
+
+// Materials
+const bunMaterial = new THREE.MeshPhongMaterial({
+  color: 0xc9752d,
+  specular: 0x4a2a0c,
+  shininess: 32
+});
+
+const sesameMaterial = new THREE.MeshStandardMaterial({
+  color: 0xfff2d6,
+  roughness: 0.35,
+  metalness: 0.05
+});
+
+const pattyMaterial = new THREE.MeshStandardMaterial({
+  color: 0x361806,
+  roughness: 0.88,
+  metalness: 0.1
+});
+
+const cheeseMaterial = new THREE.MeshStandardMaterial({
+  color: 0xff9d00,
+  roughness: 0.22,
+  metalness: 0.05
+});
+
+const lettuceMaterial = new THREE.MeshStandardMaterial({
+  color: 0x2e8b2b,
+  roughness: 0.5,
+  metalness: 0.05,
+  side: THREE.DoubleSide
+});
+
+const tomatoMaterial = new THREE.MeshStandardMaterial({
+  color: 0xc72010,
+  roughness: 0.2,
+  metalness: 0.1
+});
+
+const pickleMaterial = new THREE.MeshStandardMaterial({
+  color: 0x486b25,
+  roughness: 0.45,
+  metalness: 0.05
+});
+
+const carbonPlateMat = new THREE.MeshStandardMaterial({
+  color: 0x141416,
+  roughness: 0.25,
+  metalness: 0.8
+});
+
+// Pedestal: Forged Carbon Plinth with glowing telemetry ring
+const plinth = new THREE.Mesh(new THREE.CylinderGeometry(2.2, 2.35, 0.14, 48), carbonPlateMat);
+plinth.position.y = -1.15;
+plinth.receiveShadow = true;
+burgerGroup.add(plinth);
+
+const ringMat = new THREE.MeshBasicMaterial({ color: 0xff5708 });
+const ringMesh = new THREE.Mesh(new THREE.TorusGeometry(2.22, 0.03, 16, 64), ringMat);
+ringMesh.rotation.x = Math.PI / 2;
+ringMesh.position.y = -1.07;
+burgerGroup.add(ringMesh);
+
+// 1. Bottom Bun
+const bottomBun = new THREE.Mesh(new THREE.CylinderGeometry(1.42, 1.28, 0.44, 40), bunMaterial);
+bottomBun.position.y = -0.75;
+bottomBun.castShadow = true;
+bottomBun.receiveShadow = true;
+burgerGroup.add(bottomBun);
+
+// Bottom Aioli / Truffle Emulsion
+const sauce = new THREE.Mesh(new THREE.CylinderGeometry(1.36, 1.36, 0.06, 32), new THREE.MeshStandardMaterial({ color: 0xfce8ad, roughness: 0.15 }));
+sauce.position.y = -0.51;
+burgerGroup.add(sauce);
+
+// 2. Pickles
+for (let i = 0; i < 4; i++) {
+  const angle = (i * Math.PI) / 2 + 0.35;
+  const pickle = new THREE.Mesh(new THREE.CylinderGeometry(0.38, 0.38, 0.05, 24), pickleMaterial);
+  pickle.position.set(Math.cos(angle) * 0.75, -0.47, Math.sin(angle) * 0.75);
+  pickle.rotation.set(0.08 * (i % 2), 0, 0.12);
+  burgerGroup.add(pickle);
+}
+
+// 3. Flame-Seared Wagyu Patty
+const patty = new THREE.Mesh(new THREE.CylinderGeometry(1.58, 1.54, 0.44, 40), pattyMaterial);
+patty.position.y = -0.22;
+patty.castShadow = true;
+burgerGroup.add(patty);
+
+// Char marks on patty
+for (let g = -1; g <= 1; g++) {
+  const grillMesh = new THREE.Mesh(new THREE.BoxGeometry(2.9, 0.04, 0.05), new THREE.MeshBasicMaterial({ color: 0x150701 }));
+  grillMesh.position.set(0, -0.21, g * 0.5);
+  grillMesh.rotation.y = 0.45;
+  burgerGroup.add(grillMesh);
+}
+
+// 4. Melted Saffron Cheddar / Taleggio Cheese
+const cheeseGroup = new THREE.Group();
+const cheeseBase = new THREE.Mesh(new THREE.BoxGeometry(2.15, 0.06, 2.15), cheeseMaterial);
+cheeseGroup.add(cheeseBase);
+cheeseGroup.rotation.y = Math.PI / 4;
+cheeseGroup.position.y = 0.03;
+
+const dripGeo = new THREE.ConeGeometry(0.18, 0.36, 16);
+for (let d = 0; d < 4; d++) {
+  const drip = new THREE.Mesh(dripGeo, cheeseMaterial);
+  const dAngle = (d * Math.PI) / 2;
+  drip.rotation.x = Math.PI;
+  drip.position.set(Math.cos(dAngle) * 1.38, -0.15, Math.sin(dAngle) * 1.38);
+  cheeseGroup.add(drip);
+}
+burgerGroup.add(cheeseGroup);
+
+// 5. Crisp Frill Lettuce Leaves
+const lettuceGroup = new THREE.Group();
+const leavesCount = 8;
+for (let l = 0; l < leavesCount; l++) {
+  const leafAngle = (l * 2 * Math.PI) / leavesCount;
+  const leafGeo = new THREE.PlaneGeometry(1.15, 0.75, 6, 6);
+  const pos = leafGeo.attributes.position;
+  for (let p = 0; p < pos.count; p++) {
+    const vx = pos.getX(p);
+    const vy = pos.getY(p);
+    pos.setZ(p, Math.sin(vx * 5) * 0.12 + Math.cos(vy * 5) * 0.08);
+  }
+  leafGeo.computeVertexNormals();
+  const leaf = new THREE.Mesh(leafGeo, lettuceMaterial);
+  leaf.rotation.x = -Math.PI / 2 + (Math.random() - 0.5) * 0.25;
+  leaf.rotation.z = leafAngle;
+  leaf.position.set(Math.cos(leafAngle) * 1.18, 0.16 + (l % 2) * 0.05, Math.sin(leafAngle) * 1.18);
+  lettuceGroup.add(leaf);
+}
+burgerGroup.add(lettuceGroup);
+
+// 6. Heirloom Tomato Slices
+for (let t = 0; t < 2; t++) {
+  const tSlice = new THREE.Mesh(new THREE.CylinderGeometry(0.85, 0.85, 0.13, 32), tomatoMaterial);
+  const tX = (t === 0 ? -0.45 : 0.45);
+  const tZ = (t === 0 ? 0.22 : -0.22);
+  tSlice.position.set(tX, 0.34, tZ);
+  burgerGroup.add(tSlice);
+}
+
+// 7. Top Brioche Bun
+const topBun = new THREE.Mesh(new THREE.SphereGeometry(1.58, 40, 24, 0, Math.PI * 2, 0, Math.PI * 0.48), bunMaterial);
+topBun.position.y = 0.38;
+topBun.castShadow = true;
+burgerGroup.add(topBun);
+
+// Sesame seeds sprinkled aerodynamically
+const seedGeo = new THREE.ConeGeometry(0.038, 0.09, 6);
+seedGeo.rotateX(Math.PI / 2);
+for (let s = 0; s < 100; s++) {
+  const phi = Math.random() * (Math.PI * 0.38);
+  const theta = Math.random() * (Math.PI * 2);
+  const r = 1.585;
+  const x = r * Math.sin(phi) * Math.cos(theta);
+  const y = 0.38 + r * Math.cos(phi);
+  const z = r * Math.sin(phi) * Math.sin(theta);
+
+  const seed = new THREE.Mesh(seedGeo, sesameMaterial);
+  seed.position.set(x, y, z);
+  seed.lookAt(0, 0.38, 0);
+  seed.rotateX(Math.PI);
+  burgerGroup.add(seed);
+}
+
+// Hamborghini Carbon Flag / Skewer
+const skewerMat = new THREE.MeshStandardMaterial({ color: 0xd4af37, metalness: 0.9, roughness: 0.2 });
+const skewer = new THREE.Mesh(new THREE.CylinderGeometry(0.02, 0.02, 1.2, 16), skewerMat);
+skewer.position.set(0, 1.85, 0);
+burgerGroup.add(skewer);
+
+const pennant = new THREE.Mesh(new THREE.PlaneGeometry(0.48, 0.24), new THREE.MeshBasicMaterial({ color: 0x111115, side: THREE.DoubleSide }));
+pennant.position.set(0.24, 2.3, 0);
+burgerGroup.add(pennant);
+
+// Floating Golden Spice / Embers
+const particleGeo = new THREE.BufferGeometry();
+const particleCount = 50;
+const posArray = new Float32Array(particleCount * 3);
+for (let p = 0; p < particleCount * 3; p += 3) {
+  posArray[p] = (Math.random() - 0.5) * 5.0;
+  posArray[p + 1] = (Math.random() - 0.5) * 4.0 + 0.5;
+  posArray[p + 2] = (Math.random() - 0.5) * 5.0;
+}
+particleGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+const particles = new THREE.Points(particleGeo, new THREE.PointsMaterial({
+  size: 0.055,
+  color: 0xffb703,
+  transparent: true,
+  opacity: 0.85
+}));
+particlesGroup.add(particles);
+
+// Mouse & Touch 360° Drag & Inertia
+let isDragging = false;
+let previousPointerX = 0;
+let previousPointerY = 0;
+let userRotX = 0;
+let userRotY = 0;
+let targetX = 0;
+let targetY = 0;
+
+function onPointerMove(e) {
+  const rect = container.getBoundingClientRect();
+  const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+  const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+  
+  if (isDragging) {
+    const deltaX = clientX - previousPointerX;
+    const deltaY = clientY - previousPointerY;
+    userRotY += deltaX * 0.009;
+    userRotX += deltaY * 0.009;
+    previousPointerX = clientX;
+    previousPointerY = clientY;
+  }
+  
+  targetX = ((clientX - rect.left) / rect.width - 0.5) * 0.6;
+  targetY = ((clientY - rect.top) / rect.height - 0.5) * 0.4;
+}
+
+function onPointerDown(e) {
+  isDragging = true;
+  if (container && container.style) container.style.touchAction = 'none';
+  const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+  const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+  previousPointerX = clientX;
+  previousPointerY = clientY;
+}
+
+function onPointerUp() {
+  isDragging = false;
+  if (container && container.style) container.style.touchAction = 'pan-y';
+}
+
+container.addEventListener('mousemove', onPointerMove);
+container.addEventListener('mousedown', onPointerDown);
+window.addEventListener('mouseup', onPointerUp);
+container.addEventListener('touchmove', onPointerMove, { passive: true });
+container.addEventListener('touchstart', onPointerDown, { passive: true });
+window.addEventListener('touchend', onPointerUp);
+
+function onWindowResize() {
+  const w = container.clientWidth || 550;
+  const h = container.clientHeight || 440;
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+}
+window.addEventListener('resize', onWindowResize);
+
+// Animation Loop
+let clock = new THREE.Clock();
+function animate() {
+  requestAnimationFrame(animate);
+  const elapsedTime = clock.getElapsedTime();
+
+  burgerGroup.position.y = Math.sin(elapsedTime * 1.5) * 0.06 - 0.05;
+  burgerGroup.rotation.y = elapsedTime * 0.35 + userRotY + targetX;
+  burgerGroup.rotation.x = Math.sin(elapsedTime * 0.8) * 0.04 + userRotX + targetY * 0.3;
+
+  particles.rotation.y = elapsedTime * 0.08;
+  underGlow.intensity = 2.0 + Math.sin(elapsedTime * 2.5) * 0.6;
+
+  renderer.render(scene, camera);
+}
+animate();
+
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_48 -->
+<!-- In-Canvas HUD HUD Elements -->
+<div class="absolute top-4 left-4 bg-surface-container-low/90 backdrop-blur-md p-space-xs rounded flex flex-col gap-0.5 max-w-[150px] pointer-events-none">
+<span class="font-label-sm text-label-sm text-outline">MARBLING GRADE</span>
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">A5-BMS 11</span>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden mt-1">
+<div class="bg-secondary h-full w-[94%]"></div>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 bg-surface-container-low/90 backdrop-blur-md px-space-sm py-1.5 rounded flex items-center gap-2 pointer-events-none">
+<span class="material-symbols-outlined text-primary text-[18px]">touch_app</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">DRAG TO ROTATE 360°</span>
+</div>
+<div class="absolute bottom-4 right-4 flex items-center gap-1.5">
+<button class="bg-surface-container-high/90 hover:bg-primary-container hover:text-on-primary-container text-on-surface backdrop-blur-md font-label-sm text-label-sm px- space-sm py-1.5 rounded transition-all flex items-center gap-1" onclick="notifyHud('Thermal Sear Visualizer Engaged')">
+<span class="material-symbols-outlined text-[16px]">thermostat</span>
+<span class="">THERMAL CAM</span>
+</button>
+<button class="bg-surface-container-high/90 hover:bg-secondary text-on-surface hover:text-on-secondary backdrop-blur-md font-label-sm text-label-sm px-space-sm py-1.5 rounded transition-all flex items-center gap-1" onclick="notifyHud('Patty &amp; Brioche Layers Deconstructed')">
+<span class="material-symbols-outlined text-[16px]">layers</span>
+<span class="">EXPLODE SPECS</span>
+</button>
+</div>
+</div>
+<!-- Quick Telemetry Ticker -->
+<div class="mt-space-xs px-space-xs py-1 bg-surface-container flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant" id="hud-ticker">
+<span class="">AERODYNAMIC BRIOCHE COEFFICIENT: <strong>Cd 0.28</strong></span>
+<span class="text-secondary">READY FOR PIT DISPATCH</span>
+</div><div class="mt-space-sm grid grid-cols-2 md:grid-cols-4 gap-2 text-left"><div class="p-2 rounded bg-surface-container-lowest/90 border border-surface-container flex flex-col gap-0.5"><div class="flex items-center justify-between text-outline font-label-sm text-label-sm"><span class="uppercase">HOOD AERO</span><span class="text-primary font-bold">ZONE 1</span></div><span class="font-label-md text-label-md font-bold text-on-surface">36h Brioche Crumb</span><span class="font-body-sm text-[11px] text-on-surface-variant">Micro-porous crumb suspension</span></div><div class="p-2 rounded bg-surface-container-lowest/90 border border-surface-container flex flex-col gap-0.5"><div class="flex items-center justify-between text-outline font-label-sm text-label-sm"><span class="uppercase">CORE PATTY</span><span class="text-secondary font-bold">ZONE 2</span></div><span class="font-label-md text-label-md font-bold text-on-surface">Wagyu Miyazaki A5</span><span class="font-body-sm text-[11px] text-on-surface-variant">Intramuscular sear crystallization</span></div><div class="p-2 rounded bg-surface-container-lowest/90 border border-surface-container flex flex-col gap-0.5"><div class="flex items-center justify-between text-outline font-label-sm text-label-sm"><span class="uppercase">LIPID GASKET</span><span class="text-primary-container font-bold">ZONE 3</span></div><span class="font-label-md text-label-md font-bold text-on-surface">Aged Fontina Melt</span><span class="font-body-sm text-[11px] text-on-surface-variant">0.84 Pa·s thermal viscosity</span></div><div class="p-2 rounded bg-surface-container-lowest/90 border border-surface-container flex flex-col gap-0.5"><div class="flex items-center justify-between text-outline font-label-sm text-label-sm"><span class="uppercase">BASE CHASSIS</span><span class="text-outline font-bold">ZONE 4</span></div><span class="font-label-md text-label-md font-bold text-on-surface">Cryo Sous-Vide</span><span class="font-body-sm text-[11px] text-on-surface-variant">48-min 132°F water immersion</span></div></div>
+</div>
+</div>
+</div>
+</section>
+<!-- SHOWROOM CATALOG SECTION -->
+<section class="w-full bg-background px-margin-mobile lg:px-margin py-space-xl flex flex-col gap-space-lg" id="showroom">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary">SCUDERIA GASTRONOMICA</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-extrabold uppercase text-on-surface">THE HAMBORGHINI FLEET</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Every chassis is crafted to order on vulcanized cast iron. Select a platform to view telemetry details or order direct from paddock.</p>
+</div>
+<!-- Category Filter Tabs -->
+<div class="flex items-center flex-wrap gap-space-xs bg-surface-container-low p-1 rounded">
+<button class="fleet-tab px-space-sm py-space-xs font-label-md text-label-md uppercase rounded bg-primary-container text-on-primary-container font-bold transition-all" id="tab-all" onclick="filterFleet('all')">ALL EDITIONS</button>
+<button class="fleet-tab px-space-sm py-space-xs font-label-md text-label-md uppercase rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" id="tab-v12" onclick="filterFleet('v12')">V12 SMASH</button>
+<button class="fleet-tab px-space-sm py-space-xs font-label-md text-label-md uppercase rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" id="tab-poultry" onclick="filterFleet('poultry')">HOT-LAP POULTRY</button>
+<button class="fleet-tab px-space-sm py-space-xs font-label-md text-label-md uppercase rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" id="tab-hybrid" onclick="filterFleet('hybrid')">GREEN HYBRID</button>
+</div>
+</div>
+<!-- Burger Fleet Grid (4 Core Showcase Models) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-lg"><div class="fleet-card group flex flex-col bg-surface-container-low rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all" data-category="v12"><div class="relative w-full h-72 bg-surface-container-lowest overflow-hidden"><img alt="The AventaBeef Wagyu Spec burger combo with black slate, wire basket fries and chilled cola" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPJvcu_FRtirG9BkfZElOVwUCdctH8p7Wq80kES4pT-8CpwT5P93vDbTZUL7P5KWI-9oRGrcKtyVdDYt0AtAQy3Xf3RgCinrEuGKBv7xWYqL8Ddf1EGt4YapssKKOPbSZjgGharnKpDUFWGPiLLvJ4kvijA3KdpPAhIGUiEorKAXAq5iwKSp4fwddlLWZg1HLJGPVy8ODZd_010ViYijrMOEAVPpF5LfiF6EdDvTP7OlLgiuXG-vcF"/><div class="absolute top-3 left-3 bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold px-2 py-0.5 rounded uppercase">FLAGSHIP ALLOCATION</div><div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded font-label-md text-label-md font-bold text-secondary">$28.50</div></div><div class="p-space-md flex flex-col flex-1 justify-between gap-space-md"><div class="flex flex-col gap-1.5"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">SPEC ID: AV-650</span><span class="font-label-sm text-label-sm text-secondary font-bold">A5 JAPANESE WAGYU</span></div><h3 class="font-headline-sm text-headline-sm uppercase font-bold text-on-surface">The AventaBeef Wagyu</h3><p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Pureblood Miyazaki Wagyu seared at 650°F, aged molten fontina, cured heirloom tomato, smoked chili emulsion on aero brioche.</p><div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary pt-0.5"><span class="material-symbols-outlined text-[14px]">wine_bar</span><span class="">Pairing: Barolo Riserva DOCG 2018</span></div></div><div class="grid grid-cols-3 gap-2 bg-surface-container p-space-xs rounded text-center"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline">PATTY WT</span><span class="font-label-md text-label-md font-bold text-on-surface">220g</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline">SEAR</span><span class="font-label-md text-label-md font-bold text-secondary">650°F</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline">DOWNFORCE</span><span class="font-label-md text-label-md font-bold text-primary">0.84 Pa·s</span></div></div><div class="flex items-center gap-space-xs pt-space-xs"><button class="flex-1 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md uppercase font-bold py-2 rounded flex items-center justify-center gap-1 transition-colors" onclick="openInspectModal('aventabeef')"><span class="material-symbols-outlined text-[16px]">search</span> Inspect Platter</button><button class="bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container px-3 py-2 rounded transition-colors flex items-center justify-center" onclick="addToCartDirect('The AventaBeef Wagyu', 28.50, 'A5 Wagyu, Melted Fontina, Brioche')" title="Add to Order"><span class="material-symbols-outlined text-[20px]">add_shopping_cart</span></button></div></div></div><div class="fleet-card group flex flex-col bg-surface-container-low rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all" data-category="v12"><div class="relative w-full h-72 bg-surface-container-lowest overflow-hidden"><img alt="The Murcielago Twin-Smash burger with double patties, black truffles, fries and supercar background" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjE7vkBpxZJCT9uw5c29fLp-sU5t0ev7XuJ4helNuzPAAn0KXsS1sHyMz2lIgZm45TZ0rF7a_SFtqMnJNeqWCdCpus3apfdSNt62HTmOv2NKm5qTec6mqH80EWjJbceFKDShyhFki6CrquUO3cvkUdr2gtg30FNNR4LHsqjxGzc5PMzKkrPpd4HzVbzI1ChfxuFItA4f8c4HyYSSYlvRYaTClk6LuLdQOsh5yu3GEuo5aWY0n-6uC1"/><div class="absolute top-3 left-3 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold px-2 py-0.5 rounded uppercase">TWIN TURBO CHARGED</div><div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded font-label-md text-label-md font-bold text-secondary">$26.00</div></div><div class="p-space-md flex flex-col flex-1 justify-between gap-space-md"><div class="flex flex-col gap-1.5"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">SPEC ID: MU-V12</span><span class="font-label-sm text-label-sm text-secondary font-bold">TWIN 110G PATTIES</span></div><h3 class="font-headline-sm text-headline-sm uppercase font-bold text-on-surface">Murciélago Twin-Smash</h3><p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Dual smashed Wagyu beef rounds with crispy lace skirts, shaved black summer truffles, double Gruyère flood, and peppery wild arugula.</p><div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary pt-0.5"><span class="material-symbols-outlined text-[14px]">wine_bar</span><span class="">Pairing: Super Tuscan Bolgheri Superiore</span></div></div><div class="grid grid-cols-3 gap-2 bg-surface-container p-space-xs rounded text-center"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline">PATTY WT</span><span class="font-label-md text-label-md font-bold text-on-surface">2x 110g</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline">SEAR</span><span class="font-label-md text-label-md font-bold text-secondary">680°F</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline">TRUFFLE</span><span class="font-label-md text-label-md font-bold text-primary">Norcia 8g</span></div></div><div class="flex items-center gap-space-xs pt-space-xs"><button class="flex-1 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md uppercase font-bold py-2 rounded flex items-center justify-center gap-1 transition-colors" onclick="openInspectModal('murcielago')"><span class="material-symbols-outlined text-[16px]">search</span> Inspect Platter</button><button class="bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container px-3 py-2 rounded transition-colors flex items-center justify-center" onclick="addToCartDirect('Murciélago Twin-Smash', 26.00, 'Dual Wagyu, Black Truffle, Gruyère')" title="Add to Order"><span class="material-symbols-outlined text-[20px]">add_shopping_cart</span></button></div></div></div><div class="fleet-card group flex flex-col bg-surface-container-low rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all" data-category="poultry"><div class="relative w-full h-72 bg-surface-container-lowest overflow-hidden"><img alt="The Huracan Hot-Lap spicy crispy chicken burger with pickled jalapenos, glazed sauce and slaw" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0aKG3Z52hNGbe_gUwG417RZE2OYnDvQ9m1HHUcJNHq7G2jSOSdJHhR2mvxIPlfzU_CFCHYmJpGKB01P5yPnpazaUB0q2zmJGILMNIj_P02yBorNmsQtVqmrEhSgPe8iFvIicX8UBxXkBS34l1GbPFwbOdlDuBCwhO1FQx9yocLjgatbeDb3UESRhdJ7dLZLcM6glWOEuaKDdiL2xbCvuTCqY3xCA7Z-N0pnFUzWYhYpNL0OljHXpJ"/><div class="absolute top-3 left-3 bg-error text-on-error font-label-sm text-label-sm font-bold px-2 py-0.5 rounded uppercase">THERMAL BOOST</div><div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded font-label-md text-label-md font-bold text-secondary">$22.50</div></div><div class="p-space-md flex flex-col flex-1 justify-between gap-space-md"><div class="flex flex-col gap-1.5"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">SPEC ID: HU-610</span><span class="font-label-sm text-label-sm text-secondary font-bold">BUTTERMILK POULTRY</span></div><h3 class="font-headline-sm text-headline-sm uppercase font-bold text-on-surface">The Huracán Hot-Lap</h3><p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Crispy 24-hr brined buttermilk chicken thigh, hot smoked habanero-parmesan glaze, charred jalapeños, and yuzu crunch slaw.</p><div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary pt-0.5"><span class="material-symbols-outlined text-[14px]">local_drink</span><span class="">Pairing: Chilled Yuzu Nitro Soda</span></div></div><div class="grid grid-cols-3 gap-2 bg-surface-container p-space-xs rounded text-center"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline">POULTRY</span><span class="font-label-md text-label-md font-bold text-on-surface">200g</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline">SCOVILLE</span><span class="font-label-md text-label-md font-bold text-error">45,000 SHU</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline">CRUNCH</span><span class="font-label-md text-label-md font-bold text-secondary">3.4x dB</span></div></div><div class="flex items-center gap-space-xs pt-space-xs"><button class="flex-1 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md uppercase font-bold py-2 rounded flex items-center justify-center gap-1 transition-colors" onclick="openInspectModal('huracan')"><span class="material-symbols-outlined text-[16px]">search</span> Inspect Platter</button><button class="bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container px-3 py-2 rounded transition-colors flex items-center justify-center" onclick="addToCartDirect('The Huracán Hot-Lap', 22.50, 'Buttermilk Chicken, Habanero Glaze, Jalapeños')" title="Add to Order"><span class="material-symbols-outlined text-[20px]">add_shopping_cart</span></button></div></div></div><div class="fleet-card group flex flex-col bg-surface-container-low rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all" data-category="hybrid"><div class="relative w-full h-72 bg-surface-container-lowest overflow-hidden"><img alt="The Revuelto Green Hybrid gourmet plant-based burger with charred portobello and avocado on black aero bun" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdW8MeuEbRr0k_rgpJ4ua5l8yYM0yoAD_MxaB7kfLumYPCUiaFyYU-KmNGoNjuEWxAkbVpybU3mIU6wjS7-hzZWM8AXXdz3PZoKTsL6GnW5Q7Emc19GYAPTYGsMwLSGSq3tshQxIQHOak8Z2f_KiOPEwH94unEUzbUkGMyC11GEIctp41lN30LpJBVnYcSLIRb9VWIFMW946QyABeLWTU5h9FKpnr2evCIawjsQVvkTboxmrK6K1ij"/><div class="absolute top-3 left-3 bg-secondary text-on-secondary font-label-sm text-label-sm font-bold px-2 py-0.5 rounded uppercase">ECO-PERFORMANCE</div><div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded font-label-md text-label-md font-bold text-secondary">$21.00</div></div><div class="p-space-md flex flex-col flex-1 justify-between gap-space-md"><div class="flex flex-col gap-1.5"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">SPEC ID: RV-HYBRID</span><span class="font-label-sm text-label-sm text-secondary font-bold">ORGANIC BOTANICAL</span></div><h3 class="font-headline-sm text-headline-sm uppercase font-bold text-on-surface">Revuelto Green Hybrid</h3><p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Wood-fired jumbo Portobello steak, charred avocado disks, argentinian chimichurri, vegan aged fontina on black activated carbon aero bun.</p><div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary pt-0.5"><span class="material-symbols-outlined text-[14px]">wine_bar</span><span class="">Pairing: Biodynamic Natural Orange Wine</span></div></div><div class="grid grid-cols-3 gap-2 bg-surface-container p-space-xs rounded text-center"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline">PLANT WT</span><span class="font-label-md text-label-md font-bold text-on-surface">190g</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline">CARBON</span><span class="font-label-md text-label-md font-bold text-secondary">NET ZERO</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline">BUN</span><span class="font-label-md text-label-md font-bold text-primary">BIO-CHAR</span></div></div><div class="flex items-center gap-space-xs pt-space-xs"><button class="flex-1 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md uppercase font-bold py-2 rounded flex items-center justify-center gap-1 transition-colors" onclick="openInspectModal('revuelto')"><span class="material-symbols-outlined text-[16px]">search</span> Inspect Platter</button><button class="bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container px-3 py-2 rounded transition-colors flex items-center justify-center" onclick="addToCartDirect('Revuelto Green Hybrid', 21.00, 'Portobello Steak, Charred Avocado, Carbon Bun')" title="Add to Order"><span class="material-symbols-outlined text-[20px]">add_shopping_cart</span></button></div></div></div><div class="fleet-card group flex flex-col bg-surface-container-low rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all" data-category="v12"><div class="relative w-full h-72 bg-surface-container-lowest overflow-hidden"><img alt="Photorealistic premium 3D Countach Carbon Wagyu — carbon-fiber brioche, A5 Kobe, 24K gold leaf, osetra caviar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/countach-carbon-wagyu.jpg" width="800" height="800" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"/><div class="absolute top-3 left-3 bg-secondary text-on-secondary font-label-sm text-label-sm font-bold px-2 py-0.5 rounded uppercase">HOMOLOGATION SPECIAL</div><div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded font-label-md text-label-md font-bold text-secondary">$34.00</div></div><div class="p-space-md flex flex-col flex-1 justify-between gap-space-md"><div class="flex flex-col gap-1.5"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">SPEC ID: CT-LP5000</span><span class="font-label-sm text-label-sm text-secondary font-bold">24K EDIBLE GOLD</span></div><h3 class="font-headline-sm text-headline-sm uppercase font-bold text-on-surface">Countach Carbon Wagyu</h3><p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">A5 Kobe ribeye chop ground to 180g, gilded in 24-karat Florentine gold leaf, royal osetra caviar remoulade, and black squid ink brioche.</p><div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary pt-0.5"><span class="material-symbols-outlined text-[14px]">wine_bar</span><span class="">Pairing: Dom Pérignon Vintage Brut</span></div></div><div class="grid grid-cols-3 gap-2 bg-surface-container p-space-xs rounded text-center"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline">KOBE A5</span><span class="font-label-md text-label-md font-bold text-on-surface">180g</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline">LEAF</span><span class="font-label-md text-label-md font-bold text-secondary">24 Karat</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline">CAVIAR</span><span class="font-label-md text-label-md font-bold text-primary">Osetra 12g</span></div></div><div class="flex items-center gap-space-xs pt-space-xs"><button class="flex-1 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md uppercase font-bold py-2 rounded flex items-center justify-center gap-1 transition-colors" onclick="openInspectModal('aventabeef')"><span class="material-symbols-outlined text-[16px]">search</span> Inspect Platter</button><button class="bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container px-3 py-2 rounded transition-colors flex items-center justify-center" onclick="addToCartDirect('Countach Carbon Wagyu', 34.00, 'Kobe A5, 24K Gold Leaf, Caviar')" title="Add to Order"><span class="material-symbols-outlined text-[20px]">add_shopping_cart</span></button></div></div></div><div class="fleet-card group flex flex-col bg-surface-container-low rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all" data-category="v12"><div class="relative w-full h-72 bg-surface-container-lowest overflow-hidden"><img alt="Photorealistic premium 3D Diablo Quad-Turbo — four lace smash patties, red Leicester melt, ghost-pepper glaze, ember cinematic light" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/diablo-quad-turbo.jpg" width="800" height="800" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"/><div class="absolute top-3 left-3 bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold px-2 py-0.5 rounded uppercase">QUAD TURBOCHARGED</div><div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded font-label-md text-label-md font-bold text-secondary">$31.50</div></div><div class="p-space-md flex flex-col flex-1 justify-between gap-space-md"><div class="flex flex-col gap-1.5"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">SPEC ID: DB-QUAD</span><span class="font-label-sm text-label-sm text-secondary font-bold">4X 80G SMASH PATTIES</span></div><h3 class="font-headline-sm text-headline-sm uppercase font-bold text-on-surface">Diablo Quad-Turbo</h3><p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Four razor-thin smashed Angus-Wagyu lace patties, quadruple red leicester melt, smoked ghost pepper honey mustard, and caramelized shallots.</p><div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary pt-0.5"><span class="material-symbols-outlined text-[14px]">wine_bar</span><span class="">Pairing: Smoked Barrel-Aged Porter</span></div></div><div class="grid grid-cols-3 gap-2 bg-surface-container p-space-xs rounded text-center"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline">PATTY WT</span><span class="font-label-md text-label-md font-bold text-on-surface">4x 80g</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline">SEAR</span><span class="font-label-md text-label-md font-bold text-secondary">690°F</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline">LACE CRUST</span><span class="font-label-md text-label-md font-bold text-primary">360° Ring</span></div></div><div class="flex items-center gap-space-xs pt-space-xs"><button class="flex-1 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md uppercase font-bold py-2 rounded flex items-center justify-center gap-1 transition-colors" onclick="openInspectModal('aventabeef')"><span class="material-symbols-outlined text-[16px]">search</span> Inspect Platter</button><button class="bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container px-3 py-2 rounded transition-colors flex items-center justify-center" onclick="addToCartDirect('Diablo Quad-Turbo', 31.50, '4x Smashed Wagyu, Red Leicester, Ghost Honey')" title="Add to Order"><span class="material-symbols-outlined text-[20px]">add_shopping_cart</span></button></div></div></div></div>
+</section>
+<!-- GASTRONOMIC PERFORMANCE PILLARS -->
+<section class="w-full bg-surface-container-lowest px-margin-mobile lg:px-margin py-space-xl flex flex-col gap-space-xl">
+<div class="flex flex-col gap-2 max-w-2xl">
+<span class="font-label-md text-label-md uppercase tracking-widest text-secondary">THE CULINARY TELEMETRY LAB</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-extrabold uppercase text-on-surface">FOUR PILLARS OF PERFORMANCE DINING</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">We treat every ingredient like an F1 aerodynamic component: measured in grams, timed to millisecond sear exposure, and crafted for maximum sensory output.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-lg">
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-sm shadow-md hover:bg-surface-container transition-colors">
+<span class="font-headline-md text-headline-md font-extrabold text-primary">01</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">air</span>
+<h3 class="font-headline-sm text-headline-sm font-bold uppercase text-on-surface">Aerodynamic Brioche</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Engineered crumb structure fermented for 36 hours. Formulated to retain optimal air suspension, preventing moisture compression under high meat-juice pressure.</p>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-sm shadow-md hover:bg-surface-container transition-colors">
+<span class="font-headline-md text-headline-md font-extrabold text-primary-container">02</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">local_fire_department</span>
+<h3 class="font-headline-sm text-headline-sm font-bold uppercase text-on-surface">650°F Combustion Sear</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Thermal induction griddles calibrate heat within ±1.5°F. Rapid Maillard reaction locks in intramuscular marbling while generating a hyper-crisp outer crust.</p>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-sm shadow-md hover:bg-surface-container transition-colors">
+<span class="font-headline-md text-headline-md font-extrabold text-secondary">03</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">gps_fixed</span>
+<h3 class="font-headline-sm text-headline-sm font-bold uppercase text-on-surface">GPS Farm Sourcing</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Single-origin cattle tracked from Hokkaido and Emilia-Romagna pasture coords. Real-time marbling BMS certification tagged to every individual burger token.</p>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-sm shadow-md hover:bg-surface-container transition-colors">
+<span class="font-headline-md text-headline-md font-extrabold text-outline">04</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">timer</span>
+<h3 class="font-headline-sm text-headline-sm font-bold uppercase text-on-surface">&lt;360s Pit Assembly</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">From griddle sizzle to heated thermal dispatch box in under six minutes flat. Zero cold spots, zero condensation degradation, guaranteed paddock-fresh.</p>
+</div>
+</div>
+</section>
+<!-- PIT PASS TESTIMONIALS & TRACK TELEMETRY -->
+<section class="w-full bg-surface-container-lowest px-margin-mobile lg:px-margin py-space-xl flex flex-col gap-space-lg border-y border-surface-container-high/60"><div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md"><div><span class="font-label-md text-label-md uppercase tracking-wider text-secondary">REAL-TIME TELEMETRY SENSOR HUB</span><h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-extrabold uppercase text-on-surface">PIT BAY #04 ACTIVE TELEMETRY</h2></div><div class="flex items-center gap-2 font-mono font-label-sm text-label-sm text-primary"><span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-ping"></span><span class="">SENSORS CALIBRATED: 100% NOMINAL</span></div></div><div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md"><div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-2 border border-surface-container-high"><div class="flex items-center justify-between text-outline font-label-sm text-label-sm"><span class="uppercase">GRILL THERMOCOUPLE</span><span class="text-secondary font-bold font-mono">SENSOR T-01</span></div><span class="font-headline-md text-headline-md font-bold text-secondary">652.4°F</span><div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden"><div class="bg-secondary h-full w-[96%]"></div></div><span class="font-body-sm text-body-sm text-on-surface-variant">Induction griddle delta: ±0.8°F</span></div><div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-2 border border-surface-container-high"><div class="flex items-center justify-between text-outline font-label-sm text-label-sm"><span class="uppercase">SOUS-VIDE VACUUM</span><span class="text-primary font-bold font-mono">SENSOR P-08</span></div><span class="font-headline-md text-headline-md font-bold text-primary">-0.985 bar</span><div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden"><div class="bg-primary h-full w-[98%]"></div></div><span class="font-body-sm text-body-sm text-on-surface-variant">Full cryogenic de-aeration locked</span></div><div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-2 border border-surface-container-high"><div class="flex items-center justify-between text-outline font-label-sm text-label-sm"><span class="uppercase">CHASSIS REST CLOCK</span><span class="text-on-surface font-bold font-mono">TIMER C-04</span></div><span class="font-headline-md text-headline-md font-bold text-on-surface">03:45 min</span><div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden"><div class="bg-primary-container h-full w-[75%]"></div></div><span class="font-body-sm text-body-sm text-on-surface-variant">Intramuscular juice redistribution phase</span></div><div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-2 border border-surface-container-high"><div class="flex items-center justify-between text-outline font-label-sm text-label-sm"><span class="uppercase">NITRO CRYOPRESERVE</span><span class="text-secondary font-bold font-mono">N2 TANK #2</span></div><span class="font-headline-md text-headline-md font-bold text-secondary font-mono">-196°C FLUID</span><div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden"><div class="bg-secondary h-full w-[92%]"></div></div><span class="font-body-sm text-body-sm text-on-surface-variant">Liquid nitrogen flash crunch active</span></div></div></section><section class="w-full bg-background px-margin-mobile lg:px-margin py-space-xl flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary">SCUDERIA TESTIMONIALS</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-extrabold uppercase text-on-surface">PADDOCK PILOT REPORTS</h2>
+</div>
+<div class="flex items-center gap-2 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="">4.98 / 5.0 RATING OVER 12,400+ GOURMET ALLOCATIONS</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between gap-space-md shadow-md">
+<p class="font-body-md text-body-md text-on-surface italic">"The AventaBeef is not a sandwich; it’s high-downforce gastronomy. The 650° sear gives a crust like carbon composite while the Wagyu interior dissolves instantly."</p>
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-bold">MR</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Marco Rossi</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">GT3 Paddock Pilot, Monza</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between gap-space-md shadow-md">
+<p class="font-body-md text-body-md text-on-surface italic">"I flew from London just to inspect the Murciélago Twin-Smash. The truffle infusion cuts through the fatty marbling with laser precision. Astonishing work."</p>
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-secondary font-bold">EK</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Elena Koslov</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Culinary Critic &amp; Supercar Collector</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between gap-space-md shadow-md">
+<p class="font-body-md text-body-md text-on-surface italic">"The Hot-Lap fried chicken has actual thermal aerodynamic tuning. The scoville kick accelerates gracefully instead of overwhelming the palate."</p>
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-bold">JC</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Julian Vance</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Motorsport Aerodynamicist</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE FULL MEAL PLATTER PRESENTATION MODAL -->
+<div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center p-space-md" id="inspect-modal">
+<div class="relative w-full max-w-5xl max-h-[90vh] overflow-y-auto bg-surface-container rounded-xl shadow-2xl flex flex-col">
+<!-- Modal Close Button -->
+<button class="absolute top-4 right-4 z-20 w-9 h-9 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface flex items-center justify-center transition-colors" onclick="closeInspectModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+<!-- Visual Presentation Side (Image 7 Platter combo) -->
+<div class="lg:col-span-6 relative bg-surface-container-lowest min-h-[360px] lg:min-h-full flex flex-col justify-end p-space-lg overflow-hidden">
+<img alt="Hamborghini Flagship Platter combo display" class="absolute inset-0 w-full h-full object-cover" id="modal-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPJvcu_FRtirG9BkfZElOVwUCdctH8p7Wq80kES4pT-8CpwT5P93vDbTZUL7P5KWI-9oRGrcKtyVdDYt0AtAQy3Xf3RgCinrEuGKBv7xWYqL8Ddf1EGt4YapssKKOPbSZjgGharnKpDUFWGPiLLvJ4kvijA3KdpPAhIGUiEorKAXAq5iwKSp4fwddlLWZg1HLJGPVy8ODZd_010ViYijrMOEAVPpF5LfiF6EdDvTP7OlLgiuXG-vcF"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+<div class="relative z-10 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">COMPLETE TELEMETRY PLATTER COMBO</span>
+<span class="font-body-sm text-body-sm text-on-surface">Includes: Custom Burger + Wire-Basket Fries + Chilled Classic Cola</span>
+</div>
+</div>
+<!-- Customization & Order Form Side -->
+<div class="lg:col-span-6 p-space-xl flex flex-col gap-space-md justify-between bg-surface-container">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider" id="modal-spec-code">CHASSIS SPEC: AV-650</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">SANT'AGATA KITCHEN</span>
+</div>
+<div class="flex items-baseline justify-between">
+<h2 class="font-headline-md text-headline-md font-extrabold uppercase text-on-surface" id="modal-title">The AventaBeef Wagyu Platter</h2>
+<span class="font-headline-sm text-headline-sm font-bold text-secondary" id="modal-base-price">$28.50</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="modal-description">
+              Served on an authentic carbon-slate tray with crispy hand-cut wire basket French fries sprinkled with rosemary salt and an ice-beaded glass contour bottle of classic Coca-Cola.
+            </p>
+<!-- Ingredients Breakdown Checklist -->
+<div class="flex flex-col gap-1 pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">GASTRONOMY STACK</span>
+<div class="flex flex-wrap gap-1.5 font-label-sm text-label-sm text-on-surface">
+<span class="px-2 py-0.5 rounded bg-surface-container-high">A5 Wagyu Patty (220g)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high">Aged Fontina Melt</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high">Charred Tomato</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high">Butter Lettuce</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high">Aerodynamic Brioche Bun</span>
+</div>
+</div>
+<!-- Modifiers & Customization Options -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">PERFORMANCE TUNING (ADD-ONS)</span>
+<label class="flex items-center justify-between p-2 rounded bg-surface-container-low hover:bg-surface-container-high cursor-pointer transition-colors">
+<div class="flex items-center gap-2">
+<input class="accent-primary-container w-4 h-4 rounded" id="mod-double" onchange="calculateModalTotal()" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Add Twin-Turbo Patty (+110g Wagyu)</span>
+</div>
+<span class="font-label-md text-label-md text-secondary font-bold">+$8.00</span>
+</label>
+<label class="flex items-center justify-between p-2 rounded bg-surface-container-low hover:bg-surface-container-high cursor-pointer transition-colors">
+<div class="flex items-center gap-2">
+<input class="accent-primary-container w-4 h-4 rounded" id="mod-bacon" onchange="calculateModalTotal()" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Smoked Applewood Crispy Bacon</span>
+</div>
+<span class="font-label-md text-label-md text-secondary font-bold">+$4.00</span>
+</label>
+<label class="flex items-center justify-between p-2 rounded bg-surface-container-low hover:bg-surface-container-high cursor-pointer transition-colors">
+<div class="flex items-center gap-2">
+<input class="accent-primary-container w-4 h-4 rounded" id="mod-truffle" onchange="calculateModalTotal()" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Extra Shaved Norcia Black Truffle</span>
+</div>
+<span class="font-label-md text-label-md text-secondary font-bold">+$6.00</span>
+</label>
+</div>
+<!-- Bun Selection Dial -->
+<div class="flex flex-col gap-1 pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">AERODYNAMIC HOOD (BUN TYPE)</span>
+<div class="grid grid-cols-2 gap-2">
+<button class="bun-btn py-1.5 px-space-sm rounded bg-primary-container text-on-primary-container font-label-md text-label-md uppercase font-bold text-center" id="bun-brioche" onclick="selectBun('brioche')" type="button">Golden Brioche</button>
+<button class="bun-btn py-1.5 px-space-sm rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md uppercase font-bold text-center hover:bg-surface-container-high" id="bun-charcoal" onclick="selectBun('charcoal')" type="button">Bio-Carbon Bun</button>
+</div>
+</div>
+</div>
+<!-- Quantity & Add to Cart Drawer Trigger -->
+<div class="flex flex-col gap-space-xs pt-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">SOMMELIER &amp; BEVERAGE ALLOCATION</span><div class="grid grid-cols-3 gap-2"><button class="bev-btn p-2 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase font-bold text-center flex flex-col items-center justify-center" data-bev="cola" id="bev-cola" onclick="selectBeverage('cola')" type="button"><span class="font-bold">VINTAGE COLA</span><span class="text-[11px] opacity-90">Glass Contour</span></button><button class="bev-btn p-2 rounded bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase font-bold text-center flex flex-col items-center justify-center" data-bev="barolo" id="bev-barolo" onclick="selectBeverage('barolo')" type="button"><span class="font-bold">BAROLO '18</span><span class="text-secondary text-[11px]">+$14.00</span></button><button class="bev-btn p-2 rounded bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase font-bold text-center flex flex-col items-center justify-center" data-bev="dom" id="bev-dom" onclick="selectBeverage('dom')" type="button"><span class="font-bold">DOM PÉRIGNON</span><span class="text-secondary text-[11px]">+$28.00</span></button></div></div><div class="p-space-xs bg-surface-container-low rounded border border-surface-container flex items-center justify-between text-center font-label-sm text-label-sm"><div class="flex flex-col"><span class="text-outline uppercase">PROTEIN</span><span class="font-bold text-on-surface">58g</span></div><div class="flex flex-col"><span class="text-outline uppercase">OMEGA 3:6</span><span class="font-bold text-secondary">1:2.4 OPT</span></div><div class="flex flex-col"><span class="text-outline uppercase">COLLAGEN MATRIX</span><span class="font-bold text-primary">98.6%</span></div><div class="flex flex-col"><span class="text-outline uppercase">SODIUM EQUIV</span><span class="font-bold text-on-surface">890mg</span></div></div><div class="flex flex-col gap-space-sm pt-space-sm bg-surface-container-low p-space-sm rounded">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase text-on-surface-variant">TOTAL PLATTER SPEC</span>
+<span class="font-headline-sm text-headline-sm font-extrabold text-secondary" id="modal-calc-total">$28.50</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center bg-surface-container-high rounded">
+<button class="w-9 h-9 flex items-center justify-center text-on-surface hover:text-primary font-bold" onclick="adjustModalQty(-1)">-</button>
+<span class="px-3 font-label-md text-label-md font-bold text-on-surface" id="modal-qty">1</span>
+<button class="w-9 h-9 flex items-center justify-center text-on-surface hover:text-primary font-bold" onclick="adjustModalQty(1)">+</button>
+</div>
+<button class="flex-1 bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-lg text-label-lg uppercase font-bold py-2.5 rounded transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(255,87,8,0.3)]" onclick="confirmModalAddToCart()">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span class="">ADD PLATTER TO CART</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- INTERACTIVE COCKPIT CART & CHECKOUT DRAWER -->
+<div class="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-surface-container-lowest shadow-2xl translate-x-full transition-transform duration-300 flex flex-col justify-between" id="cart-drawer">
+<!-- Header -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">tune</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold uppercase text-on-surface">COCKPIT BAY</span>
+<span class="font-label-sm text-label-sm text-outline">TELEMETRY ORDER DISPATCH</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface flex items-center justify-center transition-colors" onclick="toggleCartDrawer()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Cart Item Stream -->
+<div class="flex-1 overflow-y-auto p-space-md flex flex-col gap-space-sm" id="cart-items-container"><div class="bg-surface-container-low p-space-sm rounded flex flex-col gap-2">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface uppercase text-[15px]">The AventaBeef Wagyu Platter</span>
+<span class="font-body-sm text-body-sm text-outline">A5 Wagyu, Double Patty, Brioche Bun</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-secondary">$36.50</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">$36.50 / unit</span>
+<div class="flex items-center bg-surface-container rounded">
+<button class="w-7 h-7 flex items-center justify-center text-on-surface hover:text-primary" onclick="adjustCartItemQty(0, -1)">-</button>
+<span class="px-2 font-label-sm text-label-sm font-bold text-on-surface">1</span>
+<button class="w-7 h-7 flex items-center justify-center text-on-surface hover:text-primary" onclick="adjustCartItemQty(0, 1)">+</button>
+</div>
+</div>
+</div><div class="bg-surface-container-low p-space-sm rounded flex flex-col gap-2">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface uppercase text-[15px]">The Huracán Hot-Lap</span>
+<span class="font-body-sm text-body-sm text-outline">Buttermilk Poultry, Extra Habanero</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-secondary">$22.50</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">$22.50 / unit</span>
+<div class="flex items-center bg-surface-container rounded">
+<button class="w-7 h-7 flex items-center justify-center text-on-surface hover:text-primary" onclick="adjustCartItemQty(1, -1)">-</button>
+<span class="px-2 font-label-sm text-label-sm font-bold text-on-surface">1</span>
+<button class="w-7 h-7 flex items-center justify-center text-on-surface hover:text-primary" onclick="adjustCartItemQty(1, 1)">+</button>
+</div>
+</div>
+</div></div>
+<!-- Cart Footer & Checkout Controls -->
+<div class="p-space-md bg-surface-container-low flex flex-col gap-space-sm">
+<!-- Dispatch Option -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase text-outline">SELECT DISPATCH MODE</span>
+<div class="grid grid-cols-2 gap-2">
+<button class="dispatch-btn p-2 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase font-bold text-left flex flex-col" id="dispatch-express" onclick="setDispatchMode('express')" type="button">
+<span class="">PIT-STOP EXPRESS</span>
+<span class="opacity-80 font-normal">Under 30 Mins</span>
+</button>
+<button class="dispatch-btn p-2 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase font-bold text-left flex flex-col hover:bg-surface-container-high" id="dispatch-pickup" onclick="setDispatchMode('pickup')" type="button">
+<span class="">PADDOCK PICKUP</span>
+<span class="opacity-80 font-normal">Sant'Agata Pit 04</span>
+</button>
+</div>
+</div>
+<!-- Financial Calculations -->
+<div class="flex flex-col gap-1 pt-space-xs font-body-sm text-body-sm">
+<div class="flex justify-between text-on-surface-variant">
+<span class="">Telemetry Subtotal</span>
+<span class="font-bold text-on-surface" id="cart-subtotal">$59.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span class="">Paddock Logistics Fee</span>
+<span class="font-bold text-on-surface" id="cart-logistics">$5.00</span>
+</div>
+<div class="flex justify-between text-body-md font-bold text-secondary pt-1">
+<span class="uppercase">Total Allocation Due</span>
+<span class="text-headline-sm font-headline-sm" id="cart-total-grand">$64.00</span>
+</div>
+</div>
+<!-- Checkout Ignition Button -->
+<button class="w-full bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-lg text-label-lg uppercase font-bold py-3 rounded transition-all flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(255,87,8,0.4)]" onclick="executeIgnitionCheckout()">
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+<span class="">IGNITION CHECKOUT</span>
+</button>
+</div>
+</div>
+<!-- ORDER DISPATCH CONFIRMATION MODAL -->
+<div class="fixed inset-0 z-50 hidden bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center p-space-md" id="checkout-modal">
+<div class="relative w-full max-w-md bg-surface-container p-space-xl rounded-xl shadow-2xl flex flex-col items-center text-center gap-space-md">
+<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container animate-bounce">
+<span class="material-symbols-outlined text-[36px]">check</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">ALL SYSTEMS ENGAGED</span>
+<h3 class="font-headline-md text-headline-md font-extrabold uppercase text-on-surface">ORDER CONFIRMED</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Your high-velocity Wagyu cut is currently searing at 650°F in pit bay #04.</p>
+</div>
+<div class="w-full bg-surface-container-low p-space-sm rounded flex flex-col gap-1 text-left font-label-sm text-label-sm">
+<div class="flex justify-between">
+<span class="text-outline">TRACKING TOKEN:</span>
+<span class="font-bold text-secondary font-mono">#HB-9912-V12</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">PIT DISPATCH EST:</span>
+<span class="font-bold text-on-surface">18 MINUTES</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">CHEF COMMAND:</span>
+<span class="font-bold text-on-surface">CHEF ENRICO V.</span>
+</div>
+</div>
+<button class="w-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md uppercase font-bold py-2.5 rounded transition-colors" onclick="closeCheckoutModal()">
+        RETURN TO COCKPIT
+      </button>
+</div>
+</div>
+</div>
+<!-- Vanilla JS Micro-Interactions & State Engine -->
+<script>
+  // Initial Store Data
+  const fleetDatabase = {
+    aventabeef: {
+      id: "aventabeef",
+      code: "CHASSIS SPEC: AV-650",
+      title: "The AventaBeef Wagyu Platter",
+      price: 28.50,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCPJvcu_FRtirG9BkfZElOVwUCdctH8p7Wq80kES4pT-8CpwT5P93vDbTZUL7P5KWI-9oRGrcKtyVdDYt0AtAQy3Xf3RgCinrEuGKBv7xWYqL8Ddf1EGt4YapssKKOPbSZjgGharnKpDUFWGPiLLvJ4kvijA3KdpPAhIGUiEorKAXAq5iwKSp4fwddlLWZg1HLJGPVy8ODZd_010ViYijrMOEAVPpF5LfiF6EdDvTP7OlLgiuXG-vcF",
+      desc: "Served on a forged carbon slate tray with crispy hand-cut wire basket French fries sprinkled with rosemary sea salt and an ice-beaded contour bottle of classic Coca-Cola.",
+      ingredients: ["A5 Wagyu Patty (220g)", "Melted Fontina", "Charred Heirloom Tomato", "Butter Lettuce", "Aero Brioche Bun"]
+    },
+    murcielago: {
+      id: "murcielago",
+      code: "CHASSIS SPEC: MU-V12",
+      title: "The Murciélago Twin-Smash Platter",
+      price: 26.00,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAjE7vkBpxZJCT9uw5c29fLp-sU5t0ev7XuJ4helNuzPAAn0KXsS1sHyMz2lIgZm45TZ0rF7a_SFtqMnJNeqWCdCpus3apfdSNt62HTmOv2NKm5qTec6mqH80EWjJbceFKDShyhFki6CrquUO3cvkUdr2gtg30FNNR4LHsqjxGzc5PMzKkrPpd4HzVbzI1ChfxuFItA4f8c4HyYSSYlvRYaTClk6LuLdQOsh5yu3GEuo5aWY0n-6uC1",
+      desc: "Dual smashed Wagyu rounds with crisp lace skirts, shaved black summer truffles, Gruyère waterfall, and wild arugula, paired with truffle-dipped shoestring fries and artisanal soda.",
+      ingredients: ["Twin Wagyu Patties (2x 110g)", "Norcia Black Truffles", "Cave-Aged Gruyère", "Truffle Aioli", "Brioche Bun"]
+    },
+    huracan: {
+      id: "huracan",
+      code: "CHASSIS SPEC: HU-610",
+      title: "The Huracán Hot-Lap Platter",
+      price: 22.50,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuC0aKG3Z52hNGbe_gUwG417RZE2OYnDvQ9m1HHUcJNHq7G2jSOSdJHhR2mvxIPlfzU_CFCHYmJpGKB01P5yPnpazaUB0q2zmJGILMNIj_P02yBorNmsQtVqmrEhSgPe8iFvIicX8UBxXkBS34l1GbPFwbOdlDuBCwhO1FQx9yocLjgatbeDb3UESRhdJ7dLZLcM6glWOEuaKDdiL2xbCvuTCqY3xCA7Z-N0pnFUzWYhYpNL0OljHXpJ",
+      desc: "Buttermilk fried chicken thigh coated in habanero chili oil and pepper cheese melt with pickled jalapeño coins, spicy seasoned curly fries, and an icy beverage.",
+      ingredients: ["Buttermilk Poultry Thigh", "Smoked Habanero Glaze", "Pickled Jalapeños", "Yuzu Cabbage Slaw", "Seeded Bun"]
+    },
+    revuelto: {
+      id: "revuelto",
+      code: "CHASSIS SPEC: RV-HYBRID",
+      title: "The Revuelto Green Hybrid Platter",
+      price: 21.00,
+      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDdW8MeuEbRr0k_rgpJ4ua5l8yYM0yoAD_MxaB7kfLumYPCUiaFyYU-KmNGoNjuEWxAkbVpybU3mIU6wjS7-hzZWM8AXXdz3PZoKTsL6GnW5Q7Emc19GYAPTYGsMwLSGSq3tshQxIQHOak8Z2f_KiOPEwH94unEUzbUkGMyC11GEIctp41lN30LpJBVnYcSLIRb9VWIFMW946QyABeLWTU5h9FKpnr2evCIawjsQVvkTboxmrK6K1ij",
+      desc: "Wood-fired Portobello cap, charred ripe avocado, chimichurri herbs, and vegan cheese melt cradled by an activated carbon black aero bun, served with sweet potato wedges.",
+      ingredients: ["Flame Portobello Cap", "Charred Haas Avocado", "Herb Chimichurri", "Vegan Provolone", "Bio-Carbon Black Bun"]
+    }
+  };
+
+  let activeModalItem = fleetDatabase.aventabeef;
+  let modalQty = 1;
+  let selectedBun = 'brioche';
+  let selectedBeverage = 'cola';
+  const beverageOptions = {
+    cola: { label: 'Vintage Cola', price: 0 },
+    barolo: { label: "Barolo '18", price: 14 },
+    dom: { label: 'Dom Pérignon', price: 28 }
+  };
+
+  let cart = [
+    {
+      name: "The AventaBeef Wagyu Platter",
+      details: "A5 Wagyu, Double Patty, Brioche Bun",
+      price: 36.50,
+      qty: 1
+    },
+    {
+      name: "The Huracán Hot-Lap",
+      details: "Buttermilk Poultry, Extra Habanero",
+      price: 22.50,
+      qty: 1
+    }
+  ];
+
+  let dispatchMode = 'express';
+
+  function filterFleet(category) {
+    const cards = document.querySelectorAll('.fleet-card');
+    const tabs = document.querySelectorAll('.fleet-tab');
+
+    tabs.forEach(tab => {
+      tab.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-bold');
+      tab.classList.add('text-on-surface-variant');
+    });
+
+    const activeTab = document.getElementById(`tab-${category}`);
+    if (activeTab) {
+      activeTab.classList.remove('text-on-surface-variant');
+      activeTab.classList.add('bg-primary-container', 'text-on-primary-container', 'font-bold');
+    }
+
+    cards.forEach(card => {
+      if (category === 'all' || card.getAttribute('data-category') === category) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function notifyHud(msg) {
+    const ticker = document.getElementById('hud-ticker');
+    if (ticker) {
+      ticker.innerHTML = `<span>TELEMETRY UPDATE: <strong class="text-secondary">${msg}</strong></span><span class="text-primary font-bold">ACKNOWLEDGED</span>`;
+    }
+  }
+
+  function openInspectModal(burgerKey) {
+    const data = fleetDatabase[burgerKey] || fleetDatabase.aventabeef;
+    activeModalItem = data;
+    modalQty = 1;
+
+    document.getElementById('modal-img').src = data.image;
+    document.getElementById('modal-spec-code').innerText = data.code;
+    document.getElementById('modal-title').innerText = data.title;
+    document.getElementById('modal-base-price').innerText = `$${data.price.toFixed(2)}`;
+    document.getElementById('modal-description').innerText = data.desc;
+    document.getElementById('modal-qty').innerText = "1";
+
+    // Uncheck modifiers
+    document.getElementById('mod-double').checked = false;
+    document.getElementById('mod-bacon').checked = false;
+    document.getElementById('mod-truffle').checked = false;
+
+    selectBun('brioche');
+    selectBeverage('cola');
+    calculateModalTotal();
+
+    document.getElementById('inspect-modal').classList.remove('hidden');
+  }
+
+  function closeInspectModal() {
+    document.getElementById('inspect-modal').classList.add('hidden');
+  }
+
+  function selectBun(type) {
+    selectedBun = type;
+    const bBtn = document.getElementById('bun-brioche');
+    const cBtn = document.getElementById('bun-charcoal');
+
+    if (type === 'brioche') {
+      bBtn.className = "bun-btn py-1.5 px-space-sm rounded bg-primary-container text-on-primary-container font-label-md text-label-md uppercase font-bold text-center";
+      cBtn.className = "bun-btn py-1.5 px-space-sm rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md uppercase font-bold text-center hover:bg-surface-container-high";
+    } else {
+      cBtn.className = "bun-btn py-1.5 px-space-sm rounded bg-primary-container text-on-primary-container font-label-md text-label-md uppercase font-bold text-center";
+      bBtn.className = "bun-btn py-1.5 px-space-sm rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md uppercase font-bold text-center hover:bg-surface-container-high";
+    }
+  }
+
+  function selectBeverage(type) {
+    selectedBeverage = type;
+    const activeCls = "bev-btn p-2 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase font-bold text-center flex flex-col items-center justify-center";
+    const idleCls = "bev-btn p-2 rounded bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase font-bold text-center flex flex-col items-center justify-center";
+    ['cola', 'barolo', 'dom'].forEach((key) => {
+      const btn = document.getElementById('bev-' + key);
+      if (btn) btn.className = key === type ? activeCls : idleCls;
+    });
+    calculateModalTotal();
+  }
+
+  function adjustModalQty(delta) {
+    modalQty = Math.max(1, modalQty + delta);
+    document.getElementById('modal-qty').innerText = modalQty;
+    calculateModalTotal();
+  }
+
+  function calculateModalTotal() {
+    let singlePrice = activeModalItem.price;
+    if (document.getElementById('mod-double').checked) singlePrice += 8.00;
+    if (document.getElementById('mod-bacon').checked) singlePrice += 4.00;
+    if (document.getElementById('mod-truffle').checked) singlePrice += 6.00;
+    singlePrice += (beverageOptions[selectedBeverage] || beverageOptions.cola).price;
+
+    const total = singlePrice * modalQty;
+    document.getElementById('modal-calc-total').innerText = `$${total.toFixed(2)}`;
+  }
+
+  function confirmModalAddToCart() {
+    let modifiersList = [];
+    let singlePrice = activeModalItem.price;
+    if (document.getElementById('mod-double').checked) {
+      modifiersList.push("Twin-Turbo Patty");
+      singlePrice += 8.00;
+    }
+    if (document.getElementById('mod-bacon').checked) {
+      modifiersList.push("Applewood Bacon");
+      singlePrice += 4.00;
+    }
+    if (document.getElementById('mod-truffle').checked) {
+      modifiersList.push("Norcia Truffle");
+      singlePrice += 6.00;
+    }
+    modifiersList.push(selectedBun === 'brioche' ? "Brioche Hood" : "Bio-Carbon Hood");
+    const bev = beverageOptions[selectedBeverage] || beverageOptions.cola;
+    modifiersList.push(bev.label);
+    singlePrice += bev.price;
+
+    cart.push({
+      name: activeModalItem.title,
+      details: modifiersList.join(", "),
+      price: singlePrice,
+      qty: modalQty
+    });
+
+    closeInspectModal();
+    renderCart();
+    toggleCartDrawer(true);
+  }
+
+  function addToCartDirect(name, price, details) {
+    cart.push({
+      name: name,
+      details: details,
+      price: price,
+      qty: 1
+    });
+    renderCart();
+    toggleCartDrawer(true);
+  }
+
+  function toggleCartDrawer(forceOpen = null) {
+    const drawer = document.getElementById('cart-drawer');
+    const isOpen = !drawer.classList.contains('translate-x-full');
+    if (forceOpen === true || (!isOpen && forceOpen === null)) {
+      renderCart();
+      drawer.classList.remove('translate-x-full');
+    } else {
+      drawer.classList.add('translate-x-full');
+    }
+  }
+
+  // Hook cart button in shell nav
+  document.addEventListener('DOMContentLoaded', () => {
+    const shellCartLink = document.querySelector('a[data-path="cart-telemetry"]');
+    if (shellCartLink) {
+      shellCartLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleCartDrawer();
+      });
+    }
+    renderCart();
+  });
+
+  function adjustCartItemQty(index, delta) {
+    cart[index].qty += delta;
+    if (cart[index].qty <= 0) {
+      cart.splice(index, 1);
+    }
+    renderCart();
+  }
+
+  function setDispatchMode(mode) {
+    dispatchMode = mode;
+    const exp = document.getElementById('dispatch-express');
+    const pick = document.getElementById('dispatch-pickup');
+    if (mode === 'express') {
+      exp.className = "dispatch-btn p-2 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase font-bold text-left flex flex-col";
+      pick.className = "dispatch-btn p-2 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase font-bold text-left flex flex-col hover:bg-surface-container-high";
+    } else {
+      pick.className = "dispatch-btn p-2 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase font-bold text-left flex flex-col";
+      exp.className = "dispatch-btn p-2 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase font-bold text-left flex flex-col hover:bg-surface-container-high";
+    }
+    renderCart();
+  }
+
+  function renderCart() {
+    const container = document.getElementById('cart-items-container');
+    if (!container) return;
+    container.innerHTML = '';
+
+    let subtotal = 0;
+    let totalItems = 0;
+
+    if (cart.length === 0) {
+      container.innerHTML = `
+        <div class="h-64 flex flex-col items-center justify-center text-center text-on-surface-variant gap-2">
+          <span class="material-symbols-outlined text-[48px] text-outline">shopping_bag</span>
+          <span class="font-headline-sm text-headline-sm uppercase">CHASSIS BAY EMPTY</span>
+          <span class="font-body-sm text-body-sm">Configure a burger from the showroom fleet to initiate ignition.</span>
+        </div>
+      `;
+    } else {
+      cart.forEach((item, index) => {
+        const itemTotal = item.price * item.qty;
+        subtotal += itemTotal;
+        totalItems += item.qty;
+
+        const el = document.createElement('div');
+        el.className = "bg-surface-container-low p-space-sm rounded flex flex-col gap-2";
+        el.innerHTML = `
+          <div class="flex items-start justify-between">
+            <div class="flex flex-col">
+              <span class="font-headline-sm text-headline-sm font-bold text-on-surface uppercase text-[15px]">${item.name}</span>
+              <span class="font-body-sm text-body-sm text-outline">${item.details}</span>
+            </div>
+            <span class="font-label-md text-label-md font-bold text-secondary">$${itemTotal.toFixed(2)}</span>
+          </div>
+          <div class="flex items-center justify-between pt-1">
+            <span class="font-label-sm text-label-sm text-on-surface-variant">$${item.price.toFixed(2)} / unit</span>
+            <div class="flex items-center bg-surface-container rounded">
+              <button onclick="adjustCartItemQty(${index}, -1)" class="w-7 h-7 flex items-center justify-center text-on-surface hover:text-primary">-</button>
+              <span class="px-2 font-label-sm text-label-sm font-bold text-on-surface">${item.qty}</span>
+              <button onclick="adjustCartItemQty(${index}, 1)" class="w-7 h-7 flex items-center justify-center text-on-surface hover:text-primary">+</button>
+            </div>
+          </div>
+        `;
+        container.appendChild(el);
+      });
+    }
+
+    const logisticsFee = (dispatchMode === 'express' && cart.length > 0) ? 5.00 : 0.00;
+    const grandTotal = subtotal + logisticsFee;
+
+    document.getElementById('cart-subtotal').innerText = `$${subtotal.toFixed(2)}`;
+    document.getElementById('cart-logistics').innerText = `$${logisticsFee.toFixed(2)}`;
+    document.getElementById('cart-total-grand').innerText = `$${grandTotal.toFixed(2)}`;
+
+    // Update shell badges if present
+    const shellBadge = document.querySelector('a[data-path="cart-telemetry"] span.bg-primary-container');
+    if (shellBadge) shellBadge.innerText = totalItems;
+    const shellPrice = document.querySelector('a[data-path="cart-telemetry"] span.font-bold.text-on-surface');
+    if (shellPrice) shellPrice.innerText = `$${grandTotal.toFixed(2)}`;
+  }
+
+  function executeIgnitionCheckout() {
+    if (cart.length === 0) {
+      alert("Please select at least one gourmet burger from the showroom fleet.");
+      return;
+    }
+    toggleCartDrawer(false);
+    window.location.href = 'checkout.html';
+  }
+
+  function closeCheckoutModal() {
+    document.getElementById('checkout-modal').classList.add('hidden');
+  }
+</script></main><footer class="w-full bg-surface-container-lowest"><div class="w-full px-margin-mobile lg:px-margin py-space-xl grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-space-xl"><div class="xl:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface">HAMBORGHINI</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">ATELIER DI GOURMET AUTOMOBILI</span></div></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">Born in Sant'Agata Bolognese. Engineered at the intersection of extreme aerodynamic design and hyper-refined Michelin culinary craft. Every Wagyu blend is precision-seared at 650°F to unleash raw thermal perfection.</p><div class="flex items-center gap-space-md pt-space-xs"><span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Telemetry Channel:</span><div class="flex gap-space-xs"><a class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">rss_feed</span></a><a class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">public</span></a><a class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">podcasts</span></a></div></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-label-lg text-label-lg uppercase tracking-wider text-primary">Dynamic Navigation</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="menu-showroom" href="menu_showroom.html">Full Menu &amp; Specs</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="nutritional-telemetry" href="menu_showroom.html">Nutritional Telemetry</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="track-catering" href="pit_stop_locations.html">Track Catering Operations</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="vip-lounge" href="vip_lounge.html">Scuderia VIP Club</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="burger-configurator" href="menu_showroom.html">Bespoke Configurator</a></ul></div><div class="flex flex-col gap-space-sm"><h3 class="font-label-lg text-label-lg uppercase tracking-wider text-secondary">Culinary Lab Operations</h3><div class="font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-space-xs"><span class="">Via Modena 12, Sant'Agata Bolognese (BO), Italy</span><span class="text-on-surface font-semibold">Pit Bay Hours:</span><span class="">Mon - Thu: 11:30 - 23:00 CET</span><span class="">Fri - Sun: 11:30 - 02:00 CET (Late Track Shift)</span><div class="pt-space-xs flex items-center gap-space-xs text-secondary font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="">ACTIVE ALLOCATION DISPATCH: LIVE</span></div></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface">The Pit Pass</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Receive confidential trackside drop dispatches, allocation access, and invitations to secret paddock dinners.</p><div class="flex flex-col gap-space-xs pt-space-xs"><div class="flex items-center bg-surface-container rounded px-space-sm py-space-xs"><input class="bg-transparent text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none w-full" placeholder="pilot@squadra.com" type="email"/><button class="bg-primary-container text-on-primary-container hover:bg-secondary-container hover:text-on-secondary-container font-label-md text-label-md px-space-sm py-space-xs rounded transition-colors uppercase font-bold shrink-0" onclick="subscribePitPass(this)" type="button">Join</button></div><span class="font-label-sm text-label-sm text-outline">Zero spam. High-octane culinary intelligence only.</span></div></div></div><div class="w-full px-margin-mobile lg:px-margin py-space-md bg-surface-container-low flex flex-col md:flex-row items-center justify-between gap-space-sm"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">© 2026 HAMBORGHINI S.P.A. ALL RIGHTS RESERVED. AUTOMOTIVE GOURMET SPECIFICATION DIVISION.</span><div class="flex items-center gap-space-md font-label-sm text-label-sm uppercase text-on-surface-variant"><a class="hover:text-on-surface transition-colors" href="our_story.html">Telemetry Privacy</a><a class="hover:text-on-surface transition-colors" href="our_story.html">Terms of Allocation</a><a class="hover:text-on-surface transition-colors" href="our_story.html">Security Protocol</a></div></div></footer>
+<script>function subscribePitPass(btn){const wrap=btn.closest("div");const input=wrap?wrap.querySelector('input[type="email"]'):null;const email=input&&input.value.trim();if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){alert("Enter a valid pilot email to join The Pit Pass.");if(input)input.focus();return;}btn.textContent="Joined";btn.disabled=true;btn.classList.add("opacity-80");if(input){input.value="";input.placeholder="Telemetry locked in";}alert("Pit Pass armed for "+email+" — confidential drop dispatches incoming.");}</script>
+<script id="nav-responsive-js">
+(function(){/*scroll-unlock-init*/document.documentElement.classList.remove('nav-open');document.body.classList.remove('nav-open');var scrollLockY=0;
+  var toggle=document.getElementById("nav-toggle");
+  var panel=document.getElementById("mobile-nav-panel");
+  var backdrop=document.getElementById("nav-backdrop");
+  var icon=document.getElementById("nav-toggle-icon");
+  if(!toggle||!panel)return;
+  function setOpen(open){
+    toggle.setAttribute("aria-expanded",open?"true":"false");
+    toggle.setAttribute("aria-label",open?"Close menu":"Open menu");
+    panel.classList.toggle("is-open",open);
+    if(backdrop){
+      backdrop.classList.toggle("is-open",open);
+      backdrop.setAttribute("aria-hidden",open?"false":"true");
+    }
+    if(open){scrollLockY=window.scrollY||document.documentElement.scrollTop||0;document.documentElement.classList.add("nav-open");document.body.classList.add("nav-open");document.body.style.top=(-scrollLockY)+"px";}else{document.documentElement.classList.remove("nav-open");document.body.classList.remove("nav-open");document.body.style.removeProperty("top");document.body.style.removeProperty("position");document.documentElement.style.removeProperty("overflow");document.body.style.removeProperty("overflow");window.scrollTo(0,scrollLockY||0);}
+    if(icon)icon.textContent=open?"close":"menu";
+  }
+  function isOpen(){return toggle.getAttribute("aria-expanded")==="true";}
+  toggle.addEventListener("click",function(e){e.preventDefault();setOpen(!isOpen());});
+  if(backdrop)backdrop.addEventListener("click",function(){setOpen(false);});
+  panel.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){setOpen(false);});});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&isOpen())setOpen(false);});
+  window.addEventListener("resize",function(){
+    var bp=panel.classList.contains("md:hidden")?768:1024;
+    if(window.innerWidth>=bp&&isOpen())setOpen(false);
+  });
+})();
+</script></body></html>

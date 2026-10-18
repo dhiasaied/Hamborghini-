@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;min-height:100%;height:auto!important;max-height:none!important;position:relative;}html{overflow-x:auto;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;}body{overflow-x:visible;overflow-y:visible;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;touch-action:auto;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}html{scrollbar-width:thin;scrollbar-color:rgba(172,137,126,.65) transparent;}::-webkit-scrollbar{width:10px;height:10px;}::-webkit-scrollbar-thumb{background:rgba(172,137,126,.55);border-radius:8px;}::-webkit-scrollbar-track{background:transparent;}::-webkit-scrollbar-corner{background:transparent;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-highest":"#353437","on-error-container":"#ffdad6","surface-bright":"#39393b","tertiary-fixed":"#d4e4fa","on-secondary":"#472a00","surface-variant":"#353437","on-error":"#690005","on-tertiary-fixed-variant":"#39485a","background":"#131315","secondary":"#ffb95f","primary-fixed-dim":"#ffb59c","on-primary-container":"#511500","on-secondary-fixed":"#2a1700","tertiary-fixed-dim":"#b9c8de","on-secondary-container":"#5b3800","primary-fixed":"#ffdbcf","secondary-container":"#ee9800","on-tertiary-container":"#1c2b3c","inverse-primary":"#aa3600","surface":"#131315","surface-dim":"#131315","surface-container-high":"#2a2a2c","surface-container-lowest":"#0e0e10","on-primary":"#5c1900","tertiary":"#b9c8de","on-secondary-fixed-variant":"#653e00","tertiary-container":"#8392a6","outline":"#ac897e","surface-container":"#201f21","on-primary-fixed":"#390c00","surface-tint":"#ffb59c","on-primary-fixed-variant":"#822700","on-surface":"#e5e1e4","surface-container-low":"#1c1b1d","on-tertiary-fixed":"#0d1c2d","on-tertiary":"#233143","on-background":"#e5e1e4","on-surface-variant":"#e5beb2","secondary-fixed":"#ffddb8","error-container":"#93000a","primary-container":"#ff5708","outline-variant":"#5c4037","secondary-fixed-dim":"#ffb95f","error":"#ffb4ab","inverse-surface":"#e5e1e4","inverse-on-surface":"#313032","primary":"#ffb59c"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xs":"0.25rem","space-sm":"0.5rem","margin-mobile":"1.25rem","space-md":"1rem","margin":"3rem","gutter":"1.5rem","space-lg":"1.5rem","gutter-mobile":"1rem","space-xl":"2.5rem"},"fontFamily":{"body-md":["Space Grotesk"],"body-lg":["Space Grotesk"],"headline-xl-mobile":["Syne"],"headline-lg":["Syne"],"label-md":["Space Grotesk"],"headline-md":["Syne"],"headline-lg-mobile":["Syne"],"body-sm":["Space Grotesk"],"headline-sm":["Syne"],"label-lg":["Space Grotesk"],"label-sm":["Space Grotesk"],"headline-xl":["Syne"]},"fontSize":{"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-xl-mobile":["36px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"800"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.1em","fontWeight":"600"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"0em","fontWeight":"700"}],"headline-lg-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0.01em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"700"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.12em","fontWeight":"700"}],"headline-xl":["56px",{"lineHeight":"60px","letterSpacing":"-0.02em","fontWeight":"800"}]}}}};</script>
+<style id="nav-responsive-css">
+/* Scroll: allow vertical + horizontal when content overflows; never trap the document */
+html,body{max-width:100%;height:auto!important;max-height:none!important;position:relative!important;}
+html{overflow-x:auto!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;touch-action:auto;}body{overflow-x:visible!important;overflow-y:visible!important;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;touch-action:auto;}
+img,video,canvas{max-width:100%;}
+[id^="threejs-container"]{touch-action:pan-y;}
+#cart-drawer.translate-x-full{pointer-events:none;}
+@media (max-width:767px){input,select,textarea{font-size:16px!important;}#nav-toggle,header button,header a[href].inline-flex,header a[href].flex{min-width:44px;min-height:44px;}main button,.cockpit-cta,[type=submit]{min-height:44px;}}
+  #mobile-nav-panel{max-height:0;opacity:0;overflow:hidden;visibility:hidden;transition:max-height .38s cubic-bezier(.4,0,.2,1),opacity .28s ease,visibility .28s;}
+  #mobile-nav-panel.is-open{max-height:min(80vh,640px);opacity:1;visibility:visible;overflow-y:auto;-webkit-overflow-scrolling:touch;touch-action:pan-y;overscroll-behavior:contain;}
+  #nav-backdrop{opacity:0;pointer-events:none!important;transition:opacity .3s ease;}
+  #nav-backdrop.is-open{opacity:1;pointer-events:auto!important;}
+  /* Lock background scroll only while mobile nav is open (html+body); keep panel scrollable */
+  html.nav-open{overflow:hidden!important;}body.nav-open{position:fixed!important;inset:0 auto auto 0;width:100%;overflow:hidden!important;overscroll-behavior:none;touch-action:auto;}
+  body.nav-open main,body.nav-open>footer{pointer-events:none;}
+  @media (min-width:1024px){
+    #mobile-nav-panel,#nav-backdrop,#nav-toggle{display:none!important;}
+    html.nav-open{overflow:auto!important;}body.nav-open{position:relative!important;inset:auto;width:auto;overflow:visible!important;overscroll-behavior:auto;}
+    body.nav-open main,body.nav-open>footer{pointer-events:auto;}
+  }
+</style></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.6)]"><div class="h-16 sm:h-20 w-full px-margin-mobile lg:px-margin flex items-center justify-between gap-space-sm sm:gap-space-md"><div class="flex items-center gap-space-lg shrink-0"><a class="flex items-center gap-space-sm group" data-path="home" href="index.html"><img alt="Hamborghini Shield Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VEiYRHW1Qw2FJqH1AZC9JcV_02p0fRrLFuGWF4jkzxW_2Oc5tynzJfbDGni0SNCvfwZdQTPeJhJ2vNWvbxWFZmO8rFHJWah4QX45ZAWeZSCErqx6GCU6owhWiaC6i4x3YD5i9fcHR5pxRjkbay5fbd6JEdGc4HmAfXY4lHjpDrw2wA8T777KbDvOkNaxYo-3rI9EYBxro67IQKitMil4VDy63Po0BlHfr__Sqr6nvexLk3jE1ujkwm6TE"/><div class="flex flex-col"><span class="font-headline-sm text-[16px] sm:text-headline-sm uppercase tracking-wider text-on-surface group-hover:text-primary transition-colors leading-tight">HAMBORGHINI</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase hidden sm:inline">SANT'AGATA GOURMET</span></div></a><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-sm text-label-sm uppercase text-on-surface-variant">SCUDERIA PIT: <strong class="text-secondary font-bold">650°F OPTIMAL</strong></span></div></div><nav class="hidden lg:flex items-center gap-space-sm shrink-0" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded"><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="home" href="index.html">Home / Showroom</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="menu-showroom" href="menu_showroom.html">Menu / Showroom</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="our-story" href="our_story.html">Our Story</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="pit-stop-locations" href="pit_stop_locations.html">Pit Stop Locations</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="vip-lounge" href="vip_lounge.html">VIP Lounge</a></nav><div class="flex items-center gap-space-xs sm:gap-space-md shrink-0"><a class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded hover:bg-surface-container-high hover:text-on-surface text-on-surface-variant transition-colors shadow-[0_0_12px_rgba(255,185,95,0.12)]" data-path="cockpit-bay-cart" href="checkout.html" aria-label="Cockpit Bay cart"><span class="material-symbols-outlined text-secondary text-[20px]">shopping_bag</span><div class="hidden sm:flex flex-col text-left"><span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Cockpit Bay</span><span class="font-label-md text-label-md font-bold text-on-surface">$142.00</span></div><span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold ml-space-xs">3</span></a><a class="hidden sm:inline-flex items-center gap-space-xs bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-md text-label-md uppercase font-bold px-space-md py-space-sm rounded transition-all shadow-[0_0_24px_rgba(255,87,8,0.35)]" data-path="burger-configurator" href="menu_showroom.html"><span class="material-symbols-outlined text-[18px]">tune</span><span class="hidden xl:inline">Configure &amp; Order</span><span class="xl:hidden">Order</span></a><a class="w-8 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-primary-container transition-colors" href="login_cockpit.html" title="Access Portal"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></a><button type="button" id="nav-toggle" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" aria-controls="mobile-nav-panel" aria-expanded="false" aria-label="Open menu"><span class="material-symbols-outlined text-[22px]" id="nav-toggle-icon">menu</span></button></div></div><div id="nav-backdrop" class="fixed inset-0 top-16 sm:top-20 z-40 bg-black/55 backdrop-blur-[2px] lg:hidden" aria-hidden="true"></div><div id="mobile-nav-panel" class="relative z-50 lg:hidden border-t border-surface-container-high bg-surface-container-lowest/95 backdrop-blur-xl" role="dialog" aria-label="Mobile navigation"><nav class="flex flex-col gap-space-xs px-margin-mobile py-space-md" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded"><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="home" href="index.html">Home / Showroom</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="menu-showroom" href="menu_showroom.html">Menu / Showroom</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="our-story" href="our_story.html">Our Story</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="pit-stop-locations" href="pit_stop_locations.html">Pit Stop Locations</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="vip-lounge" href="vip_lounge.html">VIP Lounge</a><div class="pt-space-sm mt-space-xs border-t border-surface-container-high flex flex-col gap-space-sm"><a class="inline-flex sm:hidden items-center justify-center gap-space-xs bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-md text-label-md uppercase font-bold px-space-md py-space-sm rounded transition-all shadow-[0_0_24px_rgba(255,87,8,0.35)]" data-path="burger-configurator" href="menu_showroom.html"><span class="material-symbols-outlined text-[18px]">tune</span><span>Configure &amp; Order</span></a></div></nav></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full relative overflow-hidden bg-background">
+<!-- Dynamic Atmospheric Glow / Apex Track Lighting -->
+<div class="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[850px] h-[550px] bg-gradient-to-b from-primary-container/20 via-secondary-container/10 to-transparent blur-[120px] -z-10"></div>
+<div class="pointer-events-none absolute top-96 -right-36 w-96 h-96 bg-secondary/10 blur-[100px] -z-10"></div>
+<div class="pointer-events-none absolute top-[1200px] -left-20 w-[480px] h-[480px] bg-primary-container/10 blur-[110px] -z-10"></div>
+<!-- CELEBRATION HERO SECTION -->
+<section class="relative w-full px-margin-mobile md:px-margin-mobile lg:px-margin pt-space-xl pb-space-lg">
+<!-- Carbon Trackside Grid Header Strip -->
+<div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+<!-- High-Torque Animated Seal Badge -->
+<div class="relative flex items-center justify-center mb-space-md group">
+<div class="absolute inset-0 rounded-full bg-secondary-container/30 blur-xl animate-pulse"></div>
+<div class="relative w-20 h-20 md:w-24 md:h-24 rounded-full bg-surface-container-high flex items-center justify-center shadow-[0_0_32px_rgba(238,152,0,0.4)]">
+<div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-4xl md:text-5xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<!-- Apex Micro Flag Accent -->
+<span class="absolute -bottom-2 bg-primary-container text-on-primary font-label-sm text-label-sm uppercase px-space-xs py-0.5 rounded tracking-widest font-bold">PIT CONFIRMED</span>
+</div>
+<!-- Main Headline in Syne Typography -->
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl tracking-tight text-on-background uppercase max-w-4xl">
+        YOU'VE GOT <span class="bg-gradient-to-r from-secondary via-primary to-primary-container bg-clip-text text-transparent">GREAT TASTE.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-sm">
+        Your Hamborghini order has been received. High-octane culinary telemetry engaged. Get ready for an unforgettable bite!
+      </p>
+<!-- Telemetry Dispatch Data Bar -->
+<div class="mt-space-lg w-full max-w-4xl bg-surface-container-low p-space-sm rounded-lg shadow-xl flex flex-wrap items-center justify-between gap-space-sm text-left">
+<div class="flex items-center gap-space-sm w-full sm:w-auto sm:min-w-[200px]">
+<span class="material-symbols-outlined text-primary-container text-[22px]">confirmation_number</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Dispatch Code</span>
+<span class="font-label-lg text-label-lg text-secondary font-bold tracking-wider">#HMB-911-APEX</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto sm:min-w-[260px]">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-ping"></span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Current Status</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">PREPARATION CONFIRMED // TELEMETRY LIVE</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto sm:min-w-[160px]">
+<span class="material-symbols-outlined text-outline text-[20px]">schedule</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Timestamp</span>
+<span class="font-label-md text-label-md text-on-surface">Today, 19:42 CET</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- LIVE COUNTDOWN & TELEMETRY PROGRESSION BAR -->
+<section class="w-full px-margin-mobile md:px-margin-mobile lg:px-margin py-space-md">
+<div class="max-w-7xl mx-auto bg-surface-container-lowest p-space-md md:p-space-lg rounded-xl shadow-[0_12px_40px_rgba(0,0,0,0.7)]">
+<!-- Countdown Header & Speedometer Gauge -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md pb-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">speed</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container font-bold">ACTIVE TELEMETRY VECTOR</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase mt-space-xs">
+            ESTIMATED ARRIVAL IN: <span class="text-secondary font-bold" id="countdown-timer">18 MIN, 45 SEC</span>
+</h2>
+</div>
+<!-- Telemetry Ambient Stats -->
+<div class="flex items-center gap-space-lg">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Induction Sear Heat</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">652.4°F</span>
+</div>
+<div class="h-8 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Thermal Vault Lock</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">100% SEALED</span>
+</div>
+</div>
+</div>
+<!-- 4-Stage Telemetry Track Indicator -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md pt-space-sm relative">
+<!-- Step 1: Complete -->
+<div class="relative flex flex-col p-space-sm bg-surface-container-high rounded transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold tracking-wider">PHASE 01</span>
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold uppercase">Order Verified</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Logged into Sant'Agata Paddock Queue (19:42 CET)</p>
+<div class="w-full bg-secondary h-1 mt-space-sm rounded-full"></div>
+</div>
+<!-- Step 2: Active (Pulsing) -->
+<div class="relative flex flex-col p-space-sm bg-surface-container-high rounded shadow-[0_0_24px_rgba(255,87,8,0.25)]">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-primary-container font-bold tracking-wider animate-pulse">PHASE 02 [ENGAGED]</span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-ping"></span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-primary-container bg-primary-container/20 px-1 py-0.5 rounded inline-block font-bold uppercase">650°F Thermal Sear</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Wagyu core sear calibration ~ 6 mins remaining</p>
+<div class="w-full bg-surface-container-highest h-1 mt-space-sm rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-3/4 animate-pulse"></div>
+</div>
+</div>
+<!-- Step 3: Upcoming -->
+<div class="relative flex flex-col p-space-sm bg-surface-container-low rounded opacity-75">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold tracking-wider">PHASE 03</span>
+<span class="material-symbols-outlined text-outline text-sm">lock_clock</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold uppercase">Vault Packaging</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Carbon container vacuum seal &amp; courier geofence transit</p>
+<div class="w-full bg-surface-container-highest h-1 mt-space-sm rounded-full"></div>
+</div>
+<!-- Step 4: Final Handover -->
+<div class="relative flex flex-col p-space-sm bg-surface-container-low rounded opacity-60">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold tracking-wider">PHASE 04</span>
+<span class="material-symbols-outlined text-outline text-sm">sports_score</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold uppercase">Paddock Arrival</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">VIP delivery handover at destination coordinates</p>
+<div class="w-full bg-surface-container-highest h-1 mt-space-sm rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- FEATURED CENTERPIECE MEAL VISUALIZATION -->
+<section class="w-full px-margin-mobile md:px-margin-mobile lg:px-margin py-space-lg">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<!-- Showcase Platter Graphic -->
+<div class="lg:col-span-7 relative group">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low shadow-2xl">
+<img class="w-full h-auto max-h-[500px] object-cover rounded-xl transition-transform duration-700 group-hover:scale-105" data-alt="Cinematic luxury close-up shot of a Hamborghini Wagyu burger with branded toasted brioche bun, melted golden cheese, and juicy wagyu patty, served alongside golden crispy basket fries and a vintage glass bottle of Coca-Cola on a dark carbon fiber textured slate surface inside a moody dark Michelin restaurant with warm amber spotlighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0Vq4TggJhUb4LlBwz9FKoyJfTtLDKXTFmsxfpQcZC6gf8TC8Dn9vPt87FN-Q7xCCb9zfCoTnEc5beGkzEAlrdigIMjEnZfW5dOGDpsxW8YJNPm4mFzeNjTwFXrB9upOIdnAw0eLaXwR7mYD7pI9nXyr5ezR4V-GHGKXkb_5xPFQWbXPS0S7BvMeiuK_ISE-uQ1b4_Rt5iHq380Cmuw0MbwCd6wd2TbD1x8aV4phdRhJ5i96q78kR6"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-4 right-4 flex items-center justify-between bg-surface-container-lowest/85 backdrop-blur-md p-space-sm rounded">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">restaurant</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">ASSEMBLY AT SANT'AGATA BOLOGNESE PIT BAY 04</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">CHEF COMMANDE: #09</span>
+</div>
+</div>
+</div>
+<!-- Technical Kitchen Dispatch Info -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs bg-surface-container-high px-space-sm py-1 rounded w-fit">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">BESPOKE ATELIER PREPARATION</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase tracking-tight">
+          CRAFTED BY THE SQUADRA CORSE KITCHEN.
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Your allocation is being curated under the strict direction of our Executive Master Pit Crew. Every A5 Wagyu cut is flash-seared at 650°F to preserve intramuscular succulence, finished with 24-karat gold dust, and seated within bespoke carbon thermal vaults.
+        </p>
+<!-- Spec Highlights Grid -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<div class="bg-surface-container-low p-space-sm rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Cut Temperature</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">54.5°C Med-Rare</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Truffle Viscosity</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">Index 8.4 mPa·s</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Salt Dispersion</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Maldon Smoked</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Packaging Seal</span>
+<span class="font-headline-sm text-headline-sm text-primary-container font-bold">Aero Vacuum-Insulated</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- DETAILED ORDER MANIFEST & FINANCIAL SUMMARY -->
+<section class="w-full px-margin-mobile md:px-margin-mobile lg:px-margin py-space-lg">
+<div class="max-w-7xl mx-auto">
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-widest">OFFICIAL ALLOCATION TELEMETRY</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase tracking-tight">ORDER MANIFEST &amp; RECEIPT</h2>
+</div>
+<div class="hidden sm:flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded">
+<span class="material-symbols-outlined text-outline text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase font-bold">STRIPE ENCRYPTED // AUTH #789012</span>
+</div>
+</div>
+<!-- Two-Column Breakdown -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left: Order Lineup Details (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-sm">
+<!-- Item 1 -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded bg-surface-container-high shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Extreme close up of luxury Hamborghini Countach burger on a dark plate with 24k gold leaf, taleggio DOP cheese, and dark bun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXlvztD5tnBJ8fgGY7pLfVG8N06hym7t1v0PKpBD5UUJN-wGqKYPEw24gj5fIScG051JfDishky4WLvVy6-72w8iUpooW8YkAlANAN1DUAetXLzuwGxgcOq-OsX-NfCS8cASCzD_FcvqbpxJblLbGcI7_28QzYVag7xxigju3M_GzvkQR6Pdl1dwR50DOBCT8in50c6qzKHOU9-GhgMP9weY38zs0kNm7YBPuM0Mg5PmzLw6S2NvJ3"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase font-bold">Countach Carbon Wagyu Combo</span>
+<span class="bg-secondary/20 text-secondary font-label-sm text-label-sm px-1.5 py-0.5 rounded font-bold uppercase">Flagship</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">24k Edible Gold Foil, Taleggio DOP, Rosemary Salt Truffle Fries, Chilled Glass Coca-Cola</span>
+<span class="font-label-sm text-label-sm text-outline mt-1 font-mono uppercase">SPEC: SEAR LEVEL-3 // CRISP TALLOW FRIES</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">$42.00</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant uppercase">QTY: 1</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded bg-surface-container-high shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Gourmet Miura burger with melted saffron taleggio and crispy prosciutto on a black ceramic pedestal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxfTNRR1OE0vop8qskPO6p70huK7OXdco9KnlmNJwb2DFFgUWK1D4F-vo4GoqkmHL5F2NoZ_WG1vpchWFeqwLrUI6oDbyFsy2eErG4xHusRBymmz7Y_FXwrfSiqokHJKSqYCz9S8brCQW6g1AwAav5nO97cCkYyllo9zOLYkgWgN8GkbZU1pa-6t1d9cGBtA2riS-ParWPxiTYHeNLBA-VAwDumrqzuZc-BcRB8SzdbK2WRw6QeQZr"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase font-bold">The Miura SV Gold Rush</span>
+<span class="bg-surface-container-highest text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded font-bold uppercase">x2</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Double A5 Kagoshima Wagyu, Saffron Infused Taleggio, 24-Month Crispy San Daniele Prosciutto</span>
+<span class="font-label-sm text-label-sm text-outline mt-1 font-mono uppercase">SPEC: ZERO AIOLI SUBSTITUTES // RARE BREADING</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">$72.00</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant uppercase">$36.00 EACH</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded bg-surface-container-high shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Centenario burger with Maine lobster medallion, squid ink black bun, and citrus yuzu emulsion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlpCbwkgv-mYSdxHN0Uoi51pVhXXWzlkz1bmH-p20FjRH4dQPBgVkMRkT-t8iIckEof74nx7NM4aHiLSdGQzNHY8zUBjh90d1UbcCiYe5WNJFhfKxiU5bPkdTPjj69pZLd1lNVuC_IhDPznFkespilcBCD2Y0lr6LLqUN1furgKZwQwjb8rjAt5TybIOu73B1rTlRvkaF2zoBr2I8cFWrCuELffksttZoISrHJnb-sgnb6suplIDJo"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase font-bold">The Centenario Surf-Velocity</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Charcoal-Grilled Maine Lobster Medallion, Squid Ink Brioche, Citrus-Infused Caviar Butter Emulsion</span>
+<span class="font-label-sm text-label-sm text-outline mt-1 font-mono uppercase">SPEC: CHILLED CAVIAR FLIGHT INCLUDED</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">$38.50</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant uppercase">QTY: 1</span>
+</div>
+</div>
+<!-- Paddock Special Add-On -->
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-[20px]">workspace_premium</span>
+<span class="font-body-sm text-body-sm text-on-surface">Includes: Complimentary Hamborghini Carbon Flight Cutlery Kit &amp; Titanium Wet Towel</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold">INCLUDED</span>
+</div>
+</div>
+<!-- Right: Dispatch Logistics & Financials (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Dispatch Coordinate Card -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">DELIVERY VECTOR / TARGET</span>
+<span class="material-symbols-outlined text-outline text-[18px]">near_me</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Pilot: Bruce Wayne</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Via Monte Napoleone 8, Floor PH-4</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">20121 Milano (MI), Italy</span>
+<span class="font-label-sm text-label-sm text-primary font-mono mt-1">GEOFENCE PIN: 45.4697° N, 9.1952° E</span>
+</div>
+<div class="h-px w-full bg-surface-container-highest my-space-xs"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">credit_card</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Visa Ending in •••• 9842</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">AUTH COMPLETED</span>
+</div>
+</div>
+<!-- Financial Breakdown Card -->
+<div class="bg-surface-container-high p-space-md rounded-lg flex flex-col gap-space-xs shadow-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-space-xs">TRANSACTION SETTLEMENT</span>
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Lineup Subtotal</span>
+<span class="font-mono text-on-surface">$152.50</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm text-secondary">
+<span>Scuderia Member Privilege (10%)</span>
+<span class="font-mono">-$15.25</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Thermal Courier Priority Transit</span>
+<span class="font-mono text-on-surface">$6.00</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Italian VAT &amp; Regional Culinary Duty (10%)</span>
+<span class="font-mono text-on-surface">$10.98</span>
+</div>
+<div class="h-px w-full bg-surface-container-highest my-space-xs"></div>
+<div class="flex justify-between items-center pt-space-xs">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase font-bold">TOTAL PAID</span>
+<span class="font-label-sm text-label-sm text-outline uppercase">ALL CHARGES CLEARED</span>
+</div>
+<span class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-secondary font-bold">$154.23</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ACTION CONTROLS & SUPPORT HUB -->
+<section class="w-full px-margin-mobile md:px-margin-mobile lg:px-margin py-space-xl">
+<div class="max-w-7xl mx-auto flex flex-col items-center gap-space-lg">
+<!-- Primary / Secondary CTAs -->
+<div class="flex flex-wrap items-center justify-center gap-space-md w-full">
+<!-- Main Telemetry Radar Trigger -->
+<a class="inline-flex items-center gap-space-sm bg-primary-container hover:bg-secondary-container text-on-primary-container font-label-lg text-label-lg uppercase font-bold px-space-xl py-space-md rounded transition-all shadow-[0_0_28px_rgba(255,87,8,0.45)] hover:shadow-[0_0_36px_rgba(238,152,0,0.6)]" href="pit_stop_locations.html">
+<span class="material-symbols-outlined text-[22px]">radar</span>
+<span>TRACK ORDER TELEMETRY (LIVE RADAR)</span>
+</a>
+<!-- Invoice Download -->
+<button class="inline-flex items-center gap-space-sm bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-lg text-label-lg uppercase font-bold px-space-lg py-space-md rounded transition-all shadow-md" onclick="downloadOfficialInvoice()" type="button">
+<span class="material-symbols-outlined text-secondary text-[20px]">download</span>
+<span>DOWNLOAD OFFICIAL INVOICE (PDF)</span>
+</button>
+<!-- Return to Showroom -->
+<a class="inline-flex items-center gap-space-xs bg-transparent hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase px-space-md py-space-md rounded transition-all" data-path="menu-showroom" href="menu_showroom.html">
+<span>EXPLORE SHOWROOM / NEW ALLOCATION</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- VIP Concierge Support Ribbon -->
+<div class="w-full max-w-4xl bg-surface-container-lowest p-space-md rounded-lg flex flex-col md:flex-row items-center justify-between gap-space-sm text-center md:text-left shadow-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">support_agent</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold">Pit Master Concierge On-Call</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Immediate paddock flight adjustments or dietary specs assistance</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md font-label-md text-label-md">
+<a class="text-on-surface hover:text-primary transition-colors flex items-center gap-1" href="tel:+390516817611">
+<span class="material-symbols-outlined text-[16px]">call</span> +39 051 681 7611
+          </a>
+<span class="text-outline">/</span>
+<a class="text-secondary hover:underline flex items-center gap-1" href="mailto:pitcrew@hamborghini.com">
+<span class="material-symbols-outlined text-[16px]">mail</span> pitcrew@hamborghini.com
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Telemetry Countdown Script -->
+<script>
+    (function initTelemetryCountdown() {
+      let totalSeconds = 18 * 60 + 45;
+      const display = document.getElementById('countdown-timer');
+      if (!display) return;
+
+      const timerInterval = setInterval(() => {
+        if (totalSeconds <= 0) {
+          display.textContent = 'ARRIVING AT PADDOCK NOW';
+          clearInterval(timerInterval);
+          return;
+        }
+        totalSeconds--;
+        const mins = Math.floor(totalSeconds / 60);
+        const secs = totalSeconds % 60;
+        display.textContent = `${mins} MIN, ${secs < 10 ? '0' : ''}${secs} SEC`;
+      }, 1000);
+    })();
+
+    function downloadOfficialInvoice() {
+      const invoice = [
+        'HAMBORGHINI — OFFICIAL ALLOCATION INVOICE',
+        '========================================',
+        'Order: #HB-9912-V12',
+        'Total Paid: $154.23',
+        'Status: ALL CHARGES CLEARED',
+        'Issued: ' + new Date().toISOString().slice(0, 10),
+        '',
+        'Atelier di Gourmet Automobili',
+        'Via Modena 12, Sant\'Agata Bolognese (BO), Italy'
+      ].join('\n');
+      const blob = new Blob([invoice], { type: 'application/pdf' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'hamborghini-invoice-HB-9912-V12.pdf';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest"><div class="w-full px-margin-mobile lg:px-margin py-space-xl grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-space-xl"><div class="xl:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface">HAMBORGHINI</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">ATELIER DI GOURMET AUTOMOBILI</span></div></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">Born in Sant'Agata Bolognese. Engineered at the intersection of extreme aerodynamic design and hyper-refined Michelin culinary craft. Wagyu thermal precision calibrated trackside with full real-time telemetry.</p><div class="flex items-center gap-space-md pt-space-xs"><span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Telemetry Channel:</span><div class="flex gap-space-xs"><a class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">rss_feed</span></a><a class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">public</span></a><a class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">podcasts</span></a></div></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-label-lg text-label-lg uppercase tracking-wider text-primary">Flight &amp; Telemetry Orders</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="cockpit-bay-cart" href="checkout.html">Cockpit Bay Cart (3)</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="checkout" href="streamlined.html">Telemetry Checkout</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="order-confirmation" href="order_confirmation.html">Allocation Confirmation</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="burger-configurator" href="menu_showroom.html">Bespoke Configurator</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="menu-showroom" href="menu_showroom.html">Full Menu &amp; Specs</a></ul></div><div class="flex flex-col gap-space-sm"><h3 class="font-label-lg text-label-lg uppercase tracking-wider text-secondary">Pit Bay Operations &amp; Logistics</h3><div class="font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-space-xs"><span>Via Modena 12, Sant'Agata Bolognese (BO), Italy</span><span class="text-on-surface font-semibold">Pit Bay Schedule:</span><span>Mon - Thu: 11:30 - 23:00 CET</span><span>Fri - Sun: 11:30 - 02:00 CET (Late Track Shift)</span><div class="pt-space-xs flex items-center gap-space-xs text-secondary font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span>TRACKSIDE LOGISTICS: DISPATCH READY</span></div></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface">The Pit Pass</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Receive confidential trackside drop dispatches, allocation access, and invitations to secret paddock dinners.</p><div class="flex flex-col gap-space-xs pt-space-xs"><div class="flex items-center bg-surface-container rounded px-space-sm py-space-xs"><input class="bg-transparent text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none w-full" placeholder="pilot@squadra.com" type="email"/><button class="bg-primary-container text-on-primary-container hover:bg-secondary-container hover:text-on-secondary-container font-label-md text-label-md px-space-sm py-space-xs rounded transition-colors uppercase font-bold shrink-0" onclick="subscribePitPass(this)" type="button">Join</button></div><span class="font-label-sm text-label-sm text-outline">Zero spam. High-octane culinary intelligence only.</span></div></div></div><div class="w-full px-margin-mobile lg:px-margin py-space-md bg-surface-container-low flex flex-col md:flex-row items-center justify-between gap-space-sm"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">© 2026 HAMBORGHINI S.P.A. ALL RIGHTS RESERVED. AUTOMOTIVE GOURMET SPECIFICATION DIVISION.</span><div class="flex items-center gap-space-md font-label-sm text-label-sm uppercase text-on-surface-variant"><a class="hover:text-on-surface transition-colors" href="our_story.html">Telemetry Privacy</a><a class="hover:text-on-surface transition-colors" href="our_story.html">Terms of Allocation</a><a class="hover:text-on-surface transition-colors" href="our_story.html">Security Protocol</a></div></div></footer><script>function subscribePitPass(btn){const wrap=btn.closest("div");const input=wrap?wrap.querySelector('input[type="email"]'):null;const email=input&&input.value.trim();if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){alert("Enter a valid pilot email to join The Pit Pass.");if(input)input.focus();return;}btn.textContent="Joined";btn.disabled=true;btn.classList.add("opacity-80");if(input){input.value="";input.placeholder="Telemetry locked in";}alert("Pit Pass armed for "+email+" — confidential drop dispatches incoming.");}</script>
+<script id="nav-responsive-js">
+(function(){/*scroll-unlock-init*/document.documentElement.classList.remove('nav-open');document.body.classList.remove('nav-open');var scrollLockY=0;
+  var toggle=document.getElementById("nav-toggle");
+  var panel=document.getElementById("mobile-nav-panel");
+  var backdrop=document.getElementById("nav-backdrop");
+  var icon=document.getElementById("nav-toggle-icon");
+  if(!toggle||!panel)return;
+  function setOpen(open){
+    toggle.setAttribute("aria-expanded",open?"true":"false");
+    toggle.setAttribute("aria-label",open?"Close menu":"Open menu");
+    panel.classList.toggle("is-open",open);
+    if(backdrop){
+      backdrop.classList.toggle("is-open",open);
+      backdrop.setAttribute("aria-hidden",open?"false":"true");
+    }
+    if(open){scrollLockY=window.scrollY||document.documentElement.scrollTop||0;document.documentElement.classList.add("nav-open");document.body.classList.add("nav-open");document.body.style.top=(-scrollLockY)+"px";}else{document.documentElement.classList.remove("nav-open");document.body.classList.remove("nav-open");document.body.style.removeProperty("top");document.body.style.removeProperty("position");document.documentElement.style.removeProperty("overflow");document.body.style.removeProperty("overflow");window.scrollTo(0,scrollLockY||0);}
+    if(icon)icon.textContent=open?"close":"menu";
+  }
+  function isOpen(){return toggle.getAttribute("aria-expanded")==="true";}
+  toggle.addEventListener("click",function(e){e.preventDefault();setOpen(!isOpen());});
+  if(backdrop)backdrop.addEventListener("click",function(){setOpen(false);});
+  panel.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){setOpen(false);});});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&isOpen())setOpen(false);});
+  window.addEventListener("resize",function(){
+    var bp=panel.classList.contains("md:hidden")?768:1024;
+    if(window.innerWidth>=bp&&isOpen())setOpen(false);
+  });
+})();
+</script></body></html>

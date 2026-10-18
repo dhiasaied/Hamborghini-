@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;min-height:100%;height:auto!important;max-height:none!important;position:relative;}html{overflow-x:auto;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;}body{overflow-x:visible;overflow-y:visible;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;touch-action:auto;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}html{scrollbar-width:thin;scrollbar-color:rgba(172,137,126,.65) transparent;}::-webkit-scrollbar{width:10px;height:10px;}::-webkit-scrollbar-thumb{background:rgba(172,137,126,.55);border-radius:8px;}::-webkit-scrollbar-track{background:transparent;}::-webkit-scrollbar-corner{background:transparent;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-highest":"#353437","on-error-container":"#ffdad6","surface-bright":"#39393b","tertiary-fixed":"#d4e4fa","on-secondary":"#472a00","surface-variant":"#353437","on-error":"#690005","on-tertiary-fixed-variant":"#39485a","background":"#131315","secondary":"#ffb95f","primary-fixed-dim":"#ffb59c","on-primary-container":"#511500","on-secondary-fixed":"#2a1700","tertiary-fixed-dim":"#b9c8de","on-secondary-container":"#5b3800","primary-fixed":"#ffdbcf","secondary-container":"#ee9800","on-tertiary-container":"#1c2b3c","inverse-primary":"#aa3600","surface":"#131315","surface-dim":"#131315","surface-container-high":"#2a2a2c","surface-container-lowest":"#0e0e10","on-primary":"#5c1900","tertiary":"#b9c8de","on-secondary-fixed-variant":"#653e00","tertiary-container":"#8392a6","outline":"#ac897e","surface-container":"#201f21","on-primary-fixed":"#390c00","surface-tint":"#ffb59c","on-primary-fixed-variant":"#822700","on-surface":"#e5e1e4","surface-container-low":"#1c1b1d","on-tertiary-fixed":"#0d1c2d","on-tertiary":"#233143","on-background":"#e5e1e4","on-surface-variant":"#e5beb2","secondary-fixed":"#ffddb8","error-container":"#93000a","primary-container":"#ff5708","outline-variant":"#5c4037","secondary-fixed-dim":"#ffb95f","error":"#ffb4ab","inverse-surface":"#e5e1e4","inverse-on-surface":"#313032","primary":"#ffb59c"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-md":"1rem","space-xl":"2.5rem","gutter-mobile":"1rem","space-lg":"1.5rem","space-xs":"0.25rem","margin":"3rem","gutter":"1.5rem","space-sm":"0.5rem","margin-mobile":"1.25rem"},"fontFamily":{"body-lg":["Space Grotesk"],"body-md":["Space Grotesk"],"headline-xl":["Syne"],"body-sm":["Space Grotesk"],"label-sm":["Space Grotesk"],"label-md":["Space Grotesk"],"headline-sm":["Syne"],"headline-lg-mobile":["Syne"],"headline-xl-mobile":["Syne"],"headline-lg":["Syne"],"label-lg":["Space Grotesk"],"headline-md":["Syne"]},"fontSize":{"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["56px",{"lineHeight":"60px","letterSpacing":"-0.02em","fontWeight":"800"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.12em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.1em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl-mobile":["36px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"800"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"700"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"0em","fontWeight":"700"}]}}}};</script>
+<style id="nav-responsive-css">
+/* Scroll: allow vertical + horizontal when content overflows; never trap the document */
+html,body{max-width:100%;height:auto!important;max-height:none!important;position:relative!important;}
+html{overflow-x:auto!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;touch-action:auto;}body{overflow-x:visible!important;overflow-y:visible!important;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;touch-action:auto;}
+img,video,canvas{max-width:100%;}
+[id^="threejs-container"]{touch-action:pan-y;}
+#cart-drawer.translate-x-full{pointer-events:none;}
+@media (max-width:767px){input,select,textarea{font-size:16px!important;}#nav-toggle,header button,header a[href].inline-flex,header a[href].flex{min-width:44px;min-height:44px;}main button,.cockpit-cta,[type=submit]{min-height:44px;}}
+  #mobile-nav-panel{max-height:0;opacity:0;overflow:hidden;visibility:hidden;transition:max-height .38s cubic-bezier(.4,0,.2,1),opacity .28s ease,visibility .28s;}
+  #mobile-nav-panel.is-open{max-height:min(80vh,640px);opacity:1;visibility:visible;overflow-y:auto;-webkit-overflow-scrolling:touch;touch-action:pan-y;overscroll-behavior:contain;}
+  #nav-backdrop{opacity:0;pointer-events:none!important;transition:opacity .3s ease;}
+  #nav-backdrop.is-open{opacity:1;pointer-events:auto!important;}
+  /* Lock background scroll only while mobile nav is open (html+body); keep panel scrollable */
+  html.nav-open{overflow:hidden!important;}body.nav-open{position:fixed!important;inset:0 auto auto 0;width:100%;overflow:hidden!important;overscroll-behavior:none;touch-action:auto;}
+  body.nav-open main,body.nav-open>footer{pointer-events:none;}
+  @media (min-width:1024px){
+    #mobile-nav-panel,#nav-backdrop,#nav-toggle{display:none!important;}
+    html.nav-open{overflow:auto!important;}body.nav-open{position:relative!important;inset:auto;width:auto;overflow:visible!important;overscroll-behavior:auto;}
+    body.nav-open main,body.nav-open>footer{pointer-events:auto;}
+  }
+</style></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.6)]"><div class="h-16 sm:h-20 w-full px-margin-mobile lg:px-margin flex items-center justify-between gap-space-sm sm:gap-space-md"><div class="flex items-center gap-space-lg shrink-0"><a class="flex items-center gap-space-sm group" data-path="home" href="index.html"><img alt="Hamborghini Shield Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VEiYRHW1Qw2FJqH1AZC9JcV_02p0fRrLFuGWF4jkzxW_2Oc5tynzJfbDGni0SNCvfwZdQTPeJhJ2vNWvbxWFZmO8rFHJWah4QX45ZAWeZSCErqx6GCU6owhWiaC6i4x3YD5i9fcHR5pxRjkbay5fbd6JEdGc4HmAfXY4lHjpDrw2wA8T777KbDvOkNaxYo-3rI9EYBxro67IQKitMil4VDy63Po0BlHfr__Sqr6nvexLk3jE1ujkwm6TE"/><div class="flex flex-col"><span class="font-headline-sm text-[16px] sm:text-headline-sm uppercase tracking-wider text-on-surface group-hover:text-primary transition-colors leading-tight">HAMBORGHINI</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase hidden sm:inline">SANT'AGATA GOURMET</span></div></a></div><nav class="hidden lg:flex items-center gap-space-sm shrink-0" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded"><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="home" href="index.html">Home</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="menu-showroom" href="menu_showroom.html">Menu / Showroom</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="our-story" href="our_story.html">Our Story</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="pit-stop-locations" href="pit_stop_locations.html">Pit Stop Locations</a><a aria-current="page" class="px-space-sm py-space-xs transition-colors uppercase tracking-wider bg-primary-container text-on-primary-container font-bold rounded" data-path="vip-lounge" href="vip_lounge.html">VIP Lounge</a></nav><div class="flex items-center gap-space-xs sm:gap-space-md shrink-0"><a class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded hover:bg-surface-container-high hover:text-on-surface text-on-surface-variant transition-colors" data-path="cart-telemetry" href="checkout.html" aria-label="Cockpit Bay cart"><span class="material-symbols-outlined text-secondary text-[20px]">shopping_bag</span><div class="hidden sm:flex flex-col text-left"><span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Cockpit Bay</span><span class="font-label-md text-label-md font-bold text-on-surface">$142.00</span></div><span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold ml-space-xs">3</span></a><a class="hidden sm:inline-flex items-center gap-space-xs bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-md text-label-md uppercase font-bold px-space-md py-space-sm rounded transition-all shadow-[0_0_24px_rgba(255,87,8,0.35)]" data-path="burger-configurator" href="menu_showroom.html"><span class="material-symbols-outlined text-[18px]">tune</span><span>CONFIGURE &amp; ORDER NOW</span></a><a class="w-8 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-primary-container transition-colors" href="login_cockpit.html" title="Access Portal"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></a><button type="button" id="nav-toggle" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" aria-controls="mobile-nav-panel" aria-expanded="false" aria-label="Open menu"><span class="material-symbols-outlined text-[22px]" id="nav-toggle-icon">menu</span></button></div></div><div id="nav-backdrop" class="fixed inset-0 top-16 sm:top-20 z-40 bg-black/55 backdrop-blur-[2px] lg:hidden" aria-hidden="true"></div><div id="mobile-nav-panel" class="relative z-50 lg:hidden border-t border-surface-container-high bg-surface-container-lowest/95 backdrop-blur-xl" role="dialog" aria-label="Mobile navigation"><nav class="flex flex-col gap-space-xs px-margin-mobile py-space-md" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded"><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="home" href="index.html">Home</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="menu-showroom" href="menu_showroom.html">Menu / Showroom</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="our-story" href="our_story.html">Our Story</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="pit-stop-locations" href="pit_stop_locations.html">Pit Stop Locations</a><a aria-current="page" class="block w-full px-space-md py-space-sm rounded bg-primary-container text-on-primary-container font-bold uppercase tracking-wider font-label-md text-label-md" data-path="vip-lounge" href="vip_lounge.html">VIP Lounge</a><div class="pt-space-sm mt-space-xs border-t border-surface-container-high flex flex-col gap-space-sm"><a class="inline-flex sm:hidden items-center justify-center gap-space-xs bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-md text-label-md uppercase font-bold px-space-md py-space-sm rounded transition-all shadow-[0_0_24px_rgba(255,87,8,0.35)]" data-path="burger-configurator" href="menu_showroom.html"><span class="material-symbols-outlined text-[18px]">tune</span><span>CONFIGURE &amp; ORDER NOW</span></a></div></nav></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Hero Section -->
+<section class="relative w-full -mt-20 overflow-hidden bg-surface-container-lowest">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center filter brightness-[0.4] scale-105 transition-transform duration-1000 ease-out" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAaFVdd8Dkqd7D8KZcSSjfqiLx5C1ap8i9LTwClA2nXwCCSaGPAx0Cnc2cCT1V_F4lHtlf_pBFSNiIIgnnU-OtuLeLGgBDhHEdL0NyfwfX5lo1zC9izBAPHeuLqPQd0LY9at_u4zwRqGG_t1wUpthXux6rzcIDlGb6ftc4u-_jWkW4P33MMaQSqHgK5SXwLnRtpEw6oIeLx8xY7V83a6gbESzZV7sapTZ1m8k1GIlwnJuMEumSoeDZv');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-surface-container-lowest/70 to-surface-container-lowest/30"></div>
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-secondary/10 via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 w-full px-margin-mobile lg:px-margin pt-28 sm:pt-40 pb-space-xl flex flex-col justify-end min-h-[70vh] sm:min-h-[82vh]">
+<div class="max-w-4xl flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-high/80 backdrop-blur-md w-fit">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">PRIVATE SANCTUARY // PADDOCK PRIVILEGE</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface uppercase tracking-tight max-w-3xl drop-shadow-2xl">
+          NOT EVERYONE GETS THE KEYS.
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl font-normal leading-relaxed">
+          WELCOME TO THE HAMBORGHINI VIP LOUNGE — AN EXCLUSIVE INNER CIRCLE OF HIGH-PERFORMANCE GASTRONOMY.
+        </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-sm">
+<a class="inline-flex items-center gap-space-xs bg-primary-container text-on-primary-container hover:bg-secondary-container hover:text-on-secondary-container px-space-lg py-space-md rounded font-label-lg text-label-lg uppercase tracking-wider font-bold transition-all shadow-[0_0_28px_rgba(255,87,8,0.45)]" href="#enrollment">
+<span class="material-symbols-outlined text-[20px]">key</span>
+<span>CLAIM YOUR PADDOCK KEY</span>
+</a>
+<button class="inline-flex items-center gap-space-xs bg-surface-container-high/90 hover:bg-surface-bright text-on-surface hover:text-secondary px-space-lg py-space-md rounded font-label-lg text-label-lg uppercase tracking-wider font-semibold transition-all backdrop-blur-md" onclick="document.getElementById('pilot-toggle-enroll').click(); document.getElementById('enrollment').scrollIntoView({behavior: 'smooth'});">
+<span class="material-symbols-outlined text-[20px]">lock_open</span>
+<span>PILOT SIGN-IN</span>
+</button>
+</div>
+</div>
+<!-- Live Lounge Telemetry Bar -->
+<div class="mt-space-xl grid grid-cols-2 md:grid-cols-4 gap-space-md pt-space-md bg-surface-container-low/60 backdrop-blur-md rounded px-space-md py-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Lounge Access Status</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold flex items-center gap-space-xs">
+            RESTRICTED <span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Global Allocation</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">500 PILOTS</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">A5 Wagyu Cellar Vault</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">OPTIMAL 1.8°C</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Vintage Reserve</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">BRUT 2012 FLOWING</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Atmospheric Featurette (Bespoke Craft Intersection) -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl bg-surface-container-lowest">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">AERODYNAMIC LUXURY // BESPOKE CONCIERGE</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase tracking-tight">
+          WHERE OBSESSION MEETS OCCASION.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Step beyond the showroom grill into our hidden atelier salon. Designed as an aerodynamic study in ultra-matte obsidian, raw forged composites, and hand-stitched leather, the VIP Lounge offers members a sanctum for confidential culinary releases, private pairing banquets, and bespoke recipe dyno sessions.
+        </p>
+<div class="grid grid-cols-2 gap-space-md pt-space-xs">
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1">
+<span class="material-symbols-outlined text-primary text-[24px]">local_bar</span>
+<span class="font-label-md text-label-md text-on-surface uppercase font-bold">Sommelier Reserve</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Curated pairings tailored to dry-aged sear profiles.</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-1">
+<span class="material-symbols-outlined text-secondary text-[24px]">speed</span>
+<span class="font-label-md text-label-md text-on-surface uppercase font-bold">Paddock Expedited</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Zero line wait. Dedicated telemetry bay seating.</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="relative rounded overflow-hidden shadow-2xl h-52 sm:h-72 lg:h-80">
+<img class="w-full h-full object-cover filter brightness-90 hover:scale-105 transition-transform duration-700" data-alt="Close up shot of crystal champagne flutes and bespoke amber cocktail on a black polished marble bar counter with carbon fiber finishes, moody ambient golden warm backlighting, Hamborghini luxury VIP atmosphere, photorealistic 8k octane render." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxfFOXBWFqsczls91_WD9EPKUyiXbu9sqSmJQZwQ1Maogpu0I2IJAL8Nf7eyb-vGa4SmUZ489xSan9icwGkx70qE_gaoXxfxajBq-PtUl6siezaJFWuV6y3ErLaaUXsKu4Jj98JiobcKTmpx72PlDrs88mjIzsSRVT6nK03LCHu8D4P0ayhYHemmpm2lwmVamY4VejYingXksLIS_7URObRtrlXjq1-wh4oKh0py4jv731EANElc09"/>
+<div class="absolute bottom-3 left-3 bg-surface-container-lowest/80 backdrop-blur-md px-space-xs py-1 rounded">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold">RESERVE BAR BAY</span>
+</div>
+</div>
+<div class="relative rounded overflow-hidden shadow-2xl h-52 sm:h-72 lg:h-80 sm:-mt-6">
+<img class="w-full h-full object-cover filter brightness-90 hover:scale-105 transition-transform duration-700" data-alt="Executive members seated in sculpted dark matte carbon fiber armchairs with warm amber mood lighting discussing gourmet culinary creations in an exclusive moody Italian hypercar lounge, elegant presentation, editorial luxury lifestyle photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIkmaYTuXJNZFCPi2N9dsZB6B0pP13UOutbLmD_zc682SP5m03vGwmzmEruu2cp-RON9sSEIjIF8ZPFc9RRgGOtcf3AtPE8lG91XxR9NJZ4PU3D3TFICjpmQSgxHqGHqGDUp8Fgb4sJKAe159e1PMZvNCwa70_XxV5GSp88lvcdhipTMf6rf67gYAUjTHmKtzYwsBVaDUMDf07lldiwqQRxph6jbQSUjS0QVgjlFW4eTc5vAXo9PPT"/>
+<div class="absolute bottom-3 left-3 bg-surface-container-lowest/80 backdrop-blur-md px-space-xs py-1 rounded">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">SALOTTO PRIVATO</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Membership Tiers Hierarchy -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl bg-surface">
+<div class="flex flex-col items-center text-center gap-space-xs mb-space-xl max-w-3xl mx-auto">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">SQUADRA CORSE TIERS</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase tracking-tight">ENGINEERED FOR THE DISCERNING PILOT</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Ascend through calibrated tiers designed to reward your commitment to culinary velocity. Each rank unlocks proprietary privileges, kitchen telemetry, and rare tasting batches.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg items-stretch">
+<!-- Tier 1: Pit Crew -->
+<div class="flex flex-col justify-between p-space-lg rounded bg-surface-container-low hover:bg-surface-container transition-all relative group shadow-lg">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase font-bold tracking-wider">
+              TIER 01 // ENTRY
+            </span>
+<span class="material-symbols-outlined text-outline text-[24px]">minor_crash</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">PIT CREW</h3>
+<span class="font-label-md text-label-md text-secondary font-bold">COMMENCE RUN</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Foundational telemetry access for all culinary enthusiasts. Immediate points accumulation on every ignition.
+          </p>
+<div class="h-[1px] bg-surface-container-highest w-full my-space-xs"></div>
+<ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span><strong>10 Octane Points</strong> per $1 spent across all bays</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Member-only secret menu drops via encrypted SMS</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Annual Birthday Wagyu allocation burger</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Complimentary Nitro Cold Brew with lunch orders</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg mt-space-md">
+<button class="w-full py-space-sm rounded bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md uppercase font-bold tracking-wider transition-colors" onclick="selectTierAndScroll('PIT CREW')">
+            SELECT ENTRY TIER
+          </button>
+</div>
+</div>
+<!-- Tier 2: Pole Position (Featured) -->
+<div class="flex flex-col justify-between p-space-lg rounded bg-surface-container-high relative group shadow-2xl scale-100 md:-translate-y-2">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-on-secondary font-label-sm text-label-sm font-bold uppercase tracking-widest px-space-md py-0.5 rounded shadow">
+          MOST ACCELERATED
+        </div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-1 rounded bg-secondary/20 text-secondary font-label-sm text-label-sm uppercase font-bold tracking-wider">
+              TIER 02 // 2,500 PTS
+            </span>
+<span class="material-symbols-outlined text-secondary text-[26px]">sports_score</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-secondary uppercase">POLE POSITION</h3>
+<span class="font-label-md text-label-md text-on-surface font-bold">PERFORMANCE PACE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Reserved for pilots seeking elevated speed, uncompromised dispatch priority, and intimate testing access.
+          </p>
+<div class="h-[1px] bg-surface-container-highest w-full my-space-xs"></div>
+<ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span><strong>All Pit Crew privileges</strong> included</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span><strong>48-hour priority</strong> preview and allocation for new drops</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Reserved Pit Stop bays with no waiting queue</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Exclusive invitations to seasonal chef testing sessions</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Zero delivery logistics fees across all metropolitan sectors</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg mt-space-md">
+<button class="w-full py-space-sm rounded bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-md text-label-md uppercase font-bold tracking-wider transition-all shadow-md" onclick="selectTierAndScroll('POLE POSITION')">
+            ACCELERATE TO POLE POSITION
+          </button>
+</div>
+</div>
+<!-- Tier 3: Legend (Apex Black Card) -->
+<div class="flex flex-col justify-between p-space-lg rounded bg-surface-container-lowest hover:bg-surface-container-low transition-all relative group shadow-2xl">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-1 rounded bg-surface-container text-primary-fixed-dim font-label-sm text-label-sm uppercase font-bold tracking-wider">
+              APEX // 10,000 PTS / INVITE
+            </span>
+<span class="material-symbols-outlined text-primary-container text-[26px]">workspace_premium</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase flex items-center gap-2">
+              LEGEND
+              <span class="text-xs px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm font-bold uppercase">APEX BLACK</span>
+</h3>
+<span class="font-label-md text-label-md text-outline font-bold">SOVEREIGN PATRON</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Unfiltered access to the Sant'Agata inner circle. A rare distinction for uncompromising patrons of gastronomic power.
+          </p>
+<div class="h-[1px] bg-surface-container-highest w-full my-space-xs"></div>
+<ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">star</span>
+<span><strong>Everything in Pole Position</strong> included</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">star</span>
+<span>Private chef table at the <strong>Sant'Agata Atelier</strong></span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">star</span>
+<span>Annual limited-edition Hamborghini carbon fiber burger press</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">star</span>
+<span>Encrypted VIP secret lounge physical keycard</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">star</span>
+<span>Bespoke burger customization directly with Master Pitmaster</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg mt-space-md">
+<button class="w-full py-space-sm rounded bg-surface-container hover:bg-surface-container-high text-secondary font-label-md text-label-md uppercase font-bold tracking-wider transition-colors flex items-center justify-center gap-space-xs" onclick="selectTierAndScroll('LEGEND')">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>REQUEST APEX CONCIERGE</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Pilot Telemetry & Enrollment Terminal -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl bg-surface-container-low" id="enrollment">
+<div class="max-w-6xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">TELEMETRY ACCESS PORTAL</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase tracking-tight">PILOT COCKPIT &amp; ALLOCATION</h2>
+</div>
+<!-- Mode Toggle Tabs -->
+<div class="flex flex-col sm:inline-flex sm:flex-row w-full sm:w-auto p-1 rounded bg-surface-container-lowest gap-1">
+<button class="px-space-md py-space-xs rounded font-label-md text-label-md uppercase font-bold transition-all bg-primary-container text-on-primary-container" id="pilot-toggle-dash" onclick="switchPilotTab('dash')">
+            Member Dashboard Demo
+          </button>
+<button class="px-space-md py-space-xs rounded font-label-md text-label-md uppercase font-bold transition-all text-on-surface-variant hover:text-on-surface" id="pilot-toggle-enroll" onclick="switchPilotTab('enroll')">
+            Pilot Enrollment / Sign In
+          </button>
+</div>
+</div>
+<!-- VIEW A: MEMBER DASHBOARD DEMO -->
+<div class="flex flex-col gap-space-lg transition-all duration-300" id="view-dashboard">
+<!-- Top Profile & Spec Header -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md p-space-lg rounded bg-surface-container-lowest shadow-xl">
+<div class="lg:col-span-8 flex flex-col sm:flex-row items-start sm:items-center gap-space-md">
+<div class="w-20 h-20 rounded bg-surface-container-high flex items-center justify-center relative overflow-hidden shrink-0">
+<span class="material-symbols-outlined text-secondary text-[40px]">shield</span>
+<span class="absolute bottom-1 right-1 w-3 h-3 rounded-full bg-primary-container"></span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">VALERIO MORETTI</h3>
+<span class="bg-secondary/20 text-secondary font-label-sm text-label-sm px-2 py-0.5 rounded font-bold uppercase tracking-wider">POLE POSITION</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 text-on-surface-variant font-body-sm text-body-sm pt-1">
+<span>Pilot ID: <strong class="text-on-surface">#HB-00492-V12</strong></span>
+<span>•</span>
+<span>Base Paddock: <strong class="text-on-surface">Sant'Agata Atelier Bay 01</strong></span>
+<span>•</span>
+<span>Member Since: <strong class="text-on-surface">MAR 2024</strong></span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col justify-center sm:items-end p-space-sm rounded bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">AVAILABLE OCTANE POINTS</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-secondary font-extrabold">3,420</span>
+<span class="font-label-md text-label-md text-secondary font-bold">PTS</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Est. culinary value: $342.00 VIP Credit</span>
+</div>
+</div>
+<!-- Metric Gauges & Progress to Legend -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Progress Card -->
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-sm justify-between shadow">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Apex Legend Elevation</span>
+<span class="font-label-md text-label-md text-secondary font-bold">68% COMPLETE</span>
+</div>
+<div class="w-full h-3 rounded bg-surface-container-highest overflow-hidden mt-space-xs relative">
+<div class="h-full bg-gradient-to-r from-primary-container via-secondary to-secondary-container w-[68%] rounded transition-all duration-1000"></div>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Current: 3,420 Pts</span>
+<span>Target: 5,000 Pts (Next Checkpoint)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              1,580 more Octane Points until unlock of the bespoke Master Pitmaster tasting pass.
+            </p>
+</div>
+<!-- Active Vouchers Card -->
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-sm shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">DEPLOYABLE VOUCHERS</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">confirmation_number</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="p-space-xs rounded bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">currency_exchange</span>
+<span class="font-label-md text-label-md text-on-surface uppercase font-bold">$25 Pit Bay Credit</span>
+</div>
+<button class="px-2 py-1 rounded bg-primary-container hover:bg-secondary text-on-primary-container hover:text-on-secondary font-label-sm text-label-sm uppercase font-bold transition-colors" onclick="applyVoucher('$25 Pit Bay Credit')" type="button">Apply</button>
+</div>
+<div class="p-space-xs rounded bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">auto_awesome</span>
+<span class="font-label-md text-label-md text-on-surface uppercase font-bold">Free Truffle Shave Upgrade</span>
+</div>
+<button class="px-2 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm uppercase font-bold transition-colors" onclick="applyVoucher('Free Truffle Shave Upgrade')" type="button">Apply</button>
+</div>
+</div>
+</div>
+<!-- Next Scheduled Drop -->
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-sm justify-between shadow">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">NEXT CONFIDENTIAL ALLOCATION</span>
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface uppercase mt-space-xs">
+                SVJ BLACK TRUFFLE SMASH // BATCH 04
+              </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                A5 Kagoshima Ribeye blend, 48-month Parmigiano crisp, 24k gold leaf brioche.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold">OPENS IN: 18h 42m</span>
+<button class="font-label-sm text-label-sm uppercase text-primary font-bold hover:underline flex items-center gap-1" onclick="preRegisterAllocation(this)" type="button">
+                PRE-REGISTER <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Recent Pit Stop Allocation Table -->
+<div class="p-space-lg rounded bg-surface-container-lowest flex flex-col gap-space-md shadow-xl">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-headline-sm text-on-surface uppercase">Telemetry History &amp; Orders</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">LAST 30 FLIGHTS</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider border-b border-surface-container-highest">
+<th class="py-space-xs">Run ID</th>
+<th class="py-space-xs">Allocation Item</th>
+<th class="py-space-xs">Paddock Hub</th>
+<th class="py-space-xs">Octane Gained</th>
+<th class="py-space-xs">Thermal Telemetry</th>
+<th class="py-space-xs text-right">Receipt / Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high text-on-surface">
+<tr>
+<td class="py-space-sm font-label-md font-bold text-secondary">#ORD-98421</td>
+<td class="py-space-sm">Double Toro Carbon Smash + Smoked Duck Fries</td>
+<td class="py-space-sm text-on-surface-variant">Via Modena Atelier</td>
+<td class="py-space-sm font-bold text-primary">+420 PTS</td>
+<td class="py-space-sm"><span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-secondary">650°F CRUST</span></td>
+<td class="py-space-sm text-right"><button class="text-on-surface-variant hover:text-on-surface font-label-sm uppercase font-bold" onclick="openTelemetryLog(this)" type="button">Telemetry Log</button></td>
+</tr>
+<tr>
+<td class="py-space-sm font-label-md font-bold text-secondary">#ORD-97810</td>
+<td class="py-space-sm">Centenario Triple Wagyu + Truffle Aioli Reserve</td>
+<td class="py-space-sm text-on-surface-variant">Milan Speed Hub</td>
+<td class="py-space-sm font-bold text-primary">+580 PTS</td>
+<td class="py-space-sm"><span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-secondary">645°F CRUST</span></td>
+<td class="py-space-sm text-right"><button class="text-on-surface-variant hover:text-on-surface font-label-sm uppercase font-bold" onclick="openTelemetryLog(this)" type="button">Telemetry Log</button></td>
+</tr>
+<tr>
+<td class="py-space-sm font-label-md font-bold text-secondary">#ORD-96541</td>
+<td class="py-space-sm">VIP Tasting Flight + Dom Pérignon Pairing</td>
+<td class="py-space-sm text-on-surface-variant">Private Salon Bay 01</td>
+<td class="py-space-sm font-bold text-primary">+1,200 PTS</td>
+<td class="py-space-sm"><span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-primary">CHEF RESERVE</span></td>
+<td class="py-space-sm text-right"><button class="text-on-surface-variant hover:text-on-surface font-label-sm uppercase font-bold" onclick="openTelemetryLog(this)" type="button">Telemetry Log</button></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- VIEW B: PILOT ENROLLMENT / REGISTRATION FORM -->
+<div class="hidden flex-col gap-space-lg transition-all duration-300" id="view-enrollment">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg p-space-xl rounded bg-surface-container-lowest shadow-2xl">
+<div class="lg:col-span-5 flex flex-col gap-space-md justify-between">
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-bold">APPLICATION DOSSIER</span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">COMMISSION YOUR TELEMETRY KEY</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Join an internationally revered collective of automotive drivers and Michelin-tier burger gourmands. Once vetted, your access pass syncs across all global pit stop kitchens.
+              </p>
+</div>
+<div class="p-space-md rounded bg-surface-container-low flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-secondary uppercase font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+                ENCRYPTION ASSURANCE
+              </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                VIP allocation coordinates and secret kitchen drops are transmitted through encrypted telemetry dispatches. Your identity remains strictly compartmentalized.
+              </p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Selected Membership Tier</span>
+<div class="flex items-center gap-space-xs p-space-xs rounded bg-surface-container-high text-on-surface font-label-md text-label-md font-bold uppercase" id="selected-tier-indicator">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span>POLE POSITION (DEFAULT ALLOCATION)</span>
+</div>
+</div>
+</div>
+<form class="lg:col-span-7 flex flex-col gap-space-md" onsubmit="handlePilotEnrollment(event)">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Pilot Full Name *</label>
+<input class="p-space-sm rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="e.g. Leonardo Veloce" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Pilot Email Transmission *</label>
+<input class="p-space-sm rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="pilot@scuderia.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Preferred Paddock Hub *</label>
+<select class="p-space-sm rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container">
+<option>Sant'Agata Bolognese (Atelier Central)</option>
+<option>Milan Quadrilatero Lounge</option>
+<option>Monaco Port Paddock Hub</option>
+<option>London Mayfair Pit Stop</option>
+<option>Miami Brickell Dynamic Bay</option>
+</select>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Interest Specialty</label>
+<select class="p-space-sm rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container">
+<option>Rare Wagyu Curations &amp; Testing Batches</option>
+<option>Motorsport Circuit Track Catering</option>
+<option>Vintage Champagne &amp; Brioche Pairings</option>
+<option>Bespoke Private Pitmaster Dinners</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Cockpit Passkey *</label>
+<input class="p-space-sm rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="••••••••••••" required="" type="password"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Vehicle Chassis / Garage Details</label>
+<input class="p-space-sm rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="e.g. V10 Performance / Aero Coupe" type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<input class="w-4 h-4 rounded bg-surface-container-low accent-secondary" id="terms" required="" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant" for="terms">
+                I accept the <a class="text-secondary underline" href="our_story.html">Telemetry Terms of Paddock Allocation</a> and culinary NDA guidelines.
+              </label>
+</div>
+<div class="pt-space-sm flex flex-col sm:flex-row items-center gap-space-md">
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container px-space-xl py-space-md rounded font-label-lg text-label-lg uppercase font-bold tracking-wider transition-all shadow-[0_0_24px_rgba(255,87,8,0.4)]" type="submit">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<span>IGNITE MEMBERSHIP</span>
+</button>
+<span class="font-body-sm text-body-sm text-secondary hidden" id="form-feedback">
+                Verification pulse transmitted. Welcome to the Paddock.
+              </span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Paddock Rules of Engagement (Bento Spec Grid) -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl bg-surface">
+<div class="max-w-6xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-bold">RULES OF ENGAGEMENT</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase tracking-tight">THE PADDOCK CODE OF CONDUCT</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-space-lg rounded bg-surface-container-low flex flex-col gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-secondary">01 // THERMAL TIMING</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Reserved burgers must be received within precisely 180 seconds of extraction from the 650°F grill pit. Flavor degradation curve begins at minute four.
+          </p>
+</div>
+<div class="p-space-lg rounded bg-surface-container-low flex flex-col gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-secondary">02 // ALLOCATION DISCRETION</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Secret menu drop formulations and sous-vide marination ratios are proprietary trade secrets of Hamborghini S.p.A. culinary division.
+          </p>
+</div>
+<div class="p-space-lg rounded bg-surface-container-low flex flex-col gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-secondary">03 // CARDINAL COURTESY</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            The private salon remains a tranquil temple of gastronomic mechanics. High volume audio transmissions and flash photography are strictly curtailed.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Closing Manifesto Banner -->
+<section class="w-full px-margin-mobile lg:px-margin py-28 bg-surface-container-lowest relative overflow-hidden flex flex-col items-center justify-center text-center">
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent opacity-50"></div>
+<div class="relative z-10 max-w-4xl flex flex-col items-center gap-space-md">
+<div class="w-12 h-1 bg-secondary rounded mb-space-xs"></div>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface uppercase tracking-tighter">
+        YOUR LOYALTY. YOUR LEGEND.
+      </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+        Every lap on the asphalt, every visit to the grill bay elevates your telemetry record. Take your seat at the apex of high-speed gastronomy.
+      </p>
+<div class="pt-space-md flex flex-wrap items-center justify-center gap-space-md">
+<button class="bg-primary-container text-on-primary-container hover:bg-secondary-container hover:text-on-secondary-container px-space-xl py-space-md rounded font-label-lg text-label-lg uppercase font-bold tracking-wider transition-all shadow-[0_0_30px_rgba(255,87,8,0.35)]" onclick="switchPilotTab('enroll'); document.getElementById('enrollment').scrollIntoView({behavior: 'smooth'});">
+          INITIATE PADDOCK APPLICATION
+        </button>
+</div>
+</div>
+</section>
+<!-- Micro-interaction Script -->
+<script>
+    function switchPilotTab(tab) {
+      const dashView = document.getElementById('view-dashboard');
+      const enrollView = document.getElementById('view-enrollment');
+      const dashBtn = document.getElementById('pilot-toggle-dash');
+      const enrollBtn = document.getElementById('pilot-toggle-enroll');
+
+      if (tab === 'dash') {
+        dashView.classList.remove('hidden');
+        dashView.classList.add('flex');
+        enrollView.classList.add('hidden');
+        enrollView.classList.remove('flex');
+
+        dashBtn.className = "px-space-md py-space-xs rounded font-label-md text-label-md uppercase font-bold transition-all bg-primary-container text-on-primary-container";
+        enrollBtn.className = "px-space-md py-space-xs rounded font-label-md text-label-md uppercase font-bold transition-all text-on-surface-variant hover:text-on-surface";
+      } else {
+        enrollView.classList.remove('hidden');
+        enrollView.classList.add('flex');
+        dashView.classList.add('hidden');
+        dashView.classList.remove('flex');
+
+        enrollBtn.className = "px-space-md py-space-xs rounded font-label-md text-label-md uppercase font-bold transition-all bg-primary-container text-on-primary-container";
+        dashBtn.className = "px-space-md py-space-xs rounded font-label-md text-label-md uppercase font-bold transition-all text-on-surface-variant hover:text-on-surface";
+      }
+    }
+
+    function selectTierAndScroll(tierName) {
+      switchPilotTab('enroll');
+      const indicator = document.getElementById('selected-tier-indicator');
+      if (indicator) {
+        indicator.innerHTML = `<span class="material-symbols-outlined text-secondary text-[18px]">verified</span><span>${tierName} (SELECTED ALLOCATION)</span>`;
+      }
+      const el = document.getElementById('enrollment');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+
+    function applyVoucher(name) {
+      alert(name + ' applied to your next paddock allocation.');
+    }
+
+    function preRegisterAllocation(btn) {
+      btn.innerHTML = 'REGISTERED <span class="material-symbols-outlined text-[14px]">check</span>';
+      btn.classList.add('text-secondary');
+      btn.disabled = true;
+    }
+
+    function openTelemetryLog(btn) {
+      const row = btn.closest('tr');
+      const runId = row ? row.querySelector('td')?.textContent?.trim() : 'ORDER';
+      alert('Telemetry log for ' + runId + ' — searing curve, dispatch ETA, and pit bay sensors archived.');
+    }
+    function handlePilotEnrollment(e) {
+      e.preventDefault();
+      const feedback = document.getElementById('form-feedback');
+      feedback.classList.remove('hidden');
+      setTimeout(() => {
+        feedback.innerText = "Access Token granted: Pilot #HB-00891-V8 confirmed. Telemetry active.";
+      }, 1000);
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest"><div class="w-full px-margin-mobile lg:px-margin py-space-xl grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-space-xl"><div class="xl:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface">HAMBORGHINI</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">ATELIER DI GOURMET AUTOMOBILI</span></div></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">Born in Sant'Agata Bolognese. Engineered at the intersection of extreme aerodynamic design and hyper-refined Michelin culinary craft. Every Wagyu blend is precision-seared at 650°F to unleash raw thermal perfection.</p><div class="flex items-center gap-space-md pt-space-xs"><span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Telemetry Channel:</span><div class="flex gap-space-xs"><a class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">rss_feed</span></a><a class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">public</span></a><a class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">podcasts</span></a></div></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-label-lg text-label-lg uppercase tracking-wider text-primary">Dynamic Navigation</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="menu-showroom" href="menu_showroom.html">Full Menu &amp; Specs</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="nutritional-telemetry" href="menu_showroom.html">Nutritional Telemetry</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="track-catering" href="pit_stop_locations.html">Track Catering Operations</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="vip-lounge" href="vip_lounge.html">Scuderia VIP Club</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="burger-configurator" href="menu_showroom.html">Bespoke Configurator</a></ul></div><div class="flex flex-col gap-space-sm"><h3 class="font-label-lg text-label-lg uppercase tracking-wider text-secondary">Culinary Lab Operations</h3><div class="font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-space-xs"><span>Via Modena 12, Sant'Agata Bolognese (BO), Italy</span><span class="text-on-surface font-semibold">Pit Bay Hours:</span><span>Mon - Thu: 11:30 - 23:00 CET</span><span>Fri - Sun: 11:30 - 02:00 CET (Late Track Shift)</span><div class="pt-space-xs flex items-center gap-space-xs text-secondary font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>ACTIVE ALLOCATION DISPATCH: LIVE</span></div></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface">The Pit Pass</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Receive confidential trackside drop dispatches, allocation access, and invitations to secret paddock dinners.</p><div class="flex flex-col gap-space-xs pt-space-xs"><div class="flex items-center bg-surface-container rounded px-space-sm py-space-xs"><input class="bg-transparent text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none w-full" placeholder="pilot@squadra.com" type="email"/><button class="bg-primary-container text-on-primary-container hover:bg-secondary-container hover:text-on-secondary-container font-label-md text-label-md px-space-sm py-space-xs rounded transition-colors uppercase font-bold shrink-0" onclick="subscribePitPass(this)" type="button">Join</button></div><span class="font-label-sm text-label-sm text-outline">Zero spam. High-octane culinary intelligence only.</span></div></div></div><div class="w-full px-margin-mobile lg:px-margin py-space-md bg-surface-container-low flex flex-col md:flex-row items-center justify-between gap-space-sm"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">© 2026 HAMBORGHINI S.P.A. ALL RIGHTS RESERVED. AUTOMOTIVE GOURMET SPECIFICATION DIVISION.</span><div class="flex items-center gap-space-md font-label-sm text-label-sm uppercase text-on-surface-variant"><a class="hover:text-on-surface transition-colors" href="our_story.html">Telemetry Privacy</a><a class="hover:text-on-surface transition-colors" href="our_story.html">Terms of Allocation</a><a class="hover:text-on-surface transition-colors" href="our_story.html">Security Protocol</a></div></div></footer><script>function subscribePitPass(btn){const wrap=btn.closest("div");const input=wrap?wrap.querySelector('input[type="email"]'):null;const email=input&&input.value.trim();if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){alert("Enter a valid pilot email to join The Pit Pass.");if(input)input.focus();return;}btn.textContent="Joined";btn.disabled=true;btn.classList.add("opacity-80");if(input){input.value="";input.placeholder="Telemetry locked in";}alert("Pit Pass armed for "+email+" — confidential drop dispatches incoming.");}</script>
+<script id="nav-responsive-js">
+(function(){/*scroll-unlock-init*/document.documentElement.classList.remove('nav-open');document.body.classList.remove('nav-open');var scrollLockY=0;
+  var toggle=document.getElementById("nav-toggle");
+  var panel=document.getElementById("mobile-nav-panel");
+  var backdrop=document.getElementById("nav-backdrop");
+  var icon=document.getElementById("nav-toggle-icon");
+  if(!toggle||!panel)return;
+  function setOpen(open){
+    toggle.setAttribute("aria-expanded",open?"true":"false");
+    toggle.setAttribute("aria-label",open?"Close menu":"Open menu");
+    panel.classList.toggle("is-open",open);
+    if(backdrop){
+      backdrop.classList.toggle("is-open",open);
+      backdrop.setAttribute("aria-hidden",open?"false":"true");
+    }
+    if(open){scrollLockY=window.scrollY||document.documentElement.scrollTop||0;document.documentElement.classList.add("nav-open");document.body.classList.add("nav-open");document.body.style.top=(-scrollLockY)+"px";}else{document.documentElement.classList.remove("nav-open");document.body.classList.remove("nav-open");document.body.style.removeProperty("top");document.body.style.removeProperty("position");document.documentElement.style.removeProperty("overflow");document.body.style.removeProperty("overflow");window.scrollTo(0,scrollLockY||0);}
+    if(icon)icon.textContent=open?"close":"menu";
+  }
+  function isOpen(){return toggle.getAttribute("aria-expanded")==="true";}
+  toggle.addEventListener("click",function(e){e.preventDefault();setOpen(!isOpen());});
+  if(backdrop)backdrop.addEventListener("click",function(){setOpen(false);});
+  panel.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){setOpen(false);});});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&isOpen())setOpen(false);});
+  window.addEventListener("resize",function(){
+    var bp=panel.classList.contains("md:hidden")?768:1024;
+    if(window.innerWidth>=bp&&isOpen())setOpen(false);
+  });
+})();
+</script></body></html>

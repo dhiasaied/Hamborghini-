@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>@layer base{html,body{margin:0;padding:0;min-height:100%;height:auto!important;max-height:none!important;position:relative;}html{overflow-x:auto;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;}body{overflow-x:visible;overflow-y:visible;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;touch-action:auto;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}html{scrollbar-width:thin;scrollbar-color:rgba(172,137,126,.65) transparent;}::-webkit-scrollbar{width:10px;height:10px;}::-webkit-scrollbar-thumb{background:rgba(172,137,126,.55);border-radius:8px;}::-webkit-scrollbar-track{background:transparent;}::-webkit-scrollbar-corner{background:transparent;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-highest":"#353437","on-error-container":"#ffdad6","surface-bright":"#39393b","tertiary-fixed":"#d4e4fa","on-secondary":"#472a00","surface-variant":"#353437","on-error":"#690005","on-tertiary-fixed-variant":"#39485a","background":"#131315","secondary":"#ffb95f","primary-fixed-dim":"#ffb59c","on-primary-container":"#511500","on-secondary-fixed":"#2a1700","tertiary-fixed-dim":"#b9c8de","on-secondary-container":"#5b3800","primary-fixed":"#ffdbcf","secondary-container":"#ee9800","on-tertiary-container":"#1c2b3c","inverse-primary":"#aa3600","surface":"#131315","surface-dim":"#131315","surface-container-high":"#2a2a2c","surface-container-lowest":"#0e0e10","on-primary":"#5c1900","tertiary":"#b9c8de","on-secondary-fixed-variant":"#653e00","tertiary-container":"#8392a6","outline":"#ac897e","surface-container":"#201f21","on-primary-fixed":"#390c00","surface-tint":"#ffb59c","on-primary-fixed-variant":"#822700","on-surface":"#e5e1e4","surface-container-low":"#1c1b1d","on-tertiary-fixed":"#0d1c2d","on-tertiary":"#233143","on-background":"#e5e1e4","on-surface-variant":"#e5beb2","secondary-fixed":"#ffddb8","error-container":"#93000a","primary-container":"#ff5708","outline-variant":"#5c4037","secondary-fixed-dim":"#ffb95f","error":"#ffb4ab","inverse-surface":"#e5e1e4","inverse-on-surface":"#313032","primary":"#ffb59c"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-md":"1rem","space-xl":"2.5rem","gutter-mobile":"1rem","space-lg":"1.5rem","space-xs":"0.25rem","margin":"3rem","gutter":"1.5rem","space-sm":"0.5rem","margin-mobile":"1.25rem"},"fontFamily":{"body-lg":["Space Grotesk"],"body-md":["Space Grotesk"],"headline-xl":["Syne"],"body-sm":["Space Grotesk"],"label-sm":["Space Grotesk"],"label-md":["Space Grotesk"],"headline-sm":["Syne"],"headline-lg-mobile":["Syne"],"headline-xl-mobile":["Syne"],"headline-lg":["Syne"],"label-lg":["Space Grotesk"],"headline-md":["Syne"]},"fontSize":{"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["56px",{"lineHeight":"60px","letterSpacing":"-0.02em","fontWeight":"800"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.12em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.1em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl-mobile":["36px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"800"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"700"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"0em","fontWeight":"700"}]}}}};</script>
+<style id="nav-responsive-css">
+/* Scroll: allow vertical + horizontal when content overflows; never trap the document */
+html,body{max-width:100%;height:auto!important;max-height:none!important;position:relative!important;}
+html{overflow-x:auto!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;touch-action:auto;}body{overflow-x:visible!important;overflow-y:visible!important;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;touch-action:auto;}
+img,video,canvas{max-width:100%;}
+[id^="threejs-container"]{touch-action:pan-y;}
+#cart-drawer.translate-x-full{pointer-events:none;}
+@media (max-width:767px){input,select,textarea{font-size:16px!important;}#nav-toggle,header button,header a[href].inline-flex,header a[href].flex{min-width:44px;min-height:44px;}main button,.cockpit-cta,[type=submit]{min-height:44px;}}
+  #mobile-nav-panel{max-height:0;opacity:0;overflow:hidden;visibility:hidden;transition:max-height .38s cubic-bezier(.4,0,.2,1),opacity .28s ease,visibility .28s;}
+  #mobile-nav-panel.is-open{max-height:min(80vh,640px);opacity:1;visibility:visible;overflow-y:auto;-webkit-overflow-scrolling:touch;touch-action:pan-y;overscroll-behavior:contain;}
+  #nav-backdrop{opacity:0;pointer-events:none!important;transition:opacity .3s ease;}
+  #nav-backdrop.is-open{opacity:1;pointer-events:auto!important;}
+  /* Lock background scroll only while mobile nav is open (html+body); keep panel scrollable */
+  html.nav-open{overflow:hidden!important;}body.nav-open{position:fixed!important;inset:0 auto auto 0;width:100%;overflow:hidden!important;overscroll-behavior:none;touch-action:auto;}
+  body.nav-open main,body.nav-open>footer{pointer-events:none;}
+  @media (min-width:1024px){
+    #mobile-nav-panel,#nav-backdrop,#nav-toggle{display:none!important;}
+    html.nav-open{overflow:auto!important;}body.nav-open{position:relative!important;inset:auto;width:auto;overflow:visible!important;overscroll-behavior:auto;}
+    body.nav-open main,body.nav-open>footer{pointer-events:auto;}
+  }
+</style></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.6)]"><div class="h-16 sm:h-20 w-full px-margin-mobile lg:px-margin flex items-center justify-between gap-space-sm sm:gap-space-md"><div class="flex items-center gap-space-lg shrink-0"><a class="flex items-center gap-space-sm group" data-path="home" href="index.html"><img alt="Hamborghini Shield Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VEiYRHW1Qw2FJqH1AZC9JcV_02p0fRrLFuGWF4jkzxW_2Oc5tynzJfbDGni0SNCvfwZdQTPeJhJ2vNWvbxWFZmO8rFHJWah4QX45ZAWeZSCErqx6GCU6owhWiaC6i4x3YD5i9fcHR5pxRjkbay5fbd6JEdGc4HmAfXY4lHjpDrw2wA8T777KbDvOkNaxYo-3rI9EYBxro67IQKitMil4VDy63Po0BlHfr__Sqr6nvexLk3jE1ujkwm6TE"/><div class="flex flex-col"><span class="font-headline-sm text-[16px] sm:text-headline-sm uppercase tracking-wider text-on-surface group-hover:text-primary transition-colors leading-tight">HAMBORGHINI</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase hidden sm:inline">SANT'AGATA GOURMET</span></div></a></div><nav class="hidden lg:flex items-center gap-space-sm shrink-0" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded"><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="home" href="index.html">Home</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="menu-showroom" href="menu_showroom.html">Menu / Showroom</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="our-story" href="our_story.html">Our Story</a><a aria-current="page" class="px-space-sm py-space-xs transition-colors uppercase tracking-wider bg-primary-container text-on-primary-container font-bold rounded" data-path="pit-stop-locations" href="pit_stop_locations.html">Pit Stop Locations</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="vip-lounge" href="vip_lounge.html">VIP Lounge</a></nav><div class="flex items-center gap-space-xs sm:gap-space-md shrink-0"><a class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded hover:bg-surface-container-high hover:text-on-surface text-on-surface-variant transition-colors" data-path="cart-telemetry" href="checkout.html" aria-label="Cockpit Bay cart"><span class="material-symbols-outlined text-secondary text-[20px]">shopping_bag</span><div class="hidden sm:flex flex-col text-left"><span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Cockpit Bay</span><span class="font-label-md text-label-md font-bold text-on-surface">$142.00</span></div><span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold ml-space-xs">3</span></a><a class="hidden sm:inline-flex items-center gap-space-xs bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-md text-label-md uppercase font-bold px-space-md py-space-sm rounded transition-all shadow-[0_0_24px_rgba(255,87,8,0.35)]" data-path="burger-configurator" href="menu_showroom.html"><span class="material-symbols-outlined text-[18px]">tune</span><span>CONFIGURE &amp; ORDER NOW</span></a><a class="w-8 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-primary-container transition-colors" href="login_cockpit.html" title="Access Portal"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></a><button type="button" id="nav-toggle" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" aria-controls="mobile-nav-panel" aria-expanded="false" aria-label="Open menu"><span class="material-symbols-outlined text-[22px]" id="nav-toggle-icon">menu</span></button></div></div><div id="nav-backdrop" class="fixed inset-0 top-16 sm:top-20 z-40 bg-black/55 backdrop-blur-[2px] lg:hidden" aria-hidden="true"></div><div id="mobile-nav-panel" class="relative z-50 lg:hidden border-t border-surface-container-high bg-surface-container-lowest/95 backdrop-blur-xl" role="dialog" aria-label="Mobile navigation"><nav class="flex flex-col gap-space-xs px-margin-mobile py-space-md" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded"><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="home" href="index.html">Home</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="menu-showroom" href="menu_showroom.html">Menu / Showroom</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="our-story" href="our_story.html">Our Story</a><a aria-current="page" class="block w-full px-space-md py-space-sm rounded bg-primary-container text-on-primary-container font-bold uppercase tracking-wider font-label-md text-label-md" data-path="pit-stop-locations" href="pit_stop_locations.html">Pit Stop Locations</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="vip-lounge" href="vip_lounge.html">VIP Lounge</a><div class="pt-space-sm mt-space-xs border-t border-surface-container-high flex flex-col gap-space-sm"><a class="inline-flex sm:hidden items-center justify-center gap-space-xs bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-md text-label-md uppercase font-bold px-space-md py-space-sm rounded transition-all shadow-[0_0_24px_rgba(255,87,8,0.35)]" data-path="burger-configurator" href="menu_showroom.html"><span class="material-symbols-outlined text-[18px]">tune</span><span>CONFIGURE &amp; ORDER NOW</span></a></div></nav></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Atmospheric Telemetry Bar -->
+<div class="w-full bg-surface-container-lowest px-margin-mobile lg:px-margin py-space-xs flex flex-wrap items-center justify-between gap-space-sm border-b border-surface-container-high">
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm uppercase text-on-surface-variant">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-primary-container/20 text-primary-container font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+        SATLINK COCKPIT ACTIVE
+      </span>
+<span class="text-outline">/</span>
+<span class="tracking-widest">COORDINATES: 44.6625° N, 11.1278° E (SANT'AGATA HQ)</span>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm uppercase text-secondary">
+<span>SERVER PING: <strong class="text-on-surface">14MS</strong></span>
+<span class="text-outline">/</span>
+<span>THERMAL ARRAY: <strong class="text-primary-container">650°F PEAK</strong></span>
+<span class="text-outline">/</span>
+<span>800V CHARGE BUS: <strong class="text-secondary font-bold">350 kW ACTIVE</strong></span>
+<span class="text-outline">/</span>
+<span class="text-on-surface-variant">UTC +01:00</span>
+</div>
+</div>
+<!-- Hero Section with Tactical GPS Staging -->
+<section class="relative w-full bg-surface-container-lowest px-margin-mobile lg:px-margin pt-space-xl pb-space-lg overflow-hidden">
+<!-- Ambient Racing Track Underglow -->
+<div class="absolute -top-32 -right-20 w-96 h-96 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-0 left-1/3 w-[500px] h-32 bg-secondary/5 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 max-w-7xl mx-auto flex flex-col gap-space-md">
+<!-- Status Badge -->
+<div class="inline-flex items-center gap-space-sm self-start px-space-sm py-space-xs rounded bg-surface-container-high shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary shadow-[0_0_8px_rgba(255,185,95,0.8)]"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface">
+          5 GLOBAL PADDOCKS LIVE <span class="text-outline mx-1">|</span> <span class="text-secondary">FIA CATERING HUBS DEPLOYED</span>
+</span>
+</div>
+<!-- Main Headline Cluster -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-lg">
+<div>
+<span class="font-label-lg text-label-lg uppercase tracking-widest text-primary-container block mb-space-xs">
+            GEO-TACTICAL TELEMETRY DEPLOYMENT
+          </span>
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl uppercase text-on-surface tracking-tight">
+            YOUR NEXT PIT STOP.
+          </h1>
+<p class="font-headline-sm text-headline-sm text-secondary uppercase tracking-wide mt-space-xs">
+            FIND YOUR NEAREST HIGH-OCTANE FLAVOR DESTINATION.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-space-sm xl:self-end">
+<div class="px-space-md py-space-sm rounded bg-surface-container text-left border border-outline-variant/30">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant block">GLOBAL FLEET AVERAGE</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">8.4 MINS <span class="text-secondary text-label-sm font-normal">AVG SEAR TURN</span></span>
+</div>
+<div class="px-space-md py-space-sm rounded bg-surface-container text-left border border-outline-variant/30">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant block">ATELIER CAPACITY</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary-container">92.4% <span class="text-on-surface text-label-sm font-normal">ACTIVE</span></span>
+</div>
+<div class="px-space-md py-space-sm rounded bg-surface-container text-left border border-outline-variant/30">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant block">CHARGING INFRA</span>
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">800V <span class="text-on-surface text-label-sm font-normal">HYPER-BAY</span></span>
+</div>
+</div>
+</div>
+<!-- Search & Radar Filter Matrix -->
+<div class="w-full mt-space-md p-space-md rounded bg-surface-container-low shadow-xl border border-outline-variant/20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-center">
+<!-- Tactical Search Input -->
+<div class="lg:col-span-5 relative">
+<div class="flex items-center bg-surface-container-lowest px-space-md py-space-sm rounded shadow-inner border border-surface-container-high">
+<span class="material-symbols-outlined text-secondary text-[22px] mr-space-sm">radar</span>
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" id="search-input" placeholder="Search by City, Zip, Circuit or Country (e.g., Sant'Agata, London, Tokyo)..." type="text"/>
+<button class="text-outline hover:text-on-surface p-1 hidden" id="clear-search" title="Clear search">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Quick Filter Pills -->
+<div class="lg:col-span-7 flex flex-wrap items-center gap-space-xs">
+<button class="filter-btn active px-space-sm py-space-xs rounded font-label-md text-label-md uppercase tracking-wider transition-all bg-primary-container text-on-primary-container shadow-[0_0_12px_rgba(255,87,8,0.3)]" data-filter="all">
+              All Paddocks (5)
+            </button>
+<button class="filter-btn px-space-sm py-space-xs rounded font-label-md text-label-md uppercase tracking-wider transition-all bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-filter="dine-in">
+              Dine-In Showroom
+            </button>
+<button class="filter-btn px-space-sm py-space-xs rounded font-label-md text-label-md uppercase tracking-wider transition-all bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-filter="pit-stop">
+              Pit-Stop Drive-Thru
+            </button>
+<button class="filter-btn px-space-sm py-space-xs rounded font-label-md text-label-md uppercase tracking-wider transition-all bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-filter="vip">
+              VIP Lounge Available
+            </button>
+<button class="filter-btn px-space-sm py-space-xs rounded font-label-md text-label-md uppercase tracking-wider transition-all bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-filter="late-night">
+              Late-Night Track Shift
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Telemetry Split Layout (Radar Map + Location Stream) -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-lg bg-background">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT: Tactical Vector Radar Map Canvas & Atmospheric Track Conditions HUD -->
+<div class="lg:col-span-6 sticky top-24 flex flex-col gap-space-sm">
+<!-- Real-Time Atmospheric & Track Conditions HUD -->
+<div class="p-space-sm rounded bg-surface-container-low border border-outline-variant/30 shadow-xl flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-space-xs pb-1 border-b border-surface-container-high">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm uppercase text-secondary font-bold">
+<span class="material-symbols-outlined text-[16px] text-primary-container">thermostat</span>
+<span>ATMOSPHERIC &amp; TRACK CONDITIONS TELEMETRY</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold animate-pulse">● LIVE SENSORS</span>
+</div>
+<div class="grid grid-cols-5 gap-1.5 pt-1 text-center font-label-sm text-label-sm">
+<div class="bg-surface-container-lowest p-2 rounded flex flex-col">
+<span class="text-outline text-[10px] uppercase">Asphalt Temp</span>
+<span class="text-on-surface font-bold text-body-sm">34.2°C</span>
+<span class="text-[9px] text-secondary">HOT TRACK</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded flex flex-col">
+<span class="text-outline text-[10px] uppercase">Ambient Hum.</span>
+<span class="text-on-surface font-bold text-body-sm">41%</span>
+<span class="text-[9px] text-on-surface-variant">OPTIMAL</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded flex flex-col">
+<span class="text-outline text-[10px] uppercase">Pressure</span>
+<span class="text-on-surface font-bold text-body-sm">1014 hPa</span>
+<span class="text-[9px] text-on-surface-variant">STABLE</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded flex flex-col">
+<span class="text-outline text-[10px] uppercase">Track Grip</span>
+<span class="text-secondary font-bold text-body-sm">0.98 μ</span>
+<span class="text-[9px] text-primary-container">MAX ADHESION</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded flex flex-col">
+<span class="text-outline text-[10px] uppercase">V12 Acoustic</span>
+<span class="text-primary font-bold text-body-sm">79 dB</span>
+<span class="text-[9px] text-secondary">HARMONIC</span>
+</div>
+</div>
+<!-- Tactical Radar Mode Pills -->
+<div class="flex items-center justify-between pt-1 gap-2">
+<span class="font-label-sm text-[11px] uppercase text-on-surface-variant tracking-wider">HUD LAYER:</span>
+<div class="flex items-center gap-1.5 flex-wrap">
+<button class="radar-layer-pill active px-2 py-0.5 rounded text-[11px] font-label-sm uppercase font-bold bg-primary-container text-on-primary-container transition-all" data-layer="thermal">
+                [SATELLITE THERMAL]
+              </button>
+<button class="radar-layer-pill px-2 py-0.5 rounded text-[11px] font-label-sm uppercase font-bold bg-surface-container text-on-surface-variant hover:text-on-surface transition-all" data-layer="geofence">
+                [GEOFENCE RANGE]
+              </button>
+<button class="radar-layer-pill px-2 py-0.5 rounded text-[11px] font-label-sm uppercase font-bold bg-surface-container text-on-surface-variant hover:text-on-surface transition-all" data-layer="flightpath">
+                [SUPERCAR FLIGHT PATH]
+              </button>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low shadow-2xl overflow-hidden relative border border-outline-variant/30">
+<!-- Glass Top Header -->
+<div class="flex items-center justify-between pb-space-xs px-space-xs">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm uppercase text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>TACTICAL RADAR HUD // SCANNING AIRSPACE &amp; CIRCUITS</span>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>BAND: 12.8 GHz</span>
+<span>GRID: AUTO-LOCK</span>
+</div>
+</div>
+<!-- Radar Visual Matrix Container -->
+<div class="relative w-full h-[500px] rounded bg-surface-container-lowest overflow-hidden flex items-center justify-center" id="radar-viewport">
+<!-- SVG Radar Sweep & Circuit Lines -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-45" fill="none" viewbox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialgradient cx="50%" cy="50%" id="radarSweepGrad" r="50%">
+<stop offset="0%" stop-color="#ff5708" stop-opacity="0.35"></stop>
+<stop offset="60%" stop-color="#ee9800" stop-opacity="0.1"></stop>
+<stop offset="100%" stop-color="#ff5708" stop-opacity="0"></stop>
+</radialgradient>
+<pattern height="40" id="radarGrid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#353437" stroke-dasharray="2 3" stroke-width="0.8"></path>
+</pattern>
+</defs>
+<!-- Grid -->
+<rect fill="url(#radarGrid)" height="600" width="600"></rect>
+<!-- Concentric Range Rings -->
+<circle cx="300" cy="300" r="80" stroke="#ac897e" stroke-dasharray="4 4" stroke-opacity="0.3" stroke-width="0.8"></circle>
+<circle cx="300" cy="300" r="160" stroke="#ffb95f" stroke-opacity="0.4" stroke-width="0.8"></circle>
+<circle cx="300" cy="300" r="240" stroke="#ff5708" stroke-dasharray="8 6" stroke-opacity="0.25" stroke-width="0.8"></circle>
+<!-- Crosshairs -->
+<line stroke="#353437" stroke-width="1.2" x1="300" x2="300" y1="0" y2="600"></line>
+<line stroke="#353437" stroke-width="1.2" x1="0" x2="600" y1="300" y2="300"></line>
+<!-- Dynamic Flight Path / Geofence Vector Layer -->
+<path class="transition-opacity duration-300" d="M 180 160 L 260 210 L 290 280 L 330 330 L 460 250" id="flightpath-layer" stroke="#ee9800" stroke-dasharray="5 5" stroke-opacity="0.8" stroke-width="1.8"></path>
+<circle class="transition-opacity duration-300" cx="290" cy="280" fill="#ff5708" fill-opacity="0.08" id="geofence-circle" r="120" stroke="#ff5708" stroke-dasharray="6 6" stroke-width="1.2"></circle>
+<!-- Ambient Rotating Scanner Line -->
+<circle class="origin-center animate-[spin_8s_linear_infinite]" cx="300" cy="300" fill="url(#radarSweepGrad)" r="240"></circle>
+</svg>
+<!-- Tactical Location Beacon 1: Sant'Agata Flagship -->
+<button class="radar-pin group absolute z-20 transition-transform hover:scale-125 focus:outline-none" data-id="loc-santagata" style="top: 45%; left: 47%;" title="Sant'Agata Bolognese Flagship">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-8 h-8 rounded-full bg-primary-container/30 animate-ping"></span>
+<span class="w-4 h-4 rounded-full bg-primary-container shadow-[0_0_14px_#ff5708] flex items-center justify-center text-[10px] font-bold text-on-primary">01</span>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-surface-container-lowest/90 px-2 py-1 rounded shadow-lg pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity border border-outline-variant/40">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">Pit 04 Flagship</span>
+<span class="block font-body-sm text-[11px] text-on-surface">Sant'Agata Bolognese (BO)</span>
+<span class="block font-label-sm text-[9px] text-primary-container">652.4°F ACTIVE SEAR</span>
+</div>
+</div>
+</button>
+<!-- Tactical Location Beacon 2: Milan Quadrilatero -->
+<button class="radar-pin group absolute z-20 transition-transform hover:scale-125 focus:outline-none" data-id="loc-milan" style="top: 34%; left: 42%;" title="Milan Quadrilatero Atelier">
+<div class="relative flex items-center justify-center">
+<span class="w-3.5 h-3.5 rounded-full bg-secondary shadow-[0_0_12px_#ffb95f] flex items-center justify-center text-[9px] font-bold text-on-secondary">02</span>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-surface-container-lowest/90 px-2 py-1 rounded shadow-lg pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity border border-outline-variant/40">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">Milan Atelier</span>
+<span class="block font-body-sm text-[11px] text-on-surface">Via Monte Napoleone</span>
+<span class="block font-label-sm text-[9px] text-secondary">800V CHARGE BAY READY</span>
+</div>
+</div>
+</button>
+<!-- Tactical Location Beacon 3: London Mayfair -->
+<button class="radar-pin group absolute z-20 transition-transform hover:scale-125 focus:outline-none" data-id="loc-london" style="top: 26%; left: 29%;" title="London Mayfair Paddock">
+<div class="relative flex items-center justify-center">
+<span class="w-3.5 h-3.5 rounded-full bg-secondary shadow-[0_0_12px_#ffb95f] flex items-center justify-center text-[9px] font-bold text-on-secondary">03</span>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-surface-container-lowest/90 px-2 py-1 rounded shadow-lg pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity border border-outline-variant/40">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">Mayfair Paddock</span>
+<span class="block font-body-sm text-[11px] text-on-surface">London Berkeley Sq</span>
+<span class="block font-label-sm text-[9px] text-primary">DRY-AGED BONE MARROW</span>
+</div>
+</div>
+</button>
+<!-- Tactical Location Beacon 4: Monaco Port Hercule -->
+<button class="radar-pin group absolute z-20 transition-transform hover:scale-125 focus:outline-none" data-id="loc-monaco" style="top: 55%; left: 54%;" title="Monaco Port Hercule">
+<div class="relative flex items-center justify-center">
+<span class="w-3.5 h-3.5 rounded-full bg-primary shadow-[0_0_12px_#ffb59c] flex items-center justify-center text-[9px] font-bold text-on-primary">04</span>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-surface-container-lowest/90 px-2 py-1 rounded shadow-lg pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity border border-outline-variant/40">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">Monaco Marina Pit</span>
+<span class="block font-body-sm text-[11px] text-on-surface">Port Hercule Chicane</span>
+<span class="block font-label-sm text-[9px] text-secondary">YACHT TENDER LINKED</span>
+</div>
+</div>
+</button>
+<!-- Tactical Location Beacon 5: Tokyo Ginza -->
+<button class="radar-pin group absolute z-20 transition-transform hover:scale-125 focus:outline-none" data-id="loc-tokyo" style="top: 40%; left: 77%;" title="Tokyo Ginza Pit Stop">
+<div class="relative flex items-center justify-center">
+<span class="w-3.5 h-3.5 rounded-full bg-primary-container shadow-[0_0_12px_#ff5708] flex items-center justify-center text-[9px] font-bold text-on-primary">05</span>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-surface-container-lowest/90 px-2 py-1 rounded shadow-lg pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity border border-outline-variant/40">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">Ginza Underground</span>
+<span class="block font-body-sm text-[11px] text-on-surface">Tokyo Chuo-ku</span>
+<span class="block font-label-sm text-[9px] text-primary-container">660°F ROBOTIC SEAR</span>
+</div>
+</div>
+</button>
+<!-- Bottom Left Telemetry Overlay -->
+<div class="absolute bottom-3 left-3 bg-surface-container-lowest/85 backdrop-blur-md p-space-xs rounded text-[11px] font-label-sm text-on-surface-variant flex flex-col gap-0.5 pointer-events-none border border-outline-variant/30">
+<span class="text-secondary font-bold">SECTOR TARGETING: ACTIVE</span>
+<span>CALIBRATION: WGS84 ELLIPSOID</span>
+<span>RADAR REFRESH RATE: 60 FPS // 14MS PING</span>
+</div>
+<!-- Bottom Right Quick View Trigger -->
+<div class="absolute bottom-3 right-3 flex items-center gap-1.5 bg-surface-container-high/90 px-2.5 py-1 rounded border border-outline-variant/30">
+<span class="material-symbols-outlined text-secondary text-[16px]">travel_explore</span>
+<span class="font-label-sm text-label-sm uppercase text-on-surface font-bold">GLOBAL MAP ACTIVE</span>
+</div>
+</div>
+<!-- Radar Sub-strip -->
+<div class="mt-space-xs pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm px-space-xs">
+<span>TAP ANY PIN TO CENTER TELEMETRY &amp; VIEW LIVE ORDER BAY</span>
+<span class="text-primary-container font-bold">5 OF 5 PADDOCKS DETECTED</span>
+</div>
+</div>
+<!-- Geofence Keyfob Auto-Sear Protocol Box -->
+<div class="p-space-md rounded bg-surface-container-low shadow-sm flex items-start gap-space-sm border border-primary-container/30 bg-gradient-to-r from-surface-container-low to-primary-container/5">
+<div class="w-10 h-10 rounded bg-primary-container/20 flex items-center justify-center shrink-0 text-primary-container mt-0.5">
+<span class="material-symbols-outlined text-[24px]">sensors</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-bold">Geofence Keyfob Auto-Sear Protocol</span>
+<span class="px-2 py-0.5 rounded bg-primary-container/20 text-primary-container font-label-sm text-label-sm font-bold uppercase animate-pulse">ARMED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Telemetry pairing active — Supercar signal locks grill 180s prior to paddock arrival. Searing manifold pre-ignites to 650°F the second your Revuelto or Aventador passes the 2-kilometer GPS geofence ring.
+            </p>
+<div class="flex items-center gap-space-md mt-2 pt-1 border-t border-surface-container-high text-label-sm text-label-sm text-secondary">
+<span>GEOFENCE PERIMETER: <strong>2,000 METERS</strong></span>
+<span>PRE-SEAR TIMING: <strong>180 SECONDS</strong></span>
+<span>KEYFOB SYNC: <strong>AUTO RFID / BLE 5.4</strong></span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT: Detailed Location Cards Stream -->
+<div class="lg:col-span-6 flex flex-col gap-space-md" id="locations-stream">
+<!-- CARD 1: Sant'Agata HQ -->
+<div class="paddock-card group p-space-lg rounded bg-surface-container-low transition-all duration-300 shadow-md hover:shadow-2xl border border-outline-variant/30 hover:border-primary-container/60" data-categories="dine-in pit-stop vip late-night" data-city="Bologna" data-country="Italy" data-name="Sant'Agata Flagship Pit 04" id="loc-santagata">
+<div class="flex flex-col gap-space-sm">
+<!-- Header Badges -->
+<div class="flex items-center justify-between flex-wrap gap-space-xs">
+<div class="inline-flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container font-bold">FLAGSHIP CHASSIS // PIT 04</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-secondary font-bold">
+                GRILL OPEN: 652.4°F OPTIMAL
+              </span>
+</div>
+<!-- Title & Address -->
+<div>
+<h2 class="font-headline-md text-headline-md uppercase text-on-surface group-hover:text-primary transition-colors">
+                Sant'Agata Flagship Pit 04
+              </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">pin_drop</span>
+                Via Modena 12, 40019 Sant'Agata Bolognese (BO), Italy
+              </p>
+</div>
+<!-- Exclusive Signature Allocation Badge -->
+<div class="p-2.5 rounded bg-surface-container-lowest border-l-2 border-primary-container flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px] shrink-0 mt-0.5">stars</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">EXCLUSIVE SIGNATURE ALLOCATION</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">A5 Miyazaki Wagyu &amp; 25-Year Tradizionale Balsamic Glaze</span>
+<span class="text-[12px] text-on-surface-variant">Pairing: Barolo Riserva DOCG 2016 decanted in hand-blown crystal manifolds.</span>
+</div>
+</div>
+<!-- Telemetry Metrics Bar & Capacity Progress -->
+<div class="grid grid-cols-3 gap-2 py-space-xs bg-surface-container-lowest px-space-sm rounded">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Live Wait Time</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">12 MINS</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Pit Bays Open</span>
+<span class="font-label-md text-label-md font-bold text-secondary">4 / 6 Active</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">800V Hyper-Bay</span>
+<span class="font-label-md text-label-md font-bold text-primary">350 kW Online</span>
+</div>
+</div>
+<!-- Live Pit Capacity Bar -->
+<div class="flex flex-col gap-1 bg-surface-container-lowest p-2 rounded">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant uppercase">PADDOCK LIVE CAPACITY</span>
+<span class="text-secondary font-bold">84% OCCUPIED</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded overflow-hidden">
+<div class="bg-gradient-to-r from-secondary to-primary-container h-full w-[84%]"></div>
+</div>
+</div>
+<!-- Operational Hours & Track Shift -->
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+                Mon - Thu: 11:30 - 23:00 | Fri - Sun: 11:30 - 02:00
+              </span>
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">Late Track Shift</span>
+</div>
+<!-- Available Amenities Chips -->
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">airline_seat_recline_extra</span> Private Tasting Pods
+              </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary-container">electric_bolt</span> 800V Hypercharge
+              </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">takeout_dining</span> Cockpit Takeout
+              </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">wine_bar</span> VIP Speakeasy
+              </span>
+</div>
+<!-- Action Cluster with Quick Order -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-sm">
+<button class="inspect-btn flex-1 min-w-0 sm:min-w-[130px] px-space-md py-space-sm rounded bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-md text-label-md uppercase font-bold transition-all shadow-[0_0_16px_rgba(255,87,8,0.25)] flex items-center justify-center gap-1.5" data-target="loc-santagata">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+                Inspect Paddock
+              </button>
+<a class="px-space-md py-space-sm rounded bg-secondary-container/20 hover:bg-secondary-container text-secondary hover:text-on-secondary-container border border-secondary/40 font-label-md text-label-md uppercase font-bold transition-all flex items-center gap-1.5" data-path="burger-configurator" href="menu_showroom.html">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+                Quick Order to Pit Bay
+              </a>
+<a class="px-space-md py-space-sm rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase font-bold transition-all flex items-center gap-1.5" href="https://maps.google.com/?q=Via+Modena+12+Sant+Agata+Bolognese+Italy" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] text-secondary">near_me</span>
+                Directions
+              </a>
+<a class="px-space-sm py-space-sm rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all flex items-center justify-center" href="tel:+390516817611" title="Call Paddock Telemetry">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</a>
+</div>
+</div>
+</div>
+<!-- CARD 2: Milan Quadrilatero Atelier -->
+<div class="paddock-card group p-space-lg rounded bg-surface-container-low transition-all duration-300 shadow-md hover:shadow-2xl border border-outline-variant/30 hover:border-primary-container/60" data-categories="dine-in vip" data-city="Milan" data-country="Italy" data-name="Milan Quadrilatero Atelier" id="loc-milan">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between flex-wrap gap-space-xs">
+<div class="inline-flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">HAUTE GASTRONOMIE // METROPOLITAN</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-secondary font-bold">
+                GRILL OPEN: 635°F PRECISION
+              </span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md uppercase text-on-surface group-hover:text-primary transition-colors">
+                Milan Quadrilatero Atelier
+              </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">pin_drop</span>
+                Via Monte Napoleone 8, 20121 Milano (MI), Italy
+              </p>
+</div>
+<!-- Exclusive Signature Allocation Badge -->
+<div class="p-2.5 rounded bg-surface-container-lowest border-l-2 border-secondary flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">stars</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">EXCLUSIVE SIGNATURE ALLOCATION</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Saffron Taleggio Melt &amp; Black Truffle Emulsion</span>
+<span class="text-[12px] text-on-surface-variant">Pairing: Franciacorta Cuvée Annamaria Clementi Riserva vault bottle.</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 py-space-xs bg-surface-container-lowest px-space-sm rounded">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Live Wait Time</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">18 MINS</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Cockpit Tables</span>
+<span class="font-label-md text-label-md font-bold text-secondary">Reservations Only</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Sommelier</span>
+<span class="font-label-md text-label-md font-bold text-primary">Barolo Decanting</span>
+</div>
+</div>
+<!-- Live Pit Capacity Bar -->
+<div class="flex flex-col gap-1 bg-surface-container-lowest p-2 rounded">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant uppercase">PADDOCK LIVE CAPACITY</span>
+<span class="text-secondary font-bold">96% OCCUPIED</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded overflow-hidden">
+<div class="bg-gradient-to-r from-secondary to-primary-container h-full w-[96%]"></div>
+</div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+                Daily: 12:00 - 15:30 &amp; 19:00 - 23:30 CET
+              </span>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Subterranean Hyper-Bay</span>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">airline_seat_recline_extra</span> Private Tasting Pods
+              </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary-container">local_parking</span> Subterranean Valet
+              </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">verified</span> Michelin Guest Residency
+              </span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-sm">
+<button class="inspect-btn flex-1 min-w-0 sm:min-w-[130px] px-space-md py-space-sm rounded bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-md text-label-md uppercase font-bold transition-all shadow-[0_0_16px_rgba(255,87,8,0.25)] flex items-center justify-center gap-1.5" data-target="loc-milan">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+                Inspect Paddock
+              </button>
+<a class="px-space-md py-space-sm rounded bg-secondary-container/20 hover:bg-secondary-container text-secondary hover:text-on-secondary-container border border-secondary/40 font-label-md text-label-md uppercase font-bold transition-all flex items-center gap-1.5" data-path="burger-configurator" href="menu_showroom.html">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+                Quick Order to Pit Bay
+              </a>
+<a class="px-space-md py-space-sm rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase font-bold transition-all flex items-center gap-1.5" href="https://maps.google.com/?q=Via+Monte+Napoleone+8+Milan+Italy" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] text-secondary">near_me</span>
+                Directions
+              </a>
+<a class="px-space-sm py-space-sm rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all flex items-center justify-center" href="tel:+390276008123">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</a>
+</div>
+</div>
+</div>
+<!-- CARD 3: London Mayfair Paddock -->
+<div class="paddock-card group p-space-lg rounded bg-surface-container-low transition-all duration-300 shadow-md hover:shadow-2xl border border-outline-variant/30 hover:border-primary-container/60" data-categories="dine-in pit-stop vip late-night" data-city="London" data-country="United Kingdom" data-name="London Mayfair Paddock" id="loc-london">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between flex-wrap gap-space-xs">
+<div class="inline-flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">UK HEADQUARTERS // MAYFAIR</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-secondary font-bold">
+                GRILL OPEN: 650°F OPTIMAL
+              </span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md uppercase text-on-surface group-hover:text-primary transition-colors">
+                London Mayfair Paddock
+              </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">pin_drop</span>
+                14 Berkeley Square, Mayfair, London W1J 6BL, United Kingdom
+              </p>
+</div>
+<!-- Exclusive Signature Allocation Badge -->
+<div class="p-2.5 rounded bg-surface-container-lowest border-l-2 border-primary flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">stars</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">EXCLUSIVE SIGNATURE ALLOCATION</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Dry-Aged Bone Marrow Butter &amp; Stilton Cream</span>
+<span class="text-[12px] text-on-surface-variant">Pairing: Château Margaux 2010 cellared at 13.5°C in carbon cask bays.</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 py-space-xs bg-surface-container-lowest px-space-sm rounded">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Live Wait Time</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">15 MINS</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Drive-Thru Lane</span>
+<span class="font-label-md text-label-md font-bold text-secondary">Curbside Hyper-Bay</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Exclusive Cut</span>
+<span class="font-label-md text-label-md font-bold text-primary">45-Day Bone-In Wagyu</span>
+</div>
+</div>
+<!-- Live Pit Capacity Bar -->
+<div class="flex flex-col gap-1 bg-surface-container-lowest p-2 rounded">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant uppercase">PADDOCK LIVE CAPACITY</span>
+<span class="text-secondary font-bold">78% OCCUPIED</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded overflow-hidden">
+<div class="bg-gradient-to-r from-secondary to-primary-container h-full w-[78%]"></div>
+</div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+                Mon - Sat: 11:30 - 01:00 GMT | Sun: 12:00 - 23:00 GMT
+              </span>
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">Midnight Shift</span>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">takeout_dining</span> Cockpit Takeout
+              </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary-container">directions_car</span> Berkeley Valet Concierge
+              </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">wine_bar</span> Scuderia VIP Bar
+              </span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-sm">
+<button class="inspect-btn flex-1 min-w-0 sm:min-w-[130px] px-space-md py-space-sm rounded bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-md text-label-md uppercase font-bold transition-all shadow-[0_0_16px_rgba(255,87,8,0.25)] flex items-center justify-center gap-1.5" data-target="loc-london">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+                Inspect Paddock
+              </button>
+<a class="px-space-md py-space-sm rounded bg-secondary-container/20 hover:bg-secondary-container text-secondary hover:text-on-secondary-container border border-secondary/40 font-label-md text-label-md uppercase font-bold transition-all flex items-center gap-1.5" data-path="burger-configurator" href="menu_showroom.html">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+                Quick Order to Pit Bay
+              </a>
+<a class="px-space-md py-space-sm rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase font-bold transition-all flex items-center gap-1.5" href="https://maps.google.com/?q=14+Berkeley+Square+London+W1J+6BL+UK" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] text-secondary">near_me</span>
+                Directions
+              </a>
+<a class="px-space-sm py-space-sm rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all flex items-center justify-center" href="tel:+442079460912">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</a>
+</div>
+</div>
+</div>
+<!-- CARD 4: Monaco Port Hercule -->
+<div class="paddock-card group p-space-lg rounded bg-surface-container-low transition-all duration-300 shadow-md hover:shadow-2xl border border-outline-variant/30 hover:border-primary-container/60" data-categories="dine-in vip late-night" data-city="Monaco" data-country="Monaco" data-name="Monaco Port Hercule Chicane" id="loc-monaco">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between flex-wrap gap-space-xs">
+<div class="inline-flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">GRAND PRIX HARBOR CIRCUIT</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-secondary font-bold">
+                GRILL OPEN: 645°F PEAK
+              </span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md uppercase text-on-surface group-hover:text-primary transition-colors">
+                Monaco Port Hercule Chicane
+              </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">pin_drop</span>
+                6 Quai Antoine 1er, 98000 Monaco
+              </p>
+</div>
+<!-- Exclusive Signature Allocation Badge -->
+<div class="p-2.5 rounded bg-surface-container-lowest border-l-2 border-secondary-container flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary-container text-[20px] shrink-0 mt-0.5">stars</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">EXCLUSIVE SIGNATURE ALLOCATION</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Maine Lobster Surf-and-Turf &amp; Beluga Caviar Aioli</span>
+<span class="text-[12px] text-on-surface-variant">Pairing: Vintage Dom Pérignon P2 2004 chilled to exactly 1.8°C for tender drop.</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 py-space-xs bg-surface-container-lowest px-space-sm rounded">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Live Wait Time</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">20 MINS</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Yacht Tender Drop</span>
+<span class="font-label-md text-label-md font-bold text-secondary">Direct Berth 14</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Black Truffle Blend</span>
+<span class="font-label-md text-label-md font-bold text-primary">Norcia Reserve</span>
+</div>
+</div>
+<!-- Live Pit Capacity Bar -->
+<div class="flex flex-col gap-1 bg-surface-container-lowest p-2 rounded">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant uppercase">PADDOCK LIVE CAPACITY</span>
+<span class="text-secondary font-bold">91% OCCUPIED</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded overflow-hidden">
+<div class="bg-gradient-to-r from-secondary to-primary-container h-full w-[91%]"></div>
+</div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+                Tue - Sun: 12:00 - 03:00 CET | Yacht Delivery 24/7
+              </span>
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">Paddock Harbor View</span>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">directions_boat</span> Yacht Berth Delivery
+              </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary-container">sports_motorsports</span> GP Pit Lane Balcony
+              </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">wine_bar</span> Dom Pérignon Pairing
+              </span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-sm">
+<button class="inspect-btn flex-1 min-w-0 sm:min-w-[130px] px-space-md py-space-sm rounded bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-md text-label-md uppercase font-bold transition-all shadow-[0_0_16px_rgba(255,87,8,0.25)] flex items-center justify-center gap-1.5" data-target="loc-monaco">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+                Inspect Paddock
+              </button>
+<a class="px-space-md py-space-sm rounded bg-secondary-container/20 hover:bg-secondary-container text-secondary hover:text-on-secondary-container border border-secondary/40 font-label-md text-label-md uppercase font-bold transition-all flex items-center gap-1.5" data-path="burger-configurator" href="menu_showroom.html">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+                Quick Order to Pit Bay
+              </a>
+<a class="px-space-md py-space-sm rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase font-bold transition-all flex items-center gap-1.5" href="https://maps.google.com/?q=6+Quai+Antoine+1er+Monaco" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] text-secondary">near_me</span>
+                Directions
+              </a>
+<a class="px-space-sm py-space-sm rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all flex items-center justify-center" href="tel:+37798062000">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</a>
+</div>
+</div>
+</div>
+<!-- CARD 5: Tokyo Ginza Pit Stop -->
+<div class="paddock-card group p-space-lg rounded bg-surface-container-low transition-all duration-300 shadow-md hover:shadow-2xl border border-outline-variant/30 hover:border-primary-container/60" data-categories="dine-in pit-stop late-night" data-city="Tokyo" data-country="Japan" data-name="Tokyo Ginza Pit Stop" id="loc-tokyo">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between flex-wrap gap-space-xs">
+<div class="inline-flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container font-bold">SHUTO EXPRESSWAY BAY // GINZA</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-secondary font-bold">
+                GRILL OPEN: 660°F INTENSE
+              </span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md uppercase text-on-surface group-hover:text-primary transition-colors">
+                Tokyo Ginza Pit Stop
+              </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">pin_drop</span>
+                6-10-1 Ginza, Chuo-ku, Tokyo 104-0061, Japan
+              </p>
+</div>
+<!-- Exclusive Signature Allocation Badge -->
+<div class="p-2.5 rounded bg-surface-container-lowest border-l-2 border-primary-container flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px] shrink-0 mt-0.5">stars</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">EXCLUSIVE SIGNATURE ALLOCATION</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Hokkaido Snow Beef &amp; Yuzu Kosho Glaze</span>
+<span class="text-[12px] text-on-surface-variant">Pairing: Yamazaki 18-Year Single Malt vapor infusion via ultrasonic atomizer.</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 py-space-xs bg-surface-container-lowest px-space-sm rounded">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Live Wait Time</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">8 MINS</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Bespoke Robotic Sear</span>
+<span class="font-label-md text-label-md font-bold text-secondary">Carbon Heat Wave</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Special Sauce</span>
+<span class="font-label-md text-label-md font-bold text-primary">Yuzu Wasabi Glaze</span>
+</div>
+</div>
+<!-- Live Pit Capacity Bar -->
+<div class="flex flex-col gap-1 bg-surface-container-lowest p-2 rounded">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant uppercase">PADDOCK LIVE CAPACITY</span>
+<span class="text-secondary font-bold">72% OCCUPIED</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded overflow-hidden">
+<div class="bg-gradient-to-r from-secondary to-primary-container h-full w-[72%]"></div>
+</div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+                Daily: 11:00 - 04:00 JST (Midnight Expressway Shifts)
+              </span>
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">Robotic Dispatch</span>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">bolt</span> High-Speed Counter
+              </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary-container">takeout_dining</span> Express Cockpit Box
+              </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">local_gas_station</span> EV Fast Charging Bay
+              </span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-sm">
+<button class="inspect-btn flex-1 min-w-0 sm:min-w-[130px] px-space-md py-space-sm rounded bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-md text-label-md uppercase font-bold transition-all shadow-[0_0_16px_rgba(255,87,8,0.25)] flex items-center justify-center gap-1.5" data-target="loc-tokyo">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+                Inspect Paddock
+              </button>
+<a class="px-space-md py-space-sm rounded bg-secondary-container/20 hover:bg-secondary-container text-secondary hover:text-on-secondary-container border border-secondary/40 font-label-md text-label-md uppercase font-bold transition-all flex items-center gap-1.5" data-path="burger-configurator" href="menu_showroom.html">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+                Quick Order to Pit Bay
+              </a>
+<a class="px-space-md py-space-sm rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase font-bold transition-all flex items-center gap-1.5" href="https://maps.google.com/?q=Ginza+Chuo+Tokyo+Japan" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] text-secondary">near_me</span>
+                Directions
+              </a>
+<a class="px-space-sm py-space-sm rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all flex items-center justify-center" href="tel:+81355550143">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Paddock Telemetry Inspector (Modal / Sliding Drawer) -->
+<div class="fixed inset-0 z-50 bg-surface-container-lowest/85 backdrop-blur-md hidden items-center justify-center p-space-sm md:p-space-md" id="inspection-drawer">
+<div class="relative w-full max-w-5xl bg-surface-container-low rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.85)] border border-outline-variant/40 overflow-hidden max-h-[92vh] flex flex-col">
+<!-- Modal Header -->
+<div class="p-space-md bg-surface-container flex items-center justify-between border-b border-surface-container-high">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-primary-container animate-pulse shadow-[0_0_10px_#ff5708]"></span>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-widest block" id="drawer-subtitle">
+              PADDOCK INSPECTION DOSSIER
+            </span>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface font-bold" id="drawer-title">
+              Sant'Agata Flagship Pit 04
+            </h3>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="hidden sm:inline-flex px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-secondary border border-secondary/30">
+            AUTO-REFRESH: 1 SEC
+          </span>
+<button class="w-10 h-10 rounded bg-surface-container-high hover:bg-surface-variant text-on-surface flex items-center justify-center transition-colors" id="close-drawer">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<!-- Modal Body (Scrollable HUD) -->
+<div class="p-space-md md:p-space-lg overflow-y-auto flex flex-col gap-space-md">
+<!-- Photo Showcase & Live Camera HUD -->
+<div class="relative w-full h-72 md:h-80 rounded overflow-hidden shadow-xl bg-surface-container-lowest border border-outline-variant/30">
+<img alt="Hamborghini Atelier Interior Showroom" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxg3hv0z6oJ6lkDnNLcjkdLSflWRYIlr7KQL4OLXCUzoPSPcDFnHy1QjZdG53J2XFvttTtiTQUsF-Fa2fxq9XL4XlQCdf9GYBG_5Sdg9c7iR6K1O-hvvMXYANXlsVlWQNdUG0TOx4zQcI_Q-x01NfV0kJeW8fgGErdnFDOlSr3h3oLTZ0JemJPa1rA10X-KtF7XhyiSdZ_nQjly0XhbzkeDHIRwenigNfcSc8z9iX6Ty7fbHNgyJCb"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/80 px-2 py-1 rounded border border-outline-variant/30 flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-sm text-[10px] uppercase text-on-surface font-bold">OPTICAL SENSOR FEED: CAM #01</span>
+</div>
+<div class="absolute bottom-4 left-4 right-4 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">INTERIOR CAMERA // PIT CAM 01</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold" id="drawer-camera-label">Live Feed: Master Charcoal Searing Table &amp; V12 Chassis Bay</span>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest/90 text-primary-container font-label-sm text-label-sm font-bold uppercase backdrop-blur-sm border border-primary-container/40">
+              LIVE BROADCAST 4K // 60 FPS
+            </span>
+</div>
+</div>
+<!-- Real-Time Pit Bay Sensor Telemetry Strip (4 Gauge Matrix) -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-xs md:gap-space-sm">
+<div class="p-space-sm rounded bg-surface-container border border-outline-variant/30 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] uppercase text-outline">GRILL PLINTH #01</span>
+<span class="material-symbols-outlined text-[14px] text-primary-container">local_fire_department</span>
+</div>
+<span class="font-headline-sm text-[19px] font-bold text-primary-container" id="sensor-sear">652.4°F</span>
+<span class="text-[10px] text-secondary font-label-sm">±0.2°C TOLERANCE</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container border border-outline-variant/30 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] uppercase text-outline">SOUS-VIDE IMMERSION</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">water_drop</span>
+</div>
+<span class="font-headline-sm text-[19px] font-bold text-on-surface" id="sensor-sousvide">132.5°F</span>
+<span class="text-[10px] text-on-surface-variant font-label-sm">WAGYU FAT CORE</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container border border-outline-variant/30 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] uppercase text-outline">CRYOGENIC BUN CHAMBER</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">ac_unit</span>
+</div>
+<span class="font-headline-sm text-[19px] font-bold text-tertiary" id="sensor-cryo">-196°C</span>
+<span class="text-[10px] text-on-surface-variant font-label-sm">LIQUID N2 INJECTION</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container border border-outline-variant/30 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] uppercase text-outline">UMAMI VAPOR EXTRACTION</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">air</span>
+</div>
+<span class="font-headline-sm text-[19px] font-bold text-secondary" id="sensor-vapor">99.2%</span>
+<span class="text-[10px] text-secondary font-label-sm">CATALYTIC CONDENSER</span>
+</div>
+</div>
+<!-- Live Pit Bay Status Visual Indicators (Bays 1-6) -->
+<div class="p-space-sm rounded bg-surface-container border border-outline-variant/30 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">PADDOCK BAY DEPLOYMENT (BAYS 01 - 06)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">REAL-TIME BAY SENSORS</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 pt-1" id="pit-bays-matrix">
+<!-- Bay 1 -->
+<div class="p-2 rounded bg-surface-container-lowest border border-primary-container/60 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[11px] font-bold text-on-surface">BAY 01</span>
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+</div>
+<span class="font-label-sm text-[10px] text-primary-container font-bold uppercase">Active Sear</span>
+<span class="text-[10px] text-outline">A5 Ribcap Sear</span>
+</div>
+<!-- Bay 2 -->
+<div class="p-2 rounded bg-surface-container-lowest border border-secondary/50 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[11px] font-bold text-on-surface">BAY 02</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<span class="font-label-sm text-[10px] text-secondary font-bold uppercase">Resting Plate</span>
+<span class="text-[10px] text-outline">Marrow Infusion</span>
+</div>
+<!-- Bay 3 -->
+<div class="p-2 rounded bg-surface-container-lowest border border-tertiary/40 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[11px] font-bold text-on-surface">BAY 03</span>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+</div>
+<span class="font-label-sm text-[10px] text-tertiary font-bold uppercase">Available</span>
+<span class="text-[10px] text-on-surface-variant">Ready for Sear</span>
+</div>
+<!-- Bay 4 -->
+<div class="p-2 rounded bg-surface-container-lowest border border-primary/50 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[11px] font-bold text-on-surface">BAY 04</span>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</div>
+<span class="font-label-sm text-[10px] text-primary font-bold uppercase">VIP Allocation</span>
+<span class="text-[10px] text-outline">Revuelto Driver</span>
+</div>
+<!-- Bay 5 -->
+<div class="p-2 rounded bg-surface-container-lowest border border-primary-container/60 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[11px] font-bold text-on-surface">BAY 05</span>
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+</div>
+<span class="font-label-sm text-[10px] text-primary-container font-bold uppercase">Active Sear</span>
+<span class="text-[10px] text-outline">Truffle Brioche</span>
+</div>
+<!-- Bay 6 -->
+<div class="p-2 rounded bg-surface-container-lowest border border-tertiary/40 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[11px] font-bold text-on-surface">BAY 06</span>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+</div>
+<span class="font-label-sm text-[10px] text-tertiary font-bold uppercase">Available</span>
+<span class="text-[10px] text-on-surface-variant">Ready for Sear</span>
+</div>
+</div>
+</div>
+<!-- Split Technical Specs: Supercar Hypercharging + Cellar & Crew -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Left Column: Supercar Concierge & 800V Hypercharging Bay Status -->
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-xs border border-outline-variant/30">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">SUPERCAR CONCIERGE &amp; HYPERCHARGER</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-[10px] font-label-sm text-primary-container font-bold uppercase">800V ARCHITECTURE</span>
+</div>
+<div class="flex flex-col gap-2 mt-1">
+<div class="p-2 rounded bg-surface-container-lowest flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] text-outline uppercase">Active Charge Slot</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold" id="drawer-charge-slot">Revuelto Hybrid V12 (Slot #01)</span>
+</div>
+<span class="font-label-md text-label-md text-secondary font-bold" id="drawer-charge-kw">350 kW Active</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm pt-1">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">tire_repair</span>
+                    Hydraulic Tire Check:
+                  </span>
+<span class="text-on-surface font-semibold" id="drawer-tire">2.4 BAR (Cold Calibrated)</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary-container">key</span>
+                    Keyfob Geofence Arming:
+                  </span>
+<span class="text-primary-container font-semibold" id="drawer-geofence">Armed // 180s Pre-Sear Trigger</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">local_gas_station</span>
+                    Valet Bay Capacity:
+                  </span>
+<span class="text-secondary font-semibold" id="drawer-valet">4 / 6 Supercar Stalls Free</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Cellar & Sommelier Vault Specs + Pit Crew -->
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-xs border border-outline-variant/30">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-primary font-bold">CELLAR VAULT &amp; ON-DUTY PIT CREW</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-[10px] font-label-sm text-secondary font-bold uppercase">MICHELIN CERTIFIED</span>
+</div>
+<div class="flex flex-col gap-2 mt-1">
+<div class="p-2 rounded bg-surface-container-lowest flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">wine_bar</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-outline uppercase">Sommelier Reserve Vault</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold" id="drawer-wine">Vintage Dom Pérignon P2 2004 chilled at 1.8°C</span>
+<span class="text-[11px] text-on-surface-variant" id="drawer-decant">Barolo Riserva DOCG 2016 continuous ultrasonic decanting.</span>
+</div>
+</div>
+<div class="flex flex-col pt-1">
+<span class="font-label-sm text-[10px] text-outline uppercase">Executive Pitmaster On-Duty</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold mt-0.5" id="drawer-chef-name">Matteo Vallardi</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-0.5" id="drawer-chef-bio">
+                    Former Squadra Corse race strategist turned Michelin-trained grill master. Commands 6 high-heat infrared carbon beds calibrated to Wagyu grain alignment.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Order Routing Action Drawer Dock -->
+<div class="p-space-md rounded bg-surface-container-high flex flex-col sm:flex-row items-center justify-between gap-space-md border border-outline-variant/40">
+<div class="flex flex-col text-left">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">FAST-TRACK COCKPIT DISPATCH</span>
+<span class="font-body-md text-body-md text-on-surface">Lock your private bay or dispatch your configured burger directly to this atelier.</span>
+</div>
+<div class="flex items-center gap-space-xs sm:gap-space-sm w-full sm:w-auto">
+<a class="flex-1 sm:flex-initial px-space-md py-space-sm rounded bg-surface-container hover:bg-surface-container-highest text-on-surface border border-outline-variant/40 font-label-md text-label-md uppercase font-bold transition-all text-center" data-path="vip-lounge" href="vip_lounge.html">Reserve Private Pit Bay</a>
+<a class="flex-1 sm:flex-initial px-space-md py-space-sm rounded bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-md text-label-md uppercase font-bold transition-all shadow-[0_0_24px_rgba(255,87,8,0.4)] flex items-center justify-center gap-space-xs shrink-0" data-path="burger-configurator" href="menu_showroom.html">
+<span class="material-symbols-outlined text-[18px]">shopping_cart_checkout</span>
+<span>Order Ahead to Bay</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Teaser Section: Upcoming Pit Stops in Assembly -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl bg-surface-container-lowest border-t border-surface-container-high">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-lg text-label-lg uppercase tracking-widest text-secondary block mb-space-xs">
+            EXPANSION RUNWAY // PHASE 02
+          </span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-on-surface tracking-tight">
+            NEW PIT STOPS COMING SOON
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mt-1">
+            Structural wind tunnel assembly and custom charcoal duct installation are currently underway across 3 high-octane global motorsport hubs.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>ESTIMATED COMMISSIONING: Q3 / Q4 2026</span>
+</div>
+</div>
+<!-- Assembly Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- TEASER 1: Dubai -->
+<div class="p-space-lg rounded bg-surface-container-low shadow-sm flex flex-col justify-between gap-space-md group hover:bg-surface-container transition-colors border border-outline-variant/20">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">DIFC / AUTODROME CORRIDOR</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm uppercase text-primary font-bold">78% ASSEMBLED</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface font-bold group-hover:text-primary transition-colors">
+              Dubai Marina Paddock
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Multi-level hypercar elevator with direct terrace viewing. Featuring 24k gold leaf brioche options and chilled nitrogen dipping vaults.
+            </p>
+</div>
+<div class="pt-space-sm flex flex-col gap-2">
+<div class="w-full bg-surface-container-lowest h-1.5 rounded overflow-hidden">
+<div class="bg-primary-container h-full w-[78%]"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>TARGET LAUNCH: SEPTEMBER 2026</span>
+<span class="text-secondary">DUBAI, UAE</span>
+</div>
+</div>
+</div>
+<!-- TEASER 2: Miami -->
+<div class="p-space-lg rounded bg-surface-container-low shadow-sm flex flex-col justify-between gap-space-md group hover:bg-surface-container transition-colors border border-outline-variant/20">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">BRICKELL WATERFRONT</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm uppercase text-primary font-bold">62% ASSEMBLED</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface font-bold group-hover:text-primary transition-colors">
+              Miami Brickell Pit Stop
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Positioned on the marina waterfront with dedicated cigarette boat speed docks and tropical night terrace DJ telemetry.
+            </p>
+</div>
+<div class="pt-space-sm flex flex-col gap-2">
+<div class="w-full bg-surface-container-lowest h-1.5 rounded overflow-hidden">
+<div class="bg-primary-container h-full w-[62%]"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>TARGET LAUNCH: NOVEMBER 2026</span>
+<span class="text-secondary">MIAMI, FLORIDA</span>
+</div>
+</div>
+</div>
+<!-- TEASER 3: Zurich -->
+<div class="p-space-lg rounded bg-surface-container-low shadow-sm flex flex-col justify-between gap-space-md group hover:bg-surface-container transition-colors border border-outline-variant/20">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">BAHNHOFSTRASSE PRECISION</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm uppercase text-primary font-bold">45% ASSEMBLED</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface font-bold group-hover:text-primary transition-colors">
+              Zurich Alpine Atelier
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Alpine cellar maturation vault with aged Gruyère lava sauce injections and mountain pass drive-out staging points.
+            </p>
+</div>
+<div class="pt-space-sm flex flex-col gap-2">
+<div class="w-full bg-surface-container-lowest h-1.5 rounded overflow-hidden">
+<div class="bg-primary-container h-full w-[45%]"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>TARGET LAUNCH: JANUARY 2026</span>
+<span class="text-secondary">ZURICH, SWITZERLAND</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- VIP Trackside Logistics, Helipad & Mobile Paddock Modules Section -->
+<section class="w-full bg-surface-container-low px-margin-mobile lg:px-margin py-space-xl border-t border-surface-container-high shadow-inner">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded bg-surface-container-high border border-secondary/30 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[32px]">flight_takeoff</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface font-bold">VIP Trackside Logistics &amp; Helipad Operations</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deploy our carbon mobile pit module and helicopter concierge to Grand Prix circuits globally.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<a class="px-space-md py-space-sm rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase font-bold transition-colors border border-outline-variant/30" data-path="track-catering" href="pit_stop_locations.html">
+          Request Track Operation
+        </a>
+<a class="px-space-md py-space-sm rounded bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-md text-label-md uppercase font-bold transition-all shadow-[0_0_16px_rgba(255,87,8,0.25)]" data-path="vip-lounge" href="vip_lounge.html">
+          Scuderia Pass Access
+        </a>
+</div>
+</div>
+<!-- FIA Track Logistics & Helipad Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-xs">
+<!-- Circuit 1: Monza -->
+<div class="p-space-md rounded bg-surface-container border border-outline-variant/30 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-primary font-bold">AUTODROMO NAZIONALE MONZA</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-[10px] text-secondary font-bold">FIA GRADE 1</span>
+</div>
+<h4 class="font-headline-sm text-[18px] text-on-surface uppercase font-bold mt-1">Monza Curva Parabolica Module</h4>
+<div class="space-y-1 text-body-sm text-[13px] text-on-surface-variant pt-1">
+<div class="flex justify-between"><span>Helipad Waypoint:</span> <strong class="text-on-surface">45.6201° N, 9.2811° E</strong></div>
+<div class="flex justify-between"><span>Mobile Charcoal Kiln:</span> <strong class="text-secondary">650°F Dual Carbon Core</strong></div>
+<div class="flex justify-between"><span>Helicopter In-Flight Sear:</span> <strong class="text-primary-container">6 Min Express Staging</strong></div>
+<div class="flex justify-between"><span>Dedicated Paddock Bay:</span> <strong class="text-on-surface">Parabolica Pits 01-03</strong></div>
+</div>
+</div>
+<!-- Circuit 2: Spa -->
+<div class="p-space-md rounded bg-surface-container border border-outline-variant/30 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">SPA-FRANCORCHAMPS</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-[10px] text-primary-container font-bold">ARDENNES SECTOR</span>
+</div>
+<h4 class="font-headline-sm text-[18px] text-on-surface uppercase font-bold mt-1">Eau Rouge Mobile Pit Hub</h4>
+<div class="space-y-1 text-body-sm text-[13px] text-on-surface-variant pt-1">
+<div class="flex justify-between"><span>Helipad Waypoint:</span> <strong class="text-on-surface">50.4372° N, 5.9714° E</strong></div>
+<div class="flex justify-between"><span>Thermal Wind Barrier:</span> <strong class="text-secondary">F1 Aerodynamic Canopy</strong></div>
+<div class="flex justify-between"><span>Pre-Heated Wagyu Vault:</span> <strong class="text-primary-container">40 Paddock Guests / Hour</strong></div>
+<div class="flex justify-between"><span>Helicopter Transfer:</span> <strong class="text-on-surface">Liège Airport: 12 Mins</strong></div>
+</div>
+</div>
+<!-- Circuit 3: Nurburgring -->
+<div class="p-space-md rounded bg-surface-container border border-outline-variant/30 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-tertiary font-bold">NÜRBURGRING NORDSCHLEIFE</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-[10px] text-secondary font-bold">GREEN HELL UNIT</span>
+</div>
+<h4 class="font-headline-sm text-[18px] text-on-surface uppercase font-bold mt-1">Döttinger Höhe Apex Base</h4>
+<div class="space-y-1 text-body-sm text-[13px] text-on-surface-variant pt-1">
+<div class="flex justify-between"><span>Helipad Waypoint:</span> <strong class="text-on-surface">50.3356° N, 6.9475° E</strong></div>
+<div class="flex justify-between"><span>Rapid Sear Turnaround:</span> <strong class="text-secondary">3.8 Mins Telemetry Target</strong></div>
+<div class="flex justify-between"><span>Keyfob Track Sensor:</span> <strong class="text-primary-container">Bridge-to-Gantry Geofence</strong></div>
+<div class="flex justify-between"><span>Helicopter Transfer:</span> <strong class="text-on-surface">Frankfurt Airport: 24 Mins</strong></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Interactive Radar & Inspection Scripts -->
+<script>
+  (function initPaddockHud() {
+    // Rich Inspection Data Registry with automotive & culinary telemetry
+    const paddockRegistry = {
+      'loc-santagata': {
+        title: "Sant'Agata Flagship Pit 04",
+        subtitle: "GLOBAL HEADQUARTERS // SECTOR BOLOGNA",
+        chefName: "Matteo Vallardi",
+        chefBio: "Former Squadra Corse race strategist turned Michelin-trained grill master. Commands 6 high-heat infrared carbon beds calibrated to Wagyu grain alignment.",
+        camLabel: "Live Feed: Master Charcoal Searing Table & V12 Chassis Bay",
+        searTemp: "652.4°F",
+        sousVide: "132.5°F",
+        cryo: "-196°C",
+        vapor: "99.2%",
+        chargeSlot: "Revuelto Hybrid V12 (Slot #01)",
+        chargeKw: "350 kW Active",
+        tire: "2.4 BAR (Cold Calibrated)",
+        geofence: "Armed // 180s Pre-Sear Trigger",
+        valet: "4 / 6 Supercar Stalls Free",
+        wine: "Vintage Dom Pérignon P2 2004 chilled at 1.8°C",
+        decant: "Barolo Riserva DOCG 2016 continuous ultrasonic decanting."
+      },
+      'loc-milan': {
+        title: "Milan Quadrilatero Atelier",
+        subtitle: "HAUTE GASTRONOMIE // METROPOLITAN",
+        chefName: "Chef Gianluigi Baresi",
+        chefBio: "Trained under Milan's premier luxury culinary houses. Pioneered our white-truffle bone marrow emulsification system at 635°F with laser precision induction.",
+        camLabel: "Live Feed: Gold Plating Pass & Glass-Fronted Curing Vault",
+        searTemp: "635.0°F",
+        sousVide: "131.0°F",
+        cryo: "-196°C",
+        vapor: "98.5%",
+        chargeSlot: "Aventador Ultimae (Slot #02)",
+        chargeKw: "300 kW Active",
+        tire: "2.3 BAR (Pirelli Trofeo R)",
+        geofence: "Armed // Duomo Geofence Active",
+        valet: "Reservations Staged Underground",
+        wine: "Franciacorta Cuvée Annamaria Clementi Riserva 2013",
+        decant: "Gaja Barbaresco 2017 decanted through magnetic aeration."
+      },
+      'loc-london': {
+        title: "London Mayfair Paddock",
+        subtitle: "UK HEADQUARTERS // MAYFAIR",
+        chefName: "Chef Alistair Sterling",
+        chefBio: "Specialist in dry-aged British heritage Wagyu crossbreds. Custom charcoal airflow furnace built with Formula 1 exhaust geometry and titanium ducting.",
+        camLabel: "Live Feed: Berkeley Square Curbside Pit Bay & Lounge",
+        searTemp: "650.0°F",
+        sousVide: "133.2°F",
+        cryo: "-196°C",
+        vapor: "99.0%",
+        chargeSlot: "Huracán Sterrato (Hyper-Bay #01)",
+        chargeKw: "350 kW Active",
+        tire: "2.5 BAR (Bridgestone Dueler AT)",
+        geofence: "Armed // Hyde Park Perimeter Alert",
+        valet: "3 Curbside Slots Live",
+        wine: "Château Margaux 2010 Premier Grand Cru",
+        decant: "Vintage Port 1994 chilled to 14°C cellar standard."
+      },
+      'loc-monaco': {
+        title: "Monaco Port Hercule Chicane",
+        subtitle: "GRAND PRIX HARBOR CIRCUIT",
+        chefName: "Chef Pierre-Olivier Laurent",
+        chefBio: "Mediterranean maritime seasoning maestro. Integrates aged balsamic spheres and rare caviar crumbles into wagyu thermal crusts right beside the harbor chicane.",
+        camLabel: "Live Feed: Port Hercule Chicane & Superyacht Tender Bay",
+        searTemp: "645.8°F",
+        sousVide: "132.0°F",
+        cryo: "-196°C",
+        vapor: "99.4%",
+        chargeSlot: "Countach LPI 800-4 (Harbor Berth #14)",
+        chargeKw: "350 kW Active",
+        tire: "2.3 BAR (Monaco Asphalt Spec)",
+        geofence: "Armed // Helicopter & Yacht Transponder Linked",
+        valet: "Berth 14 Tender Jet-Boat Synchronized",
+        wine: "Vintage Dom Pérignon P2 2004 chilled at 1.8°C",
+        decant: "Sassicaia 2015 decanting inside carbon cooling sleeve."
+      },
+      'loc-tokyo': {
+        title: "Tokyo Ginza Pit Stop",
+        subtitle: "SHUTO EXPRESSWAY BAY // GINZA",
+        chefName: "Master Kenji Takahashi",
+        chefBio: "Obsessive sear master. Uses automated carbon wave searing plates operating at 660°F for extreme exterior Maillard caramelization in under 120 seconds.",
+        camLabel: "Live Feed: Underground Shuto Expressway Fast-Bay",
+        searTemp: "660.0°F",
+        sousVide: "130.5°F",
+        cryo: "-196°C",
+        vapor: "99.8%",
+        chargeSlot: "Diablo GT Tribute / Urus Performante",
+        chargeKw: "350 kW Ultra-Fast",
+        tire: "2.4 BAR (Yokohama Advan Neova)",
+        geofence: "Armed // Shuto C1 Loop Radar Lock",
+        valet: "Automated Robotic Stacking Bays",
+        wine: "Yamazaki 18-Year Single Malt vapor infusion array",
+        decant: "Echigo Koshino Kanbai Daiginjo Sake at 5.0°C."
+      }
+    };
+
+    // Modal Drawer logic
+    const drawer = document.getElementById('inspection-drawer');
+    const closeBtn = document.getElementById('close-drawer');
+    const inspectButtons = document.querySelectorAll('.inspect-btn');
+    const radarPins = document.querySelectorAll('.radar-pin');
+
+    function openInspection(id) {
+      const data = paddockRegistry[id];
+      if (!data) return;
+
+      document.getElementById('drawer-title').textContent = data.title;
+      document.getElementById('drawer-subtitle').textContent = data.subtitle;
+      document.getElementById('drawer-chef-name').textContent = data.chefName;
+      document.getElementById('drawer-chef-bio').textContent = data.chefBio;
+      document.getElementById('drawer-camera-label').textContent = data.camLabel;
+      
+      // Dynamic sensor gauges
+      document.getElementById('sensor-sear').textContent = data.searTemp;
+      document.getElementById('sensor-sousvide').textContent = data.sousVide;
+      document.getElementById('sensor-cryo').textContent = data.cryo;
+      document.getElementById('sensor-vapor').textContent = data.vapor;
+
+      // Supercar concierge & cellar
+      document.getElementById('drawer-charge-slot').textContent = data.chargeSlot;
+      document.getElementById('drawer-charge-kw').textContent = data.chargeKw;
+      document.getElementById('drawer-tire').textContent = data.tire;
+      document.getElementById('drawer-geofence').textContent = data.geofence;
+      document.getElementById('drawer-valet').textContent = data.valet;
+      document.getElementById('drawer-wine').textContent = data.wine;
+      document.getElementById('drawer-decant').textContent = data.decant;
+
+      drawer.classList.remove('hidden');
+      drawer.classList.add('flex');
+    }
+
+    inspectButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const targetId = btn.getAttribute('data-target');
+        openInspection(targetId);
+      });
+    });
+
+    radarPins.forEach(pin => {
+      pin.addEventListener('click', () => {
+        const id = pin.getAttribute('data-id');
+        openInspection(id);
+
+        const card = document.getElementById(id);
+        if (card && window.innerWidth < 1024) {
+          card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      drawer.classList.add('hidden');
+      drawer.classList.remove('flex');
+    });
+
+    drawer.addEventListener('click', (e) => {
+      if (e.target === drawer) {
+        drawer.classList.add('hidden');
+        drawer.classList.remove('flex');
+      }
+    });
+
+    // Radar HUD Layer Pills
+    const radarPills = document.querySelectorAll('.radar-layer-pill');
+    const flightpathLayer = document.getElementById('flightpath-layer');
+    const geofenceCircle = document.getElementById('geofence-circle');
+
+    radarPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        radarPills.forEach(p => {
+          p.classList.remove('active', 'bg-primary-container', 'text-on-primary-container');
+          p.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        pill.classList.add('active', 'bg-primary-container', 'text-on-primary-container');
+        pill.classList.remove('bg-surface-container', 'text-on-surface-variant');
+
+        const layer = pill.getAttribute('data-layer');
+        if (layer === 'thermal') {
+          if (flightpathLayer) flightpathLayer.style.opacity = '0.4';
+          if (geofenceCircle) geofenceCircle.style.opacity = '0.3';
+        } else if (layer === 'geofence') {
+          if (flightpathLayer) flightpathLayer.style.opacity = '0.2';
+          if (geofenceCircle) {
+            geofenceCircle.style.opacity = '0.9';
+            geofenceCircle.setAttribute('stroke', '#ff5708');
+          }
+        } else if (layer === 'flightpath') {
+          if (flightpathLayer) {
+            flightpathLayer.style.opacity = '1';
+            flightpathLayer.setAttribute('stroke-width', '2.5');
+          }
+          if (geofenceCircle) geofenceCircle.style.opacity = '0.15';
+        }
+      });
+    });
+
+    // Filtering Matrix
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.paddock-card');
+    const searchInput = document.getElementById('search-input');
+    const clearSearch = document.getElementById('clear-search');
+
+    function applyFilterAndSearch() {
+      const activeFilterBtn = document.querySelector('.filter-btn.active');
+      const activeFilter = activeFilterBtn ? activeFilterBtn.getAttribute('data-filter') : 'all';
+      const query = (searchInput.value || '').trim().toLowerCase();
+
+      cards.forEach(card => {
+        const categories = card.getAttribute('data-categories') || '';
+        const name = (card.getAttribute('data-name') || '').toLowerCase();
+        const city = (card.getAttribute('data-city') || '').toLowerCase();
+        const country = (card.getAttribute('data-country') || '').toLowerCase();
+
+        const matchesFilter = activeFilter === 'all' || categories.includes(activeFilter);
+        const matchesQuery = query === '' || name.includes(query) || city.includes(query) || country.includes(query);
+
+        if (matchesFilter && matchesQuery) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (query.length > 0) {
+        clearSearch.classList.remove('hidden');
+      } else {
+        clearSearch.classList.add('hidden');
+      }
+    }
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('active', 'bg-primary-container', 'text-on-primary-container', 'shadow-[0_0_12px_rgba(255,87,8,0.3)]');
+          b.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        btn.classList.add('active', 'bg-primary-container', 'text-on-primary-container', 'shadow-[0_0_12px_rgba(255,87,8,0.3)]');
+        btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        applyFilterAndSearch();
+      });
+    });
+
+    searchInput.addEventListener('input', applyFilterAndSearch);
+
+    clearSearch.addEventListener('click', () => {
+      searchInput.value = '';
+      applyFilterAndSearch();
+      searchInput.focus();
+    });
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest"><div class="w-full px-margin-mobile lg:px-margin py-space-xl grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-space-xl"><div class="xl:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface">HAMBORGHINI</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">ATELIER DI GOURMET AUTOMOBILI</span></div></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">Born in Sant'Agata Bolognese. Engineered at the intersection of extreme aerodynamic design and hyper-refined Michelin culinary craft. Every Wagyu blend is precision-seared at 650°F to unleash raw thermal perfection.</p><div class="flex items-center gap-space-md pt-space-xs"><span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Telemetry Channel:</span><div class="flex gap-space-xs"><a class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">rss_feed</span></a><a class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">public</span></a><a class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">podcasts</span></a></div></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-label-lg text-label-lg uppercase tracking-wider text-primary">Dynamic Navigation</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="menu-showroom" href="menu_showroom.html">Full Menu &amp; Specs</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="nutritional-telemetry" href="menu_showroom.html">Nutritional Telemetry</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="track-catering" href="pit_stop_locations.html">Track Catering Operations</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="vip-lounge" href="vip_lounge.html">Scuderia VIP Club</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="burger-configurator" href="menu_showroom.html">Bespoke Configurator</a></ul></div><div class="flex flex-col gap-space-sm"><h3 class="font-label-lg text-label-lg uppercase tracking-wider text-secondary">Culinary Lab Operations</h3><div class="font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-space-xs"><span>Via Modena 12, Sant'Agata Bolognese (BO), Italy</span><span class="text-on-surface font-semibold">Pit Bay Hours:</span><span>Mon - Thu: 11:30 - 23:00 CET</span><span>Fri - Sun: 11:30 - 02:00 CET (Late Track Shift)</span><div class="pt-space-xs flex items-center gap-space-xs text-secondary font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>ACTIVE ALLOCATION DISPATCH: LIVE</span></div></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface">The Pit Pass</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Receive confidential trackside drop dispatches, allocation access, and invitations to secret paddock dinners.</p><div class="flex flex-col gap-space-xs pt-space-xs"><div class="flex items-center bg-surface-container rounded px-space-sm py-space-xs"><input class="bg-transparent text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none w-full" placeholder="pilot@squadra.com" type="email"/><button class="bg-primary-container text-on-primary-container hover:bg-secondary-container hover:text-on-secondary-container font-label-md text-label-md px-space-sm py-space-xs rounded transition-colors uppercase font-bold shrink-0" onclick="subscribePitPass(this)" type="button">Join</button></div><span class="font-label-sm text-label-sm text-outline">Zero spam. High-octane culinary intelligence only.</span></div></div></div><div class="w-full px-margin-mobile lg:px-margin py-space-md bg-surface-container-low flex flex-col md:flex-row items-center justify-between gap-space-sm"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">© 2026 HAMBORGHINI S.P.A. ALL RIGHTS RESERVED. AUTOMOTIVE GOURMET SPECIFICATION DIVISION.</span><div class="flex items-center gap-space-md font-label-sm text-label-sm uppercase text-on-surface-variant"><a class="hover:text-on-surface transition-colors" href="our_story.html">Telemetry Privacy</a><a class="hover:text-on-surface transition-colors" href="our_story.html">Terms of Allocation</a><a class="hover:text-on-surface transition-colors" href="our_story.html">Security Protocol</a></div></div></footer><script>function subscribePitPass(btn){const wrap=btn.closest("div");const input=wrap?wrap.querySelector('input[type="email"]'):null;const email=input&&input.value.trim();if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){alert("Enter a valid pilot email to join The Pit Pass.");if(input)input.focus();return;}btn.textContent="Joined";btn.disabled=true;btn.classList.add("opacity-80");if(input){input.value="";input.placeholder="Telemetry locked in";}alert("Pit Pass armed for "+email+" — confidential drop dispatches incoming.");}</script>
+<script id="nav-responsive-js">
+(function(){/*scroll-unlock-init*/document.documentElement.classList.remove('nav-open');document.body.classList.remove('nav-open');var scrollLockY=0;
+  var toggle=document.getElementById("nav-toggle");
+  var panel=document.getElementById("mobile-nav-panel");
+  var backdrop=document.getElementById("nav-backdrop");
+  var icon=document.getElementById("nav-toggle-icon");
+  if(!toggle||!panel)return;
+  function setOpen(open){
+    toggle.setAttribute("aria-expanded",open?"true":"false");
+    toggle.setAttribute("aria-label",open?"Close menu":"Open menu");
+    panel.classList.toggle("is-open",open);
+    if(backdrop){
+      backdrop.classList.toggle("is-open",open);
+      backdrop.setAttribute("aria-hidden",open?"false":"true");
+    }
+    if(open){scrollLockY=window.scrollY||document.documentElement.scrollTop||0;document.documentElement.classList.add("nav-open");document.body.classList.add("nav-open");document.body.style.top=(-scrollLockY)+"px";}else{document.documentElement.classList.remove("nav-open");document.body.classList.remove("nav-open");document.body.style.removeProperty("top");document.body.style.removeProperty("position");document.documentElement.style.removeProperty("overflow");document.body.style.removeProperty("overflow");window.scrollTo(0,scrollLockY||0);}
+    if(icon)icon.textContent=open?"close":"menu";
+  }
+  function isOpen(){return toggle.getAttribute("aria-expanded")==="true";}
+  toggle.addEventListener("click",function(e){e.preventDefault();setOpen(!isOpen());});
+  if(backdrop)backdrop.addEventListener("click",function(){setOpen(false);});
+  panel.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){setOpen(false);});});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&isOpen())setOpen(false);});
+  window.addEventListener("resize",function(){
+    var bp=panel.classList.contains("md:hidden")?768:1024;
+    if(window.innerWidth>=bp&&isOpen())setOpen(false);
+  });
+})();
+</script></body></html>

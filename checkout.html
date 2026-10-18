@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;min-height:100%;height:auto!important;max-height:none!important;position:relative;}html{overflow-x:auto;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;}body{overflow-x:visible;overflow-y:visible;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;touch-action:auto;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}html{scrollbar-width:thin;scrollbar-color:rgba(172,137,126,.65) transparent;}::-webkit-scrollbar{width:10px;height:10px;}::-webkit-scrollbar-thumb{background:rgba(172,137,126,.55);border-radius:8px;}::-webkit-scrollbar-track{background:transparent;}::-webkit-scrollbar-corner{background:transparent;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-highest":"#353437","on-error-container":"#ffdad6","surface-bright":"#39393b","tertiary-fixed":"#d4e4fa","on-secondary":"#472a00","surface-variant":"#353437","on-error":"#690005","on-tertiary-fixed-variant":"#39485a","background":"#131315","secondary":"#ffb95f","primary-fixed-dim":"#ffb59c","on-primary-container":"#511500","on-secondary-fixed":"#2a1700","tertiary-fixed-dim":"#b9c8de","on-secondary-container":"#5b3800","primary-fixed":"#ffdbcf","secondary-container":"#ee9800","on-tertiary-container":"#1c2b3c","inverse-primary":"#aa3600","surface":"#131315","surface-dim":"#131315","surface-container-high":"#2a2a2c","surface-container-lowest":"#0e0e10","on-primary":"#5c1900","tertiary":"#b9c8de","on-secondary-fixed-variant":"#653e00","tertiary-container":"#8392a6","outline":"#ac897e","surface-container":"#201f21","on-primary-fixed":"#390c00","surface-tint":"#ffb59c","on-primary-fixed-variant":"#822700","on-surface":"#e5e1e4","surface-container-low":"#1c1b1d","on-tertiary-fixed":"#0d1c2d","on-tertiary":"#233143","on-background":"#e5e1e4","on-surface-variant":"#e5beb2","secondary-fixed":"#ffddb8","error-container":"#93000a","primary-container":"#ff5708","outline-variant":"#5c4037","secondary-fixed-dim":"#ffb95f","error":"#ffb4ab","inverse-surface":"#e5e1e4","inverse-on-surface":"#313032","primary":"#ffb59c"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xs":"0.25rem","space-sm":"0.5rem","margin-mobile":"1.25rem","space-md":"1rem","margin":"3rem","gutter":"1.5rem","space-lg":"1.5rem","gutter-mobile":"1rem","space-xl":"2.5rem"},"fontFamily":{"body-md":["Space Grotesk"],"body-lg":["Space Grotesk"],"headline-xl-mobile":["Syne"],"headline-lg":["Syne"],"label-md":["Space Grotesk"],"headline-md":["Syne"],"headline-lg-mobile":["Syne"],"body-sm":["Space Grotesk"],"headline-sm":["Syne"],"label-lg":["Space Grotesk"],"label-sm":["Space Grotesk"],"headline-xl":["Syne"]},"fontSize":{"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-xl-mobile":["36px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"800"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.1em","fontWeight":"600"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"0em","fontWeight":"700"}],"headline-lg-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0.01em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"700"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.12em","fontWeight":"700"}],"headline-xl":["56px",{"lineHeight":"60px","letterSpacing":"-0.02em","fontWeight":"800"}]}}}};</script>
+<style id="nav-responsive-css">
+/* Scroll: allow vertical + horizontal when content overflows; never trap the document */
+html,body{max-width:100%;height:auto!important;max-height:none!important;position:relative!important;}
+html{overflow-x:auto!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;touch-action:auto;}body{overflow-x:visible!important;overflow-y:visible!important;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;touch-action:auto;}
+img,video,canvas{max-width:100%;}
+[id^="threejs-container"]{touch-action:pan-y;}
+#cart-drawer.translate-x-full{pointer-events:none;}
+@media (max-width:767px){input,select,textarea{font-size:16px!important;}#nav-toggle,header button,header a[href].inline-flex,header a[href].flex{min-width:44px;min-height:44px;}main button,.cockpit-cta,[type=submit]{min-height:44px;}}
+  #mobile-nav-panel{max-height:0;opacity:0;overflow:hidden;visibility:hidden;transition:max-height .38s cubic-bezier(.4,0,.2,1),opacity .28s ease,visibility .28s;}
+  #mobile-nav-panel.is-open{max-height:min(80vh,640px);opacity:1;visibility:visible;overflow-y:auto;-webkit-overflow-scrolling:touch;touch-action:pan-y;overscroll-behavior:contain;}
+  #nav-backdrop{opacity:0;pointer-events:none!important;transition:opacity .3s ease;}
+  #nav-backdrop.is-open{opacity:1;pointer-events:auto!important;}
+  /* Lock background scroll only while mobile nav is open (html+body); keep panel scrollable */
+  html.nav-open{overflow:hidden!important;}body.nav-open{position:fixed!important;inset:0 auto auto 0;width:100%;overflow:hidden!important;overscroll-behavior:none;touch-action:auto;}
+  body.nav-open main,body.nav-open>footer{pointer-events:none;}
+  @media (min-width:1024px){
+    #mobile-nav-panel,#nav-backdrop,#nav-toggle{display:none!important;}
+    html.nav-open{overflow:auto!important;}body.nav-open{position:relative!important;inset:auto;width:auto;overflow:visible!important;overscroll-behavior:auto;}
+    body.nav-open main,body.nav-open>footer{pointer-events:auto;}
+  }
+</style></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.6)]"><div class="h-16 sm:h-20 w-full px-margin-mobile lg:px-margin flex items-center justify-between gap-space-sm sm:gap-space-md"><div class="flex items-center gap-space-lg shrink-0"><a class="flex items-center gap-space-sm group" data-path="home" href="index.html"><img alt="Hamborghini Shield Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VEiYRHW1Qw2FJqH1AZC9JcV_02p0fRrLFuGWF4jkzxW_2Oc5tynzJfbDGni0SNCvfwZdQTPeJhJ2vNWvbxWFZmO8rFHJWah4QX45ZAWeZSCErqx6GCU6owhWiaC6i4x3YD5i9fcHR5pxRjkbay5fbd6JEdGc4HmAfXY4lHjpDrw2wA8T777KbDvOkNaxYo-3rI9EYBxro67IQKitMil4VDy63Po0BlHfr__Sqr6nvexLk3jE1ujkwm6TE"/><div class="flex flex-col"><span class="font-headline-sm text-[16px] sm:text-headline-sm uppercase tracking-wider text-on-surface group-hover:text-primary transition-colors leading-tight">HAMBORGHINI</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase hidden sm:inline">SANT'AGATA GOURMET</span></div></a><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-sm text-label-sm uppercase text-on-surface-variant">SCUDERIA PIT: <strong class="text-secondary font-bold">650°F OPTIMAL</strong></span></div></div><nav class="hidden lg:flex items-center gap-space-sm shrink-0" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded"><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="home" href="index.html">Home / Showroom</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="menu-showroom" href="menu_showroom.html">Menu / Showroom</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="our-story" href="our_story.html">Our Story</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="pit-stop-locations" href="pit_stop_locations.html">Pit Stop Locations</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="vip-lounge" href="vip_lounge.html">VIP Lounge</a></nav><div class="flex items-center gap-space-xs sm:gap-space-md shrink-0"><a class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded hover:bg-surface-container-high hover:text-on-surface text-on-surface-variant transition-colors shadow-[0_0_12px_rgba(255,185,95,0.12)]" data-path="cockpit-bay-cart" href="checkout.html" aria-label="Cockpit Bay cart"><span class="material-symbols-outlined text-secondary text-[20px]">shopping_bag</span><div class="hidden sm:flex flex-col text-left"><span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Cockpit Bay</span><span class="font-label-md text-label-md font-bold text-on-surface">$142.00</span></div><span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold ml-space-xs">3</span></a><a class="hidden sm:inline-flex items-center gap-space-xs bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-md text-label-md uppercase font-bold px-space-md py-space-sm rounded transition-all shadow-[0_0_24px_rgba(255,87,8,0.35)]" data-path="burger-configurator" href="menu_showroom.html"><span class="material-symbols-outlined text-[18px]">tune</span><span class="hidden xl:inline">Configure &amp; Order</span><span class="xl:hidden">Order</span></a><a class="w-8 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-primary-container transition-colors" href="login_cockpit.html" title="Access Portal"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></a><button type="button" id="nav-toggle" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" aria-controls="mobile-nav-panel" aria-expanded="false" aria-label="Open menu"><span class="material-symbols-outlined text-[22px]" id="nav-toggle-icon">menu</span></button></div></div><div id="nav-backdrop" class="fixed inset-0 top-16 sm:top-20 z-40 bg-black/55 backdrop-blur-[2px] lg:hidden" aria-hidden="true"></div><div id="mobile-nav-panel" class="relative z-50 lg:hidden border-t border-surface-container-high bg-surface-container-lowest/95 backdrop-blur-xl" role="dialog" aria-label="Mobile navigation"><nav class="flex flex-col gap-space-xs px-margin-mobile py-space-md" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded"><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="home" href="index.html">Home / Showroom</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="menu-showroom" href="menu_showroom.html">Menu / Showroom</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="our-story" href="our_story.html">Our Story</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="pit-stop-locations" href="pit_stop_locations.html">Pit Stop Locations</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="vip-lounge" href="vip_lounge.html">VIP Lounge</a><div class="pt-space-sm mt-space-xs border-t border-surface-container-high flex flex-col gap-space-sm"><a class="inline-flex sm:hidden items-center justify-center gap-space-xs bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-md text-label-md uppercase font-bold px-space-md py-space-sm rounded transition-all shadow-[0_0_24px_rgba(255,87,8,0.35)]" data-path="burger-configurator" href="menu_showroom.html"><span class="material-symbols-outlined text-[18px]">tune</span><span>Configure &amp; Order</span></a></div></nav></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Telemetry HUD & Stepper Track -->
+<section class="w-full bg-surface-container-lowest px-margin-mobile lg:px-margin py-space-md shadow-sm">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-space-md">
+<!-- Staged Progress Flow -->
+<div class="flex items-center gap-space-sm w-full lg:w-auto overflow-x-auto pb-space-xs lg:pb-0">
+<div class="flex items-center gap-space-xs bg-primary-container/15 px-space-sm py-1.5 rounded">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-sm text-label-sm uppercase font-bold text-primary">01 // COCKPIT BAY (CART)</span>
+</div>
+<span class="text-outline-variant font-label-sm">→</span>
+<div class="flex items-center gap-space-xs opacity-60 px-space-sm py-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">02 // PADDOCK DISPATCH</span>
+</div>
+<span class="text-outline-variant font-label-sm">→</span>
+<div class="flex items-center gap-space-xs opacity-40 px-space-sm py-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">03 // TELEMETRY CONFIRMED</span>
+</div>
+</div>
+<!-- Real-Time Dynamic Diagnostics -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md w-full lg:w-auto bg-surface-container-low px-space-md py-space-xs rounded">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-outline">Active Payload</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight"><span id="hud-payload-count">4</span> <span class="font-label-sm text-label-sm text-secondary font-normal">UNITS</span></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-outline">Thermal Cal.</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">1,970°F</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-outline">Est. Dispatch</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold tracking-tight">14 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">MIN</span></span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Viewport Chassis: Cart Matrix + Telemetry Checkout Dock -->
+<div class="max-w-7xl mx-auto w-full px-margin-mobile lg:px-margin py-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- LEFT COLUMN: Fleet Bay Inventory (8 Columns) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg" id="fleet-container">
+<!-- Section Header Plate -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs pb-space-xs">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-1 bg-primary-container"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">SCUDERIA ATELIER SPECIFICATION</span>
+</div>
+<h1 class="font-headline-md text-headline-md uppercase text-on-surface tracking-tight mt-1">FLEET STAGING BAY</h1>
+</div>
+<button class="self-start sm:self-auto font-label-sm text-label-sm uppercase text-outline hover:text-primary transition-colors flex items-center gap-1" id="clear-bay-btn">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span> Reset Configuration
+          </button>
+</div>
+<!-- PRODUCT CARD 1: Countach Carbon Wagyu Combo -->
+<article class="cart-item bg-surface-container-low rounded p-space-md shadow-md relative overflow-hidden group transition-all" data-cal="650" data-id="countach" data-price="42.00">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center">
+<!-- Top Plate Image -->
+<div class="md:col-span-4 relative rounded overflow-hidden aspect-[4/3] bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Gourmet Hamborghini Countach luxury burger in dark moody restaurant background, black activated charcoal bun dusted with 24k gold leaf, melted taleggio cheese cascading over prime Miyazaki wagyu, alongside crispy duck fat french fries and dipping sauce served on slate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMcuwrHrusyLgdXl-uUeIvCNqrEOLGfS2NqSj3sAXfukwZ-8X3CSrhCqFZ7SCY4TU4nOTVA3StuYXuDs6Z7mRJB3jExrXRgfjRuiiLy27pKdhTBi66QHlqaXKDLVuh8LPzi2AXJvt7CcHuTIuzMsEC6qfQcLydKR5BQjYrLQzpXs9A9vsuwEJlJ7wH1e02Ry3oA-jywAUm02Cvwpj2Q2BK2lKeZFXTrfswfNKmG4MElzSTQLI6oRgl"/>
+<span class="absolute top-2 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-space-xs py-0.5 rounded font-label-sm text-label-sm uppercase text-secondary font-bold">A5 MIYAZAKI</span>
+</div>
+<!-- Configuration Telemetry Details -->
+<div class="md:col-span-8 flex flex-col justify-between h-full gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">CHASSIS NO. CTH-01</span>
+<span class="text-outline-variant font-label-sm">•</span>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">GOLD EDITION COMBO</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-tight">The Countach Carbon Wagyu</h2>
+</div>
+<button class="remove-btn text-outline hover:text-error transition-colors p-1" data-target="countach" title="De-allocate item">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Prime 250g A5 Miyazaki Wagyu, melted Taleggio DOP, 24k edible gold leaf crown on an all-black bio-carbon brioche bun. Duck-fat french fries &amp; vintage contour glass Coca-Cola pairing.
+              </p>
+<!-- Diagnostic Pill Matrix -->
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="bg-surface-container px-space-xs py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant">Sear: 650°F Maillard Flash</span>
+<span class="bg-surface-container px-space-xs py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant">Taleggio Extra Melt</span>
+<span class="bg-surface-container px-space-xs py-0.5 rounded font-label-sm text-label-sm text-secondary">Bio-Carbon Bun</span>
+<span class="bg-surface-container px-space-xs py-0.5 rounded font-label-sm text-label-sm text-primary">Truffle Black Garlic Aioli</span>
+</div>
+<!-- Price & Telemetry Stepper -->
+<div class="flex items-center justify-between pt-space-sm border-t border-surface-container-highest/40 mt-space-xs">
+<div class="flex items-center bg-surface-container-lowest rounded p-1">
+<button class="qty-btn qty-minus w-7 h-7 flex items-center justify-center rounded bg-surface-container-high text-on-surface hover:bg-primary hover:text-on-primary transition-colors font-bold" data-action="decrement" data-target="countach">−</button>
+<span class="qty-value px-space-sm font-label-md text-label-md font-bold text-on-surface" id="qty-countach">1</span>
+<button class="qty-btn qty-plus w-7 h-7 flex items-center justify-center rounded bg-surface-container-high text-on-surface hover:bg-primary hover:text-on-primary transition-colors font-bold" data-action="increment" data-target="countach">+</button>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase">Subtotal</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary item-subtotal" id="subtotal-countach">$42.00</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- PRODUCT CARD 2: The Miura SV Gold Rush -->
+<article class="cart-item bg-surface-container-low rounded p-space-md shadow-md relative overflow-hidden group transition-all" data-cal="580" data-id="miura" data-price="36.00">
+<div class="absolute top-0 left-0 w-1 h-full bg-secondary-container"></div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center">
+<!-- Top Plate Image -->
+<div class="md:col-span-4 relative rounded overflow-hidden aspect-[4/3] bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Hamborghini Miura SV Gold Rush gourmet burger with stamped raging bull logo on golden brioche bun, double Wagyu beef patty, melted saffron taleggio cheese, crispy prosciutto ribbons and edible gold leaf resting on dark volcanic stone in an automotive garage setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAycul_gbcXgSQeFIpepKr4GQCisHPwK9dytxHmMAMWA1DEA-vbO_zTmIq8NhKTgAxDKugzozfXiG6Z1yoofg1U-GYhB8HKFnxfwQbK3lQQ49yUo3mHa33_KcdxRI_Bdmy-zCrLfCVXuvJk15BInRpO7ILUOgkdJIdbrfjlsicjgim7Vjr6PNcPPemp0xt4-swAzINM5CGYWVPPLNR_fPfNveaWQDGX3X0v6GC6oLti7NXALKeReJ_d"/>
+<span class="absolute top-2 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-space-xs py-0.5 rounded font-label-sm text-label-sm uppercase text-secondary font-bold">DRY-AGED 45D</span>
+</div>
+<!-- Configuration Telemetry Details -->
+<div class="md:col-span-8 flex flex-col justify-between h-full gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">CHASSIS NO. MRA-SV</span>
+<span class="text-outline-variant font-label-sm">•</span>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">FLAME-BRANDED</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-tight">The Miura SV Gold Rush</h2>
+</div>
+<button class="remove-btn text-outline hover:text-error transition-colors p-1" data-target="miura" title="De-allocate item">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Dry-aged Wagyu beef patty, melted golden saffron taleggio, crispy prosciutto di Parma ribbons, 24k gold flakes on vintage flame-branded brioche bun with smoked bone marrow reduction.
+              </p>
+<!-- Diagnostic Pill Matrix -->
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="bg-surface-container px-space-xs py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant">Patty: 240g Rare/Med</span>
+<span class="bg-surface-container px-space-xs py-0.5 rounded font-label-sm text-label-sm text-secondary">Saffron Taleggio: Double</span>
+<span class="bg-surface-container px-space-xs py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant">Prosciutto: Crisped 4.2s</span>
+<span class="bg-surface-container px-space-xs py-0.5 rounded font-label-sm text-label-sm text-primary">Bull Brand Mark</span>
+</div>
+<!-- Price & Telemetry Stepper -->
+<div class="flex items-center justify-between pt-space-sm border-t border-surface-container-highest/40 mt-space-xs">
+<div class="flex items-center bg-surface-container-lowest rounded p-1">
+<button class="qty-btn qty-minus w-7 h-7 flex items-center justify-center rounded bg-surface-container-high text-on-surface hover:bg-primary hover:text-on-primary transition-colors font-bold" data-action="decrement" data-target="miura">−</button>
+<span class="qty-value px-space-sm font-label-md text-label-md font-bold text-on-surface" id="qty-miura">2</span>
+<button class="qty-btn qty-plus w-7 h-7 flex items-center justify-center rounded bg-surface-container-high text-on-surface hover:bg-primary hover:text-on-primary transition-colors font-bold" data-action="increment" data-target="miura">+</button>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase">Subtotal</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary item-subtotal" id="subtotal-miura">$72.00</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- PRODUCT CARD 3: The Centenario Surf-Velocity -->
+<article class="cart-item bg-surface-container-low rounded p-space-md shadow-md relative overflow-hidden group transition-all" data-cal="610" data-id="centenario" data-price="38.50">
+<div class="absolute top-0 left-0 w-1 h-full bg-tertiary"></div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center">
+<!-- Top Plate Image -->
+<div class="md:col-span-4 relative rounded overflow-hidden aspect-[4/3] bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Extravagant Hamborghini Centenario Surf-Velocity burger with black squid ink bun marked CV, seared wagyu beef topped with whole butter poached Maine lobster tail medallion, melted raclette cheese, micro arugula, served on gold rimmed slate plate in luxury sports car showroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-JTV5Mrm9nChDldwAEAcgeddZ3fSM7XffuVmitP5q6DT08OZuy99hjjJCKxrrc8zU4oEZmvxDhRhbNFzuvRs2HmCJ_Wg6m-EUYnkxtICYYEUnLzJVhGIn0Whts3_3LVb0uptitceKV5qhRmsRMaH6EqQXg8q5fsQ_7g0xXj9lyQk_OPSrGzmmpGfIMTYvcy-rCj4bNfYqKZI9Vpu95ni5SjJvf5lZz8vzQ3UvyU68eSVtqtu_cRfG"/>
+<span class="absolute top-2 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-space-xs py-0.5 rounded font-label-sm text-label-sm uppercase text-tertiary font-bold">MAINE LOBSTER SURF</span>
+</div>
+<!-- Configuration Telemetry Details -->
+<div class="md:col-span-8 flex flex-col justify-between h-full gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold">CHASSIS NO. CEN-100</span>
+<span class="text-outline-variant font-label-sm">•</span>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">SURF &amp; TURF HYPERCAR</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-tight">The Centenario Surf-Velocity</h2>
+</div>
+<button class="remove-btn text-outline hover:text-error transition-colors p-1" data-target="centenario" title="De-allocate item">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Seared Wagyu smash patty topped with butter-poached sweet Maine lobster tail medallion, tarragon lemon-garlic aioli, preserved heirloom tomato compote on toasted squid-ink bun.
+              </p>
+<!-- Diagnostic Pill Matrix -->
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="bg-surface-container px-space-xs py-0.5 rounded font-label-sm text-label-sm text-tertiary">Maine Lobster: Poached</span>
+<span class="bg-surface-container px-space-xs py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant">Tarragon Lemon Aioli</span>
+<span class="bg-surface-container px-space-xs py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant">Squid Ink Bun Gloss</span>
+<span class="bg-surface-container px-space-xs py-0.5 rounded font-label-sm text-label-sm text-secondary">Arugula Micro Greens</span>
+</div>
+<!-- Price & Telemetry Stepper -->
+<div class="flex items-center justify-between pt-space-sm border-t border-surface-container-highest/40 mt-space-xs">
+<div class="flex items-center bg-surface-container-lowest rounded p-1">
+<button class="qty-btn qty-minus w-7 h-7 flex items-center justify-center rounded bg-surface-container-high text-on-surface hover:bg-primary hover:text-on-primary transition-colors font-bold" data-action="decrement" data-target="centenario">−</button>
+<span class="qty-value px-space-sm font-label-md text-label-md font-bold text-on-surface" id="qty-centenario">1</span>
+<button class="qty-btn qty-plus w-7 h-7 flex items-center justify-center rounded bg-surface-container-high text-on-surface hover:bg-primary hover:text-on-primary transition-colors font-bold" data-action="increment" data-target="centenario">+</button>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase">Subtotal</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary item-subtotal" id="subtotal-centenario">$38.50</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Upsell Chassis Banner: Scuderia Race Combo -->
+<section class="bg-gradient-to-r from-surface-container to-surface-container-low rounded p-space-md shadow-md overflow-hidden relative">
+<div class="absolute -right-10 -bottom-10 w-44 h-44 bg-primary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex flex-col sm:flex-row items-center gap-space-md justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-20 h-20 rounded overflow-hidden shrink-0 bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Hamborghini classic wagyu burger with melted fontina cheese, fresh lettuce, tomato, steaming hot served next to a wire basket of golden crispy fries and a condensation coated glass bottle of Coca-Cola on dark carbon fiber weave surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApm8r1S3MUbOy0vTFy77PfUmg-srr6rSXJJJGJsucWLg3jxDVQHdZ3UGBerlc5PhALDnHsA0zUmrZyPDGJ_rwnvTrpMEe30d-wrBKH4oxjkxZAnxc8MSkNI_jkA1ZAbrW7HniuPkHMkx58rmvwllkQWeRAp2fTn-ceZJjTE_tAO1oI9a_TKcTLZQURGyeBgRHHsQEhwU3klIxOfJLMY9-6b_NQWsHl0up31cISpWbTpgDLu98km0iF"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm uppercase font-bold text-secondary">SCUDERIA RACE PACKAGE OPTION</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Triple-Cooked Truffle Duck Fries + Vintage Soda</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-lg">Upgrade your entire fleet bay order with rosemary sea-salt duck fat fries and chilled artisanal vintage pairings.</p>
+</div>
+</div>
+<button class="shrink-0 bg-surface-container-high hover:bg-secondary-container hover:text-on-secondary-container text-secondary font-label-md text-label-md font-bold uppercase px-space-md py-space-sm rounded transition-all shadow-sm" id="add-combo-btn">
+              + Add Combo (+$8.50)
+            </button>
+</div>
+</section>
+<!-- Empty State Chassis (Hidden by default, triggered if all removed) -->
+<div class="hidden flex-col items-center justify-center p-space-xl bg-surface-container-low rounded text-center" id="empty-state">
+<span class="material-symbols-outlined text-[64px] text-outline mb-space-sm">no_crash</span>
+<h2 class="font-headline-md text-headline-md uppercase text-on-surface">COCKPIT BAY IS EMPTY</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md mt-space-xs mb-space-md">No gastronomic chassis currently staged on the paddock pit. Select a hypercar burger build from the showroom to calibrate telemetry.</p>
+<a class="bg-primary-container text-on-primary-container font-label-md text-label-md font-bold uppercase px-space-lg py-space-sm rounded transition-all shadow-[0_0_20px_rgba(255,87,8,0.3)]" data-path="menu-showroom" href="menu_showroom.html">
+            Explore Showroom Fleet →
+          </a>
+</div>
+</div>
+<!-- RIGHT COLUMN: Telemetry Summary & Launch Control Dock (4 Columns) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Sticky Order Telemetry Dock -->
+<aside class="sticky top-28 bg-surface-container rounded p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container-highest/40">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">speed</span>
+<h2 class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface">ORDER TELEMETRY SPEC</h2>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold bg-primary-container/20 px-space-xs py-0.5 rounded">LIVE CALC</span>
+</div>
+<!-- Financial Breakdown Matrix -->
+<div class="flex flex-col gap-space-sm font-body-sm text-body-sm">
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Gross Fleet Subtotal</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold" id="summary-subtotal">$152.50</span>
+</div>
+<div class="flex justify-between items-center text-secondary">
+<div class="flex items-center gap-1">
+<span>Scuderia V12 Member Privileges</span>
+<span class="font-label-sm text-label-sm bg-secondary/15 px-1 rounded text-secondary font-bold">10% OFF</span>
+</div>
+<span class="font-body-md text-body-md font-semibold" id="summary-discount">-$15.25</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span>Pit Bay Dispatch &amp; Thermal Allocation</span>
+<span class="material-symbols-outlined text-[16px] text-outline cursor-help" title="Trackside logistics and temperature preservation capsule">help</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-semibold" id="summary-shipping">$6.00</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Telemetry Kitchen Tax (8%)</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold" id="summary-tax">$10.98</span>
+</div>
+<!-- Visual Divider SVG Pattern -->
+<div class="w-full my-space-xs overflow-hidden h-2 flex items-center">
+<svg class="w-full text-surface-container-highest" fill="none" height="4">
+<line stroke="currentColor" stroke-dasharray="4 4" stroke-width="2" x1="0" x2="100%" y1="2" y2="2"></line>
+</svg>
+</div>
+<div class="flex justify-between items-baseline pt-space-xs">
+<div>
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface font-bold">TOTAL DISPATCH</span>
+<p class="font-label-sm text-label-sm text-outline">Incl. VAT &amp; Carbon Neutral Packaging</p>
+</div>
+<span class="font-headline-md text-headline-md font-extrabold text-primary" id="summary-total">$154.23</span>
+</div>
+</div>
+<!-- Promo Voucher Chassis -->
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-outline">TELEMETRY ACCESS PASS / VOUCHER</span>
+<div class="flex gap-space-xs">
+<input class="bg-surface-container-high text-on-surface font-label-md text-label-md uppercase px-space-sm py-1.5 rounded focus:outline-none focus:ring-1 focus:ring-primary w-full tracking-wider" id="voucher-input" placeholder="ENTER CODE" type="text" value="SCUDERIAV12"/>
+<button class="bg-surface-container-high hover:bg-secondary-container hover:text-on-secondary-container text-on-surface font-label-sm text-label-sm uppercase font-bold px-space-sm py-1.5 rounded transition-colors shrink-0" id="apply-voucher-btn">
+                APPLY
+              </button>
+</div>
+<div class="flex items-center gap-1.5 pt-0.5">
+<span class="font-label-sm text-label-sm text-outline">Active hints:</span>
+<button class="promo-hint font-label-sm text-label-sm text-secondary hover:underline cursor-pointer" data-code="APEX10">APEX10</button>
+<span class="text-outline-variant font-label-sm">•</span>
+<button class="promo-hint font-label-sm text-label-sm text-secondary hover:underline cursor-pointer" data-code="VIPSCUDERIA">VIPSCUDERIA</button>
+</div>
+<div class="font-label-sm text-label-sm text-secondary flex items-center gap-1 mt-0.5" id="voucher-status">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>SCUDERIAV12: 10% Member Allocation Applied</span>
+</div>
+</div>
+<!-- Primary Launch Checkout CTA -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<a class="w-full bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-headline-sm text-headline-sm uppercase font-bold py-space-sm px-space-md rounded transition-all shadow-[0_0_24px_rgba(255,87,8,0.4)] flex items-center justify-center gap-space-sm text-center" data-path="checkout" href="streamlined.html">
+<span>PROCEED TO PADDOCK CHECKOUT</span>
+<span class="material-symbols-outlined text-[20px]">sports_score</span>
+</a>
+<a class="w-full bg-transparent hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase font-semibold py-2 px-space-sm rounded transition-colors flex items-center justify-center gap-1 text-center" data-path="menu-showroom" href="menu_showroom.html">
+<span>← RETURN TO SHOWROOM LINEUP</span>
+</a>
+</div>
+<!-- Paddock Guarantees & Security Badges -->
+<div class="grid grid-cols-2 gap-space-xs pt-space-sm border-t border-surface-container-highest/40">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm uppercase leading-tight">256-Bit Encrypted Dispatch</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">local_fire_department</span>
+<span class="font-label-sm text-label-sm uppercase leading-tight">650°F Thermal Vault Pod</span>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</div>
+<!-- Real-time Telemetry Calculations & Micro-Interactions Script -->
+<script>
+    (function initCockpitBay() {
+      // Internal State
+      const items = {
+        countach: { qty: 1, unitPrice: 42.00, title: 'The Countach Carbon Wagyu' },
+        miura: { qty: 2, unitPrice: 36.00, title: 'The Miura SV Gold Rush' },
+        centenario: { qty: 1, unitPrice: 38.50, title: 'The Centenario Surf-Velocity' }
+      };
+
+      let comboAdded = false;
+      const comboPrice = 8.50;
+      let discountRate = 0.10; // 10%
+      const dispatchFee = 6.00;
+      const taxRate = 0.08; // 8%
+
+      function formatMoney(amount) {
+        return '$' + amount.toFixed(2);
+      }
+
+      function updateCartMetrics() {
+        let totalPayload = 0;
+        let grossSubtotal = 0;
+
+        for (const [key, item] of Object.entries(items)) {
+          totalPayload += item.qty;
+          const sub = item.qty * item.unitPrice;
+          grossSubtotal += sub;
+          
+          const subtotalElem = document.getElementById('subtotal-' + key);
+          const qtyElem = document.getElementById('qty-' + key);
+          if (subtotalElem) subtotalElem.textContent = formatMoney(sub);
+          if (qtyElem) qtyElem.textContent = item.qty;
+
+          // Check if zero to fade or remove element
+          const cardElem = document.querySelector(`.cart-item[data-id="${key}"]`);
+          if (cardElem) {
+            if (item.qty === 0) {
+              cardElem.style.display = 'none';
+            } else {
+              cardElem.style.display = 'block';
+            }
+          }
+        }
+
+        if (comboAdded) {
+          grossSubtotal += comboPrice;
+        }
+
+        // Check if empty
+        const emptyState = document.getElementById('empty-state');
+        if (totalPayload === 0 && !comboAdded) {
+          if (emptyState) emptyState.classList.remove('hidden');
+          if (emptyState) emptyState.classList.add('flex');
+        } else {
+          if (emptyState) emptyState.classList.add('hidden');
+          if (emptyState) emptyState.classList.remove('flex');
+        }
+
+        // Telemetry Calculations
+        const discountAmount = grossSubtotal * discountRate;
+        const netAfterDiscount = grossSubtotal - discountAmount;
+        const currentShipping = grossSubtotal > 150 ? 0 : dispatchFee;
+        const taxAmount = netAfterDiscount * taxRate;
+        const finalTotal = Math.max(0, netAfterDiscount + currentShipping + taxAmount);
+
+        // Update DOM
+        const payloadCount = document.getElementById('hud-payload-count');
+        const summarySubtotal = document.getElementById('summary-subtotal');
+        const summaryDiscount = document.getElementById('summary-discount');
+        const summaryShipping = document.getElementById('summary-shipping');
+        const summaryTax = document.getElementById('summary-tax');
+        const summaryTotal = document.getElementById('summary-total');
+
+        if (payloadCount) payloadCount.textContent = totalPayload;
+        if (summarySubtotal) summarySubtotal.textContent = formatMoney(grossSubtotal);
+        if (summaryDiscount) summaryDiscount.textContent = discountAmount > 0 ? `-${formatMoney(discountAmount)}` : '$0.00';
+        if (summaryShipping) summaryShipping.textContent = currentShipping === 0 ? 'COMPLIMENTARY' : formatMoney(currentShipping);
+        if (summaryTax) summaryTax.textContent = formatMoney(taxAmount);
+        if (summaryTotal) summaryTotal.textContent = formatMoney(finalTotal);
+      }
+
+      // Quantity Listeners
+      document.querySelectorAll('.qty-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = this.getAttribute('data-target');
+          const action = this.getAttribute('data-action');
+          if (!items[target]) return;
+
+          if (action === 'increment') {
+            items[target].qty += 1;
+          } else if (action === 'decrement') {
+            if (items[target].qty > 1) {
+              items[target].qty -= 1;
+            } else {
+              items[target].qty = 0;
+            }
+          }
+          updateCartMetrics();
+        });
+      });
+
+      // Item Delete Listeners
+      document.querySelectorAll('.remove-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = this.getAttribute('data-target');
+          if (items[target]) {
+            items[target].qty = 0;
+            updateCartMetrics();
+          }
+        });
+      });
+
+      // Clear all
+      const clearBtn = document.getElementById('clear-bay-btn');
+      if (clearBtn) {
+        clearBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          for (const key in items) {
+            items[key].qty = 0;
+          }
+          comboAdded = false;
+          updateCartMetrics();
+        });
+      }
+
+      // Combo addition
+      const comboBtn = document.getElementById('add-combo-btn');
+      if (comboBtn) {
+        comboBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          comboAdded = !comboAdded;
+          if (comboAdded) {
+            this.textContent = '✓ Combo Included';
+            this.classList.replace('text-secondary', 'text-on-primary-container');
+            this.classList.add('bg-primary-container');
+          } else {
+            this.textContent = '+ Add Combo (+$8.50)';
+            this.classList.remove('bg-primary-container');
+            this.classList.replace('text-on-primary-container', 'text-secondary');
+          }
+          updateCartMetrics();
+        });
+      }
+
+      // Promo Voucher Logic
+      const voucherInput = document.getElementById('voucher-input');
+      const applyBtn = document.getElementById('apply-voucher-btn');
+      const voucherStatus = document.getElementById('voucher-status');
+
+      function validatePromo(code) {
+        const clean = code.trim().toUpperCase();
+        if (clean === 'SCUDERIAV12' || clean === 'APEX10') {
+          discountRate = 0.10;
+          voucherStatus.innerHTML = '<span class="material-symbols-outlined text-[14px]">verified</span><span>' + clean + ': 10% Telemetry Member Pass Applied</span>';
+          voucherStatus.className = 'font-label-sm text-label-sm text-secondary flex items-center gap-1 mt-0.5';
+        } else if (clean === 'VIPSCUDERIA') {
+          discountRate = 0.20;
+          voucherStatus.innerHTML = '<span class="material-symbols-outlined text-[14px]">verified</span><span>VIPSCUDERIA: 20% Paddock VIP Allocation Unlocked</span>';
+          voucherStatus.className = 'font-label-sm text-label-sm text-primary flex items-center gap-1 mt-0.5';
+        } else {
+          discountRate = 0;
+          voucherStatus.innerHTML = '<span class="material-symbols-outlined text-[14px]">warning</span><span>Invalid Telemetry Voucher Protocol</span>';
+          voucherStatus.className = 'font-label-sm text-label-sm text-error flex items-center gap-1 mt-0.5';
+        }
+        updateCartMetrics();
+      }
+
+      if (applyBtn && voucherInput) {
+        applyBtn.addEventListener('click', () => validatePromo(voucherInput.value));
+        voucherInput.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') validatePromo(voucherInput.value);
+        });
+      }
+
+      document.querySelectorAll('.promo-hint').forEach(hint => {
+        hint.addEventListener('click', function() {
+          const c = this.getAttribute('data-code');
+          if (voucherInput) {
+            voucherInput.value = c;
+            validatePromo(c);
+          }
+        });
+      });
+
+      // Initial run
+      updateCartMetrics();
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest"><div class="w-full px-margin-mobile lg:px-margin py-space-xl grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-space-xl"><div class="xl:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface">HAMBORGHINI</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">ATELIER DI GOURMET AUTOMOBILI</span></div></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">Born in Sant'Agata Bolognese. Engineered at the intersection of extreme aerodynamic design and hyper-refined Michelin culinary craft. Wagyu thermal precision calibrated trackside with full real-time telemetry.</p><div class="flex items-center gap-space-md pt-space-xs"><span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Telemetry Channel:</span><div class="flex gap-space-xs"><a class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">rss_feed</span></a><a class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">public</span></a><a class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">podcasts</span></a></div></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-label-lg text-label-lg uppercase tracking-wider text-primary">Flight &amp; Telemetry Orders</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="cockpit-bay-cart" href="checkout.html">Cockpit Bay Cart (3)</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="checkout" href="streamlined.html">Telemetry Checkout</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="order-confirmation" href="order_confirmation.html">Allocation Confirmation</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="burger-configurator" href="menu_showroom.html">Bespoke Configurator</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="menu-showroom" href="menu_showroom.html">Full Menu &amp; Specs</a></ul></div><div class="flex flex-col gap-space-sm"><h3 class="font-label-lg text-label-lg uppercase tracking-wider text-secondary">Pit Bay Operations &amp; Logistics</h3><div class="font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-space-xs"><span>Via Modena 12, Sant'Agata Bolognese (BO), Italy</span><span class="text-on-surface font-semibold">Pit Bay Schedule:</span><span>Mon - Thu: 11:30 - 23:00 CET</span><span>Fri - Sun: 11:30 - 02:00 CET (Late Track Shift)</span><div class="pt-space-xs flex items-center gap-space-xs text-secondary font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span>TRACKSIDE LOGISTICS: DISPATCH READY</span></div></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface">The Pit Pass</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Receive confidential trackside drop dispatches, allocation access, and invitations to secret paddock dinners.</p><div class="flex flex-col gap-space-xs pt-space-xs"><div class="flex items-center bg-surface-container rounded px-space-sm py-space-xs"><input class="bg-transparent text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none w-full" placeholder="pilot@squadra.com" type="email"/><button class="bg-primary-container text-on-primary-container hover:bg-secondary-container hover:text-on-secondary-container font-label-md text-label-md px-space-sm py-space-xs rounded transition-colors uppercase font-bold shrink-0" onclick="subscribePitPass(this)" type="button">Join</button></div><span class="font-label-sm text-label-sm text-outline">Zero spam. High-octane culinary intelligence only.</span></div></div></div><div class="w-full px-margin-mobile lg:px-margin py-space-md bg-surface-container-low flex flex-col md:flex-row items-center justify-between gap-space-sm"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">© 2026 HAMBORGHINI S.P.A. ALL RIGHTS RESERVED. AUTOMOTIVE GOURMET SPECIFICATION DIVISION.</span><div class="flex items-center gap-space-md font-label-sm text-label-sm uppercase text-on-surface-variant"><a class="hover:text-on-surface transition-colors" href="our_story.html">Telemetry Privacy</a><a class="hover:text-on-surface transition-colors" href="our_story.html">Terms of Allocation</a><a class="hover:text-on-surface transition-colors" href="our_story.html">Security Protocol</a></div></div></footer><script>function subscribePitPass(btn){const wrap=btn.closest("div");const input=wrap?wrap.querySelector('input[type="email"]'):null;const email=input&&input.value.trim();if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){alert("Enter a valid pilot email to join The Pit Pass.");if(input)input.focus();return;}btn.textContent="Joined";btn.disabled=true;btn.classList.add("opacity-80");if(input){input.value="";input.placeholder="Telemetry locked in";}alert("Pit Pass armed for "+email+" — confidential drop dispatches incoming.");}</script>
+<script id="nav-responsive-js">
+(function(){/*scroll-unlock-init*/document.documentElement.classList.remove('nav-open');document.body.classList.remove('nav-open');var scrollLockY=0;
+  var toggle=document.getElementById("nav-toggle");
+  var panel=document.getElementById("mobile-nav-panel");
+  var backdrop=document.getElementById("nav-backdrop");
+  var icon=document.getElementById("nav-toggle-icon");
+  if(!toggle||!panel)return;
+  function setOpen(open){
+    toggle.setAttribute("aria-expanded",open?"true":"false");
+    toggle.setAttribute("aria-label",open?"Close menu":"Open menu");
+    panel.classList.toggle("is-open",open);
+    if(backdrop){
+      backdrop.classList.toggle("is-open",open);
+      backdrop.setAttribute("aria-hidden",open?"false":"true");
+    }
+    if(open){scrollLockY=window.scrollY||document.documentElement.scrollTop||0;document.documentElement.classList.add("nav-open");document.body.classList.add("nav-open");document.body.style.top=(-scrollLockY)+"px";}else{document.documentElement.classList.remove("nav-open");document.body.classList.remove("nav-open");document.body.style.removeProperty("top");document.body.style.removeProperty("position");document.documentElement.style.removeProperty("overflow");document.body.style.removeProperty("overflow");window.scrollTo(0,scrollLockY||0);}
+    if(icon)icon.textContent=open?"close":"menu";
+  }
+  function isOpen(){return toggle.getAttribute("aria-expanded")==="true";}
+  toggle.addEventListener("click",function(e){e.preventDefault();setOpen(!isOpen());});
+  if(backdrop)backdrop.addEventListener("click",function(){setOpen(false);});
+  panel.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){setOpen(false);});});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&isOpen())setOpen(false);});
+  window.addEventListener("resize",function(){
+    var bp=panel.classList.contains("md:hidden")?768:1024;
+    if(window.innerWidth>=bp&&isOpen())setOpen(false);
+  });
+})();
+</script></body></html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>html,body{overflow:auto;height:auto;}#threejs-container-ANIMATION_48,[id^=threejs-container]{touch-action:pan-y;}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+<!-- STITCH_THREEJS_START:ANIMATION_2 class="fixed inset-0 w-full h-full bg-transparent" -->
+<div class="fixed inset-0 w-full h-full bg-transparent" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_2" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_2');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  // Three.js Interactive 3D Burger Experience with Realistic Layers & Orbit Controls
+// Canvas & Environment Setup
+const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || window.innerHeight;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
+camera.position.set(0, 1.2, 5.2);
+
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'high-performance' });
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.25;
+container.appendChild(renderer.domElement);
+
+// Cinematic Studio Lighting for luxury food & automotive reflection
+const ambientLight = new THREE.AmbientLight(0xfff5ea, 1.2);
+scene.add(ambientLight);
+
+// Key warm gold light
+const keyLight = new THREE.DirectionalLight(0xffb74d, 3.2);
+keyLight.position.set(4, 6, 4);
+keyLight.castShadow = true;
+keyLight.shadow.mapSize.width = 2048;
+keyLight.shadow.mapSize.height = 2048;
+scene.add(keyLight);
+
+// Rim supercar neon orange highlight
+const rimLight = new THREE.DirectionalLight(0xff5500, 2.8);
+rimLight.position.set(-5, 3, -3);
+scene.add(rimLight);
+
+// Crisp top fill light for sesame glisten
+const topLight = new THREE.DirectionalLight(0xffffff, 2.0);
+topLight.position.set(0, 8, 2);
+scene.add(topLight);
+
+// Subtle bottom bounce light for juiciness
+const bounceLight = new THREE.PointLight(0xff8c00, 1.5, 8);
+bounceLight.position.set(0, -2, 1);
+scene.add(bounceLight);
+
+// Master Hamburger Group
+const burgerGroup = new THREE.Group();
+burgerGroup.position.y = -0.1;
+scene.add(burgerGroup);
+
+// Floating Ingredients & Garnish Particles Group
+const particlesGroup = new THREE.Group();
+scene.add(particlesGroup);
+
+// --- Materials ---
+const bunMaterial = new THREE.MeshPhongMaterial({
+  color: 0xc8752d,
+  specular: 0x5a3411,
+  shininess: 38,
+  flatShading: false
+});
+
+const sesameMaterial = new THREE.MeshStandardMaterial({
+  color: 0xfff0d0,
+  roughness: 0.3,
+  metalness: 0.1
+});
+
+const pattyMaterial = new THREE.MeshStandardMaterial({
+  color: 0x3d1c08,
+  roughness: 0.85,
+  metalness: 0.1
+});
+
+const cheeseMaterial = new THREE.MeshStandardMaterial({
+  color: 0xffa500,
+  roughness: 0.25,
+  metalness: 0.05
+});
+
+const lettuceMaterial = new THREE.MeshStandardMaterial({
+  color: 0x38a134,
+  roughness: 0.45,
+  metalness: 0.05,
+  side: THREE.DoubleSide
+});
+
+const tomatoMaterial = new THREE.MeshStandardMaterial({
+  color: 0xcc2211,
+  roughness: 0.2,
+  metalness: 0.1
+});
+
+const pickleMaterial = new THREE.MeshStandardMaterial({
+  color: 0x476a26,
+  roughness: 0.4,
+  metalness: 0.05
+});
+
+const carbonPlateMaterial = new THREE.MeshStandardMaterial({
+  color: 0x111114,
+  roughness: 0.2,
+  metalness: 0.8
+});
+
+// Pedestal / Carbon fiber serving plinth
+const plinthGeo = new THREE.CylinderGeometry(2.2, 2.4, 0.12, 64);
+const plinth = new THREE.Mesh(plinthGeo, carbonPlateMaterial);
+plinth.position.y = -1.15;
+plinth.receiveShadow = true;
+burgerGroup.add(plinth);
+
+// Glowing gold ring on plate edge
+const ringGeo = new THREE.TorusGeometry(2.22, 0.025, 16, 100);
+const ringMat = new THREE.MeshBasicMaterial({ color: 0xffa000 });
+const ringMesh = new THREE.Mesh(ringGeo, ringMat);
+ringMesh.rotation.x = Math.PI / 2;
+ringMesh.position.y = -1.08;
+burgerGroup.add(ringMesh);
+
+// 1. Bottom Bun (Brioche curved cylinder + flat base)
+const bottomBunGeo = new THREE.CylinderGeometry(1.4, 1.25, 0.42, 48);
+const bottomBun = new THREE.Mesh(bottomBunGeo, bunMaterial);
+bottomBun.position.y = -0.75;
+bottomBun.castShadow = true;
+bottomBun.receiveShadow = true;
+burgerGroup.add(bottomBun);
+
+// Bottom Sauce / Aioli Layer
+const sauceGeo = new THREE.CylinderGeometry(1.36, 1.36, 0.05, 32);
+const sauceMat = new THREE.MeshStandardMaterial({ color: 0xffe6a3, roughness: 0.1 });
+const sauce = new THREE.Mesh(sauceGeo, sauceMat);
+sauce.position.y = -0.52;
+burgerGroup.add(sauce);
+
+// 2. Pickles (3 layered discs)
+for (let i = 0; i < 4; i++) {
+  const angle = (i * Math.PI) / 2 + 0.3;
+  const pickleGeo = new THREE.CylinderGeometry(0.38, 0.38, 0.05, 24);
+  const pickle = new THREE.Mesh(pickleGeo, pickleMaterial);
+  pickle.position.set(Math.cos(angle) * 0.75, -0.48, Math.sin(angle) * 0.75);
+  pickle.rotation.set(0.1 * (i % 2), 0, 0.15);
+  burgerGroup.add(pickle);
+}
+
+// 3. Flame-Grilled Double Wagyu Patty
+const pattyGeo = new THREE.CylinderGeometry(1.56, 1.52, 0.45, 48);
+const patty = new THREE.Mesh(pattyGeo, pattyMaterial);
+patty.position.y = -0.22;
+patty.castShadow = true;
+burgerGroup.add(patty);
+
+// Patty Grill Texture Bands
+for (let g = -1; g <= 1; g++) {
+  const grillGeo = new THREE.BoxGeometry(2.9, 0.04, 0.06);
+  const grillMat = new THREE.MeshBasicMaterial({ color: 0x180902 });
+  const grillMesh = new THREE.Mesh(grillGeo, grillMat);
+  grillMesh.position.set(0, -0.22, g * 0.5);
+  grillMesh.rotation.y = 0.4;
+  burgerGroup.add(grillMesh);
+}
+
+// 4. Melted High-Octane Cheddar Cheese (Melted draping corners)
+const cheeseGroup = new THREE.Group();
+const cheeseSquareGeo = new THREE.BoxGeometry(2.1, 0.06, 2.1);
+const cheeseBase = new THREE.Mesh(cheeseSquareGeo, cheeseMaterial);
+cheeseGroup.add(cheeseBase);
+cheeseGroup.rotation.y = Math.PI / 4;
+cheeseGroup.position.y = 0.03;
+
+// Drips dripping over the edges
+const dripGeo = new THREE.ConeGeometry(0.18, 0.35, 16);
+for (let d = 0; d < 4; d++) {
+  const drip = new THREE.Mesh(dripGeo, cheeseMaterial);
+  const dAngle = (d * Math.PI) / 2;
+  drip.rotation.x = Math.PI;
+  drip.position.set(Math.cos(dAngle) * 1.35, -0.15, Math.sin(dAngle) * 1.35);
+  cheeseGroup.add(drip);
+}
+burgerGroup.add(cheeseGroup);
+
+// 5. Crisp Frill Lettuce Leaves (multiple deformed discs)
+const lettuceGroup = new THREE.Group();
+const leavesCount = 8;
+for (let l = 0; l < leavesCount; l++) {
+  const leafAngle = (l * 2 * Math.PI) / leavesCount;
+  const leafGeo = new THREE.PlaneGeometry(1.1, 0.7, 8, 8);
+  const pos = leafGeo.attributes.position;
+  for (let p = 0; p < pos.count; p++) {
+    const vx = pos.getX(p);
+    const vy = pos.getY(p);
+    pos.setZ(p, Math.sin(vx * 6) * 0.12 + Math.cos(vy * 6) * 0.1);
+  }
+  leafGeo.computeVertexNormals();
+  const leaf = new THREE.Mesh(leafGeo, lettuceMaterial);
+  leaf.rotation.x = -Math.PI / 2 + (Math.random() - 0.5) * 0.3;
+  leaf.rotation.z = leafAngle;
+  leaf.position.set(Math.cos(leafAngle) * 1.15, 0.16 + (l % 2) * 0.05, Math.sin(leafAngle) * 1.15);
+  lettuceGroup.add(leaf);
+}
+burgerGroup.add(lettuceGroup);
+
+// 6. Vine-Ripe Heirloom Tomato Slices
+const tomatoGroup = new THREE.Group();
+for (let t = 0; t < 2; t++) {
+  const tSliceGeo = new THREE.CylinderGeometry(0.85, 0.85, 0.14, 32);
+  const tSlice = new THREE.Mesh(tSliceGeo, tomatoMaterial);
+  const tX = (t === 0 ? -0.45 : 0.45);
+  const tZ = (t === 0 ? 0.2 : -0.2);
+  tSlice.position.set(tX, 0.35, tZ);
+  tSlice.rotation.set((Math.random() - 0.5) * 0.1, 0, (Math.random() - 0.5) * 0.1);
+  tomatoGroup.add(tSlice);
+}
+burgerGroup.add(tomatoGroup);
+
+// 7. Golden Brioche Top Bun (Hemisphere / Dome)
+const topBunGeo = new THREE.SphereGeometry(1.58, 48, 32, 0, Math.PI * 2, 0, Math.PI * 0.48);
+const topBun = new THREE.Mesh(topBunGeo, bunMaterial);
+topBun.position.y = 0.38;
+topBun.castShadow = true;
+burgerGroup.add(topBun);
+
+// Sesame Seeds sprinkled aerodynamically on top bun
+const seedGeo = new THREE.ConeGeometry(0.038, 0.09, 8);
+seedGeo.rotateX(Math.PI / 2);
+for (let s = 0; s < 120; s++) {
+  const phi = Math.random() * (Math.PI * 0.38);
+  const theta = Math.random() * (Math.PI * 2);
+  const r = 1.585;
+  const x = r * Math.sin(phi) * Math.cos(theta);
+  const y = 0.38 + r * Math.cos(phi);
+  const z = r * Math.sin(phi) * Math.sin(theta);
+
+  const seed = new THREE.Mesh(seedGeo, sesameMaterial);
+  seed.position.set(x, y, z);
+  seed.lookAt(0, 0.38, 0);
+  seed.rotateX(Math.PI);
+  burgerGroup.add(seed);
+}
+
+// Hamborghini Carbon Supercar Aero Flag / Toothpick topper
+const skewerGeo = new THREE.CylinderGeometry(0.02, 0.02, 1.2, 16);
+const skewerMat = new THREE.MeshStandardMaterial({ color: 0xd4af37, metalness: 0.9, roughness: 0.2 });
+const skewer = new THREE.Mesh(skewerGeo, skewerMat);
+skewer.position.set(0, 1.85, 0);
+burgerGroup.add(skewer);
+
+const pennantGeo = new THREE.PlaneGeometry(0.48, 0.24);
+const pennantMat = new THREE.MeshBasicMaterial({ color: 0x111115, side: THREE.DoubleSide });
+const pennant = new THREE.Mesh(pennantGeo, pennantMat);
+pennant.position.set(0.24, 2.3, 0);
+burgerGroup.add(pennant);
+
+// Floating Golden Sparkles / Spice Particles
+const particleGeo = new THREE.BufferGeometry();
+const particleCount = 65;
+const posArray = new Float32Array(particleCount * 3);
+for (let p = 0; p < particleCount * 3; p += 3) {
+  posArray[p] = (Math.random() - 0.5) * 5.5;
+  posArray[p + 1] = (Math.random() - 0.5) * 4.5 + 0.5;
+  posArray[p + 2] = (Math.random() - 0.5) * 5.5;
+}
+particleGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+const particleMat = new THREE.PointsMaterial({
+  size: 0.055,
+  color: 0xffb703,
+  transparent: true,
+  opacity: 0.85
+});
+const particles = new THREE.Points(particleGeo, particleMat);
+particlesGroup.add(particles);
+
+// Interactive Mouse Orbiting & Inertia
+let mouseX = 0;
+let mouseY = 0;
+let targetX = 0;
+let targetY = 0;
+let isDragging = false;
+let previousPointerX = 0;
+let previousPointerY = 0;
+let userRotX = 0;
+let userRotY = 0;
+
+function onPointerMove(e) {
+  const rect = container.getBoundingClientRect();
+  const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+  const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+  
+  if (isDragging) {
+    const deltaX = clientX - previousPointerX;
+    const deltaY = clientY - previousPointerY;
+    userRotY += deltaX * 0.008;
+    userRotX += deltaY * 0.008;
+    previousPointerX = clientX;
+    previousPointerY = clientY;
+  }
+  
+  targetX = ((clientX - rect.left) / rect.width - 0.5) * 0.8;
+  targetY = ((clientY - rect.top) / rect.height - 0.5) * 0.6;
+}
+
+function onPointerDown(e) {
+  isDragging = true;
+  const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+  const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+  previousPointerX = clientX;
+  previousPointerY = clientY;
+}
+
+function onPointerUp() {
+  isDragging = false;
+}
+
+container.addEventListener('mousemove', onPointerMove);
+container.addEventListener('mousedown', onPointerDown);
+window.addEventListener('mouseup', onPointerUp);
+container.addEventListener('touchmove', onPointerMove, { passive: true });
+container.addEventListener('touchstart', onPointerDown, { passive: true });
+window.addEventListener('touchend', onPointerUp);
+
+// Responsive Resizing
+function onWindowResize() {
+  const w = container.clientWidth || window.innerWidth;
+  const h = container.clientHeight || window.innerHeight;
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+}
+window.addEventListener('resize', onWindowResize);
+
+// Animation Loop
+let clock = new THREE.Clock();
+function animate() {
+  requestAnimationFrame(animate);
+  const elapsedTime = clock.getElapsedTime();
+
+  // Floating gentle levitation
+  burgerGroup.position.y = Math.sin(elapsedTime * 1.5) * 0.08 - 0.05;
+
+  // Smooth rotation blending mouse control with continuous luxury display turntable
+  burgerGroup.rotation.y = elapsedTime * 0.35 + userRotY + targetX;
+  burgerGroup.rotation.x = Math.sin(elapsedTime * 0.8) * 0.04 + userRotX + targetY * 0.5;
+
+  // Particle floating flow
+  particles.rotation.y = elapsedTime * 0.08;
+  particles.rotation.x = Math.sin(elapsedTime * 0.05) * 0.1;
+
+  // Pulsing ambient neon underglow
+  bounceLight.intensity = 1.4 + Math.sin(elapsedTime * 2.5) * 0.4;
+
+  renderer.render(scene, camera);
+}
+animate();
+
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_2 -->
+</body>
+</html>

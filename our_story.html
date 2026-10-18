@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;min-height:100%;height:auto!important;max-height:none!important;position:relative;}html{overflow-x:auto;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;}body{overflow-x:visible;overflow-y:visible;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;touch-action:auto;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}html{scrollbar-width:thin;scrollbar-color:rgba(172,137,126,.65) transparent;}::-webkit-scrollbar{width:10px;height:10px;}::-webkit-scrollbar-thumb{background:rgba(172,137,126,.55);border-radius:8px;}::-webkit-scrollbar-track{background:transparent;}::-webkit-scrollbar-corner{background:transparent;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-highest":"#353437","on-error-container":"#ffdad6","surface-bright":"#39393b","tertiary-fixed":"#d4e4fa","on-secondary":"#472a00","surface-variant":"#353437","on-error":"#690005","on-tertiary-fixed-variant":"#39485a","background":"#131315","secondary":"#ffb95f","primary-fixed-dim":"#ffb59c","on-primary-container":"#511500","on-secondary-fixed":"#2a1700","tertiary-fixed-dim":"#b9c8de","on-secondary-container":"#5b3800","primary-fixed":"#ffdbcf","secondary-container":"#ee9800","on-tertiary-container":"#1c2b3c","inverse-primary":"#aa3600","surface":"#131315","surface-dim":"#131315","surface-container-high":"#2a2a2c","surface-container-lowest":"#0e0e10","on-primary":"#5c1900","tertiary":"#b9c8de","on-secondary-fixed-variant":"#653e00","tertiary-container":"#8392a6","outline":"#ac897e","surface-container":"#201f21","on-primary-fixed":"#390c00","surface-tint":"#ffb59c","on-primary-fixed-variant":"#822700","on-surface":"#e5e1e4","surface-container-low":"#1c1b1d","on-tertiary-fixed":"#0d1c2d","on-tertiary":"#233143","on-background":"#e5e1e4","on-surface-variant":"#e5beb2","secondary-fixed":"#ffddb8","error-container":"#93000a","primary-container":"#ff5708","outline-variant":"#5c4037","secondary-fixed-dim":"#ffb95f","error":"#ffb4ab","inverse-surface":"#e5e1e4","inverse-on-surface":"#313032","primary":"#ffb59c"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-md":"1rem","space-xl":"2.5rem","gutter-mobile":"1rem","space-lg":"1.5rem","space-xs":"0.25rem","margin":"3rem","gutter":"1.5rem","space-sm":"0.5rem","margin-mobile":"1.25rem"},"fontFamily":{"body-lg":["Space Grotesk"],"body-md":["Space Grotesk"],"headline-xl":["Syne"],"body-sm":["Space Grotesk"],"label-sm":["Space Grotesk"],"label-md":["Space Grotesk"],"headline-sm":["Syne"],"headline-lg-mobile":["Syne"],"headline-xl-mobile":["Syne"],"headline-lg":["Syne"],"label-lg":["Space Grotesk"],"headline-md":["Syne"]},"fontSize":{"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["56px",{"lineHeight":"60px","letterSpacing":"-0.02em","fontWeight":"800"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.12em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.1em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl-mobile":["36px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"800"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"700"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"0em","fontWeight":"700"}]}}}};</script>
+<style id="nav-responsive-css">
+/* Scroll: allow vertical + horizontal when content overflows; never trap the document */
+html,body{max-width:100%;height:auto!important;max-height:none!important;position:relative!important;}
+html{overflow-x:auto!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;touch-action:auto;}body{overflow-x:visible!important;overflow-y:visible!important;-webkit-overflow-scrolling:touch;overscroll-behavior:auto;touch-action:auto;}
+img,video,canvas{max-width:100%;}
+[id^="threejs-container"]{touch-action:pan-y;}
+#cart-drawer.translate-x-full{pointer-events:none;}
+@media (max-width:767px){input,select,textarea{font-size:16px!important;}#nav-toggle,header button,header a[href].inline-flex,header a[href].flex{min-width:44px;min-height:44px;}main button,.cockpit-cta,[type=submit]{min-height:44px;}}
+  #mobile-nav-panel{max-height:0;opacity:0;overflow:hidden;visibility:hidden;transition:max-height .38s cubic-bezier(.4,0,.2,1),opacity .28s ease,visibility .28s;}
+  #mobile-nav-panel.is-open{max-height:min(80vh,640px);opacity:1;visibility:visible;overflow-y:auto;-webkit-overflow-scrolling:touch;touch-action:pan-y;overscroll-behavior:contain;}
+  #nav-backdrop{opacity:0;pointer-events:none!important;transition:opacity .3s ease;}
+  #nav-backdrop.is-open{opacity:1;pointer-events:auto!important;}
+  /* Lock background scroll only while mobile nav is open (html+body); keep panel scrollable */
+  html.nav-open{overflow:hidden!important;}body.nav-open{position:fixed!important;inset:0 auto auto 0;width:100%;overflow:hidden!important;overscroll-behavior:none;touch-action:auto;}
+  body.nav-open main,body.nav-open>footer{pointer-events:none;}
+  @media (min-width:1024px){
+    #mobile-nav-panel,#nav-backdrop,#nav-toggle{display:none!important;}
+    html.nav-open{overflow:auto!important;}body.nav-open{position:relative!important;inset:auto;width:auto;overflow:visible!important;overscroll-behavior:auto;}
+    body.nav-open main,body.nav-open>footer{pointer-events:auto;}
+  }
+</style></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.6)]"><div class="h-16 sm:h-20 w-full px-margin-mobile lg:px-margin flex items-center justify-between gap-space-sm sm:gap-space-md"><div class="flex items-center gap-space-lg shrink-0"><a class="flex items-center gap-space-sm group" data-path="home" href="index.html"><img alt="Hamborghini Shield Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VEiYRHW1Qw2FJqH1AZC9JcV_02p0fRrLFuGWF4jkzxW_2Oc5tynzJfbDGni0SNCvfwZdQTPeJhJ2vNWvbxWFZmO8rFHJWah4QX45ZAWeZSCErqx6GCU6owhWiaC6i4x3YD5i9fcHR5pxRjkbay5fbd6JEdGc4HmAfXY4lHjpDrw2wA8T777KbDvOkNaxYo-3rI9EYBxro67IQKitMil4VDy63Po0BlHfr__Sqr6nvexLk3jE1ujkwm6TE"/><div class="flex flex-col"><span class="font-headline-sm text-[16px] sm:text-headline-sm uppercase tracking-wider text-on-surface group-hover:text-primary transition-colors leading-tight">HAMBORGHINI</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase hidden sm:inline">SANT'AGATA GOURMET</span></div></a></div><nav class="hidden lg:flex items-center gap-space-sm shrink-0" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded"><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="home" href="index.html">Home</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="menu-showroom" href="menu_showroom.html">Menu / Showroom</a><a aria-current="page" class="px-space-sm py-space-xs transition-colors uppercase tracking-wider bg-primary-container text-on-primary-container font-bold rounded" data-path="our-story" href="our_story.html">Our Story</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="pit-stop-locations" href="pit_stop_locations.html">Pit Stop Locations</a><a class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="vip-lounge" href="vip_lounge.html">VIP Lounge</a></nav><div class="flex items-center gap-space-xs sm:gap-space-md shrink-0"><a class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded hover:bg-surface-container-high hover:text-on-surface text-on-surface-variant transition-colors" data-path="cart-telemetry" href="checkout.html" aria-label="Cockpit Bay cart"><span class="material-symbols-outlined text-secondary text-[20px]">shopping_bag</span><div class="hidden sm:flex flex-col text-left"><span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Cockpit Bay</span><span class="font-label-md text-label-md font-bold text-on-surface">$142.00</span></div><span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold ml-space-xs">3</span></a><a class="hidden sm:inline-flex items-center gap-space-xs bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-md text-label-md uppercase font-bold px-space-md py-space-sm rounded transition-all shadow-[0_0_24px_rgba(255,87,8,0.35)]" data-path="burger-configurator" href="menu_showroom.html"><span class="material-symbols-outlined text-[18px]">tune</span><span>CONFIGURE &amp; ORDER NOW</span></a><a class="w-8 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-primary-container transition-colors" href="login_cockpit.html" title="Access Portal"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></a><button type="button" id="nav-toggle" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" aria-controls="mobile-nav-panel" aria-expanded="false" aria-label="Open menu"><span class="material-symbols-outlined text-[22px]" id="nav-toggle-icon">menu</span></button></div></div><div id="nav-backdrop" class="fixed inset-0 top-16 sm:top-20 z-40 bg-black/55 backdrop-blur-[2px] lg:hidden" aria-hidden="true"></div><div id="mobile-nav-panel" class="relative z-50 lg:hidden border-t border-surface-container-high bg-surface-container-lowest/95 backdrop-blur-xl" role="dialog" aria-label="Mobile navigation"><nav class="flex flex-col gap-space-xs px-margin-mobile py-space-md" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded"><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="home" href="index.html">Home</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="menu-showroom" href="menu_showroom.html">Menu / Showroom</a><a aria-current="page" class="block w-full px-space-md py-space-sm rounded bg-primary-container text-on-primary-container font-bold uppercase tracking-wider font-label-md text-label-md" data-path="our-story" href="our_story.html">Our Story</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="pit-stop-locations" href="pit_stop_locations.html">Pit Stop Locations</a><a class="block w-full px-space-md py-space-sm rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors uppercase font-label-md text-label-md tracking-wider" data-path="vip-lounge" href="vip_lounge.html">VIP Lounge</a><div class="pt-space-sm mt-space-xs border-t border-surface-container-high flex flex-col gap-space-sm"><a class="inline-flex sm:hidden items-center justify-center gap-space-xs bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-md text-label-md uppercase font-bold px-space-md py-space-sm rounded transition-all shadow-[0_0_24px_rgba(255,87,8,0.35)]" data-path="burger-configurator" href="menu_showroom.html"><span class="material-symbols-outlined text-[18px]">tune</span><span>CONFIGURE &amp; ORDER NOW</span></a></div></nav></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full text-on-surface">
+<!-- HERO SECTION WITH CINEMATIC MOTORSPORT SCENERY & TELEMETRY SCATTER -->
+<section class="relative w-full -mt-20 overflow-hidden bg-surface-container-lowest min-h-[90vh] flex items-center">
+<!-- Hero Background Image (Bleeding under header) -->
+<div class="absolute inset-0 bg-cover bg-center opacity-65 mix-blend-luminosity scale-105 transition-transform duration-1000" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJvBlI-Cgq9isJCyaTk2pLTkKWsL7hCKJywUqiV4XGP8t8xQDYniwN78oihc5eySs7Nm6apBa_uyFeh3R_SegAH5SrllPZjSU2Q-pDM3MHJJHg12knv3LylRUkEqqZK5ZlHUb2ZDYRnP3pVV_jfuq0o4MAVvuLF3KsI6y4erNLbQJ0Q-V2Mb9Rotlf_SHz3090BjQX2pG9NrLoPIJikwoFXE5TGTclS4WNxGGAUemWnWmUqWcYpm3l')">
+</div>
+<!-- Atmospheric Carbon & Amber Scrim Gradients -->
+<div class="absolute inset-0 bg-gradient-to-t from-background via-surface-container-lowest/80 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-transparent to-surface-container-lowest/90"></div>
+<div class="absolute top-1/4 -left-32 w-96 h-96 bg-primary-container/20 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="absolute bottom-10 right-10 w-80 h-80 bg-secondary/15 rounded-full blur-[120px] pointer-events-none"></div>
+<!-- Content Chassis -->
+<div class="relative w-full px-margin-mobile lg:px-margin pt-28 sm:pt-36 pb-space-xl flex flex-col justify-between z-10">
+<!-- Top Meta Badge Row -->
+<div class="flex flex-wrap items-center gap-space-sm mb-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-low rounded backdrop-blur-md shadow-md">
+<span class="w-1.5 h-3 bg-primary-container"></span>
+<span class="font-label-sm text-label-sm tracking-widest text-primary uppercase">DOCUMENTATION PROTOCOL 001</span>
+</div>
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-low/70 rounded backdrop-blur-md">
+<span class="material-symbols-outlined text-secondary text-[16px]">speed</span>
+<span class="font-label-sm text-label-sm tracking-widest text-on-surface-variant uppercase">SANT'AGATA BOLOGNESE ARCHIVES</span>
+</div>
+</div>
+<!-- Main Asymmetric Typography -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter items-end">
+<div class="xl:col-span-8 flex flex-col gap-space-sm">
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl uppercase tracking-tighter text-on-surface max-w-4xl drop-shadow-2xl">
+            NOT JUST A BURGER.<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container via-secondary to-primary-fixed">
+              A STATE OF MIND.
+            </span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl pt-space-xs">
+            WHERE MOTORSPORT AERODYNAMICS MEETS MICHELIN-CALIBER VULCANIZED GASTRONOMY.
+          </p>
+</div>
+<!-- Telemetry HUD Card Docked into Hero -->
+<div class="xl:col-span-4 flex flex-col gap-space-xs bg-surface-container/80 backdrop-blur-xl p-space-md rounded-lg shadow-2xl">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+              LIVE PIT TELEMETRY
+            </span>
+<span class="font-label-sm text-label-sm text-outline">ATELIER SENSOR #09</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-xs pt-space-xs">
+<div class="bg-surface-container-lowest p-space-xs rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">SEAR INDUCTION</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">650°F</span>
+<span class="font-label-sm text-label-sm text-secondary tracking-tighter">OPTIMAL CRUST</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">FERMENTATION</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">36H</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-tighter">AERO-CRUMB</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">DOWNFORCE</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">0.82G</span>
+<span class="font-label-sm text-label-sm text-primary tracking-tighter">STACK RIGIDITY</span>
+</div>
+</div>
+<!-- Micro SVG Sparkline (Thermal curve) -->
+<div class="mt-space-xs bg-surface-container-lowest/60 p-space-xs rounded">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-sm text-label-sm text-outline uppercase">Thermal Curve Gradient</span>
+<span class="font-label-sm text-label-sm text-primary font-mono">1.2ms SEAR RESPONSE</span>
+</div>
+<svg class="w-full h-8 overflow-visible" fill="none" viewbox="0 0 300 32">
+<path class="text-primary-container" d="M0 28 L40 24 L80 26 L120 18 L160 12 L200 4 L240 6 L280 2 L300 2" stroke="currentColor" stroke-width="2.5"></path>
+<path class="text-primary-container/10" d="M0 28 L40 24 L80 26 L120 18 L160 12 L200 4 L240 6 L280 2 L300 2 L300 32 L0 32 Z" fill="currentColor"></path>
+<circle class="text-secondary animate-pulse" cx="300" cy="2" fill="currentColor" r="3"></circle>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MANIFESTO STRIP: OVERLAPPING TICKER BAR -->
+<section class="w-full bg-surface-container-high py-space-sm px-margin-mobile lg:px-margin -mt-4 z-20 shadow-xl overflow-hidden">
+<div class="flex items-center justify-between gap-space-lg text-nowrap overflow-x-auto">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">CALCULATED FRICTION</span>
+</div>
+<span class="text-outline">•</span>
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary">MICHELIN DISCIPLINE</span>
+</div>
+<span class="text-outline">•</span>
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">ZERO-COMPRESSION BRIOCHE</span>
+</div>
+<span class="text-outline">•</span>
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary">A5 MIYAZAKI WAGYU CERTIFIED</span>
+</div>
+<span class="text-outline">•</span>
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">650°F VOLCANIC SEAR</span>
+</div>
+</div>
+</section>
+<!-- BRAND PHILOSOPHY & CULINARY PILLARS -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl bg-background flex flex-col gap-space-xl">
+<!-- Section Headline & Counter Marker -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">DIVISION SPECIFICATIONS</span>
+<span class="w-8 h-[1px] bg-primary"></span>
+<span class="font-label-sm text-label-sm text-outline uppercase">FOUR CORNERSTONES</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase tracking-tight text-on-surface">
+          THE APEX ARCHITECTURE
+        </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+        Automotive dynamics translated directly to palate physics. We engineered our menu like an endurance hypercar: heat management, weight balance, and aerodynamic fluid retention.
+      </p>
+</div>
+<!-- Asymmetric 4-Pillar Mosaic Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter">
+<!-- PILLAR 01: FLAVOR OBSESSION -->
+<div class="lg:col-span-7 bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between relative overflow-hidden shadow-xl group hover:bg-surface-container transition-all">
+<div class="absolute -top-16 -right-16 w-56 h-56 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-mono">PILLAR // 01</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface mt-1">THE OBSESSION WITH FLAVOR</h3>
+</div>
+<span class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-surface-container-highest select-none font-extrabold group-hover:text-primary-container transition-colors">01</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant my-space-md">
+          Miyazaki Wagyu marbling grade BMS 11 meets custom cast-iron conductivity plates calibrated with hypercar titanium tolerances. We measure intramuscular lipid distribution with spectroscopic density scanners before a single ounce touches the heat.
+        </p>
+<!-- Spec Data Visualization Sub-Block -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg grid grid-cols-3 gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">MARBLING BMS</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">GRADE 11+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Intramuscular Lipids</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">PLATE CONDUCTIVITY</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">54 W/(m·K)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Spheroidal Cast</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">UMAMI DENSITY</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">98.4%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Glutamate Saturation</span>
+</div>
+</div>
+</div>
+<!-- PILLAR 02: THE ART OF THE SEAR -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between relative overflow-hidden shadow-xl group hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-mono">PILLAR // 02</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface mt-1">THE 650°F SEAR</h3>
+</div>
+<span class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-surface-container-highest select-none font-extrabold group-hover:text-secondary transition-colors">02</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant my-space-md">
+          Why 650°F? Instantaneous caramelization polymerizes proteins in 4.2 seconds flat, producing an aerodynamic micro-crust that locks in 100% of internal juice pressure without moisture decay.
+        </p>
+<!-- Thermal Ring Gauge (Inline SVG under 2KB) -->
+<div class="flex items-center gap-space-md bg-surface-container-lowest p-space-sm rounded-lg">
+<div class="relative w-16 h-16 shrink-0 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="92, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-sm text-label-sm font-bold text-on-surface">650°</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md uppercase font-bold text-on-surface">VULCANIZED MAILLARD SHELL</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instant thermal lockdown preserves 94% core juiciness index.</span>
+</div>
+</div>
+</div>
+<!-- PILLAR 03: AERODYNAMIC BRIOCHE LAB -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between relative overflow-hidden shadow-xl group hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-mono">PILLAR // 03</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface mt-1">AERODYNAMIC BRIOCHE</h3>
+</div>
+<span class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-surface-container-highest select-none font-extrabold group-hover:text-secondary transition-colors">03</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant my-space-md">
+          Engineered inside our pressurized humidity wind chamber. A 36-hour slow fermentation produces micro-alveolar pore dynamics that will never compress, collapse, or weep under intense wagyu tallow weight.
+        </p>
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase">PROOF CYCLE</span>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold">36H CRYOGENIC</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-outline uppercase">CRUSH RECOVERY</span>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">99.8% ELASTIC</div>
+</div>
+</div>
+</div>
+<!-- PILLAR 04: GPS SINGLE-ORIGIN TRACEABILITY -->
+<div class="lg:col-span-7 bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between relative overflow-hidden shadow-xl group hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-mono">PILLAR // 04</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface mt-1">GPS ORIGIN TRACEABILITY</h3>
+</div>
+<span class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-surface-container-highest select-none font-extrabold group-hover:text-primary transition-colors">04</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant my-space-md">
+          Zero anonymous meat pools. Every Hamborghini patty is tied to a specific paddock telemetry record from our ethical mountain reserves in Emilia-Romagna and high-altitude grasslands of Hokkaido.
+        </p>
+<!-- Map / Coordinate Trigger Box -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">location_on</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md uppercase font-bold text-on-surface">EMILIA-ROMAGNA, IT</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">44.6653° N, 11.1352° E</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-[24px]">my_location</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md uppercase font-bold text-on-surface">MIYAZAKI PREFECTURE, JP</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">31.9077° N, 131.4202° E</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE TIMELINE / OUR CHRONOLOGY -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl bg-surface-container-lowest relative overflow-hidden">
+<div class="flex flex-col gap-space-xs mb-space-xl">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">MOTORSPORT LINEAGE</span>
+<span class="w-12 h-[1px] bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-outline uppercase">PROVING GROUNDS</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase tracking-tight text-on-surface">
+        FROM SECRET MONZA PADDOCK TO GLOBAL ASPHALT
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Born in track garages where engine technicians and Michelin-starred culinary alchemists traded thermal blueprints. Click milestones to explore telemetry data.
+      </p>
+</div>
+<!-- Timeline Grid with Interactive Selection Script -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter relative" id="timeline-container">
+<!-- MILESTONE 1 (2018) -->
+<div class="timeline-card cursor-pointer bg-surface-container-low p-space-md rounded-xl shadow-lg transition-all hover:bg-surface-container group" data-year="2018">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-headline-md text-headline-md font-extrabold text-primary group-hover:text-primary-container transition-colors">2018</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-outline">ORIGIN</span>
+</div>
+<div class="h-1 w-full bg-surface-container mb-space-sm relative overflow-hidden">
+<div class="h-full bg-primary-container w-full"></div>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-on-surface mb-space-xs">SECRET PADDOCK KITCHEN</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          First prototype smashed over a discarded V10 race header inside Pit Garage 04 at Monza Autodromo. Fed exclusively to endurance pilots.
+        </p>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-secondary">
+<span>CODENAME: PROTOTIPO 01</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- MILESTONE 2 (2021) -->
+<div class="timeline-card cursor-pointer bg-surface-container-low p-space-md rounded-xl shadow-lg transition-all hover:bg-surface-container group" data-year="2021">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-headline-md text-headline-md font-extrabold text-secondary group-hover:text-secondary-container transition-colors">2021</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-outline">PATENT</span>
+</div>
+<div class="h-1 w-full bg-surface-container mb-space-sm relative overflow-hidden">
+<div class="h-full bg-secondary w-full"></div>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-on-surface mb-space-xs">THE 650°F THERMAL PLINTH</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Patented our proprietary spheroidal-graphite cast heating plinth. Achieves zero thermal droop even during continuous 100-patty sprint sessions.
+        </p>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-secondary">
+<span>PATENT IT-BO2021/099</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- MILESTONE 3 (2023) -->
+<div class="timeline-card cursor-pointer bg-surface-container p-space-md rounded-xl shadow-2xl transition-all group ring-2 ring-primary-container" data-year="2023">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-headline-md text-headline-md font-extrabold text-primary-container transition-colors">2023</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-bold">FLAGSHIP</span>
+</div>
+<div class="h-1 w-full bg-surface-container-high mb-space-sm relative overflow-hidden">
+<div class="h-full bg-primary-container w-full"></div>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-on-surface mb-space-xs">SANT'AGATA ATELIER</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Opening of our subterranean flagship gourmet atelier across from the legendary supercar factory. 60-seat cockpit dining with telemetry display tablets.
+        </p>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-primary">
+<span>VIA MODENA 12 // SOLD OUT</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- MILESTONE 4 (2026) -->
+<div class="timeline-card cursor-pointer bg-surface-container-low p-space-md rounded-xl shadow-lg transition-all hover:bg-surface-container group" data-year="2026">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-headline-md text-headline-md font-extrabold text-tertiary group-hover:text-tertiary-fixed transition-colors">2026</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-outline">GLOBAL</span>
+</div>
+<div class="h-1 w-full bg-surface-container mb-space-sm relative overflow-hidden">
+<div class="h-full bg-tertiary w-full"></div>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-on-surface mb-space-xs">GLOBAL PIT EXPANSION</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Deploying autonomous mobile pit-stop pods to Silverstone, Suzuka, Spa, and Yas Marina alongside luxury urban showrooms worldwide.
+        </p>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-tertiary">
+<span>MISSION TELEMETRY ACTIVE</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Active Timeline Detail Panel (Interactive) -->
+<div class="mt-space-lg p-space-lg bg-surface-container rounded-xl shadow-2xl flex flex-col md:flex-row items-center justify-between gap-space-lg" id="timeline-detail-box">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-container text-[28px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest" id="detail-tag">SELECTED SPECIFICATION // 2023 FLAGSHIP</span>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface" id="detail-title">Sant'Agata Bolognese Culinary Command</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl" id="detail-desc">
+            Constructed with aeronautical-grade acoustic dampening so guests hear only the violent sear of wagyu against hot iron and the low rumble of hypercar engines passing outside.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-outline uppercase block">Allocation Cap</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">350 Patties / Day</span>
+</div>
+<a class="px-space-md py-space-sm bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md uppercase rounded font-bold transition-all" data-path="pit-stop-locations" href="pit_stop_locations.html">
+          View Location
+        </a>
+</div>
+</div>
+</section>
+<!-- THE HAMBORGHINI STANDARD: 5 CORE VALUES -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl bg-background flex flex-col gap-space-xl">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">QUALITY CONSTRUCT</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase text-on-surface tracking-tight">
+        THE 5 HAMBORGHINI STANDARDS
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+        Every meal is held to aerodynamic tolerances and culinary absolutes. No shortcuts. No commercial fillers. Pure mechanical perfection.
+      </p>
+</div>
+<!-- 5 Bento Pillar Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-gutter">
+<!-- Card 1: Precision -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">straighten</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-on-surface">PRECISION</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Patties weighed to ±0.5 grams. Sear timing synchronized via digital atomic micro-controllers.
+          </p>
+</div>
+<div class="pt-space-md font-label-sm text-label-sm text-outline font-mono uppercase">
+          TOLERANCE: 0.05MM
+        </div>
+</div>
+<!-- Card 2: Quality -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">workspace_premium</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-on-surface">QUALITY</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Zero frozen inventory. Grass-finished A5 beef delivered fresh within 18 hours of dry-age maturation.
+          </p>
+</div>
+<div class="pt-space-md font-label-sm text-label-sm text-outline font-mono uppercase">
+          A5 MIYAZAKI ONLY
+        </div>
+</div>
+<!-- Card 3: Performance -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px]">bolt</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-on-surface">PERFORMANCE</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            High-velocity service architecture: from initial grill drop to customer table presentation in exactly 180 seconds.
+          </p>
+</div>
+<div class="pt-space-md font-label-sm text-label-sm text-outline font-mono uppercase">
+          PIT STOP: 180 SEC
+        </div>
+</div>
+<!-- Card 4: Originality -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">science</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-on-surface">ORIGINALITY</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Proprietary emulsified balsamic reductions and smoked bone marrow infusions crafted entirely in-house.
+          </p>
+</div>
+<div class="pt-space-md font-label-sm text-label-sm text-outline font-mono uppercase">
+          SECRET RECIPE #7
+        </div>
+</div>
+<!-- Card 5: Flavor -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-[22px]">local_fire_department</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-on-surface">UNFORGETTABLE FLAVOR</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            The violent, unforgettable collision of smoky char, sweet caramelized alliums, and velvet molten fat.
+          </p>
+</div>
+<div class="pt-space-md font-label-sm text-label-sm text-outline font-mono uppercase">
+          100% UNCOMPROMISED
+        </div>
+</div>
+</div>
+</section>
+<!-- IMMERSIVE PHOTO & ATELIER EXPERIENCE SHOWCASE -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl bg-surface-container-lowest">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Visual Card 1: Chef Precision Searing -->
+<div class="lg:col-span-7 relative group overflow-hidden rounded-xl shadow-2xl">
+<img class="w-full h-[480px] object-cover group-hover:scale-105 transition-transform duration-700 brightness-90" data-alt="Close up dramatic cinematic shot of a Michelin tier burger chef in a black precision apron using a custom steel spatula on a flaming charcoal grill in a moody high end Italian kitchen with glowing orange ember sparks flying" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBajrepGHJ8aWuzSVxMjKgzfKbQ7uJpPpeI7BqwZHYC8aEfaI7h2YZ8tfP4UcgPOLur8HFBAaoxMQqRuTgUQygn0sTUzLjpR4H8GjZafcoS5X3GBmIMxoS6p2rXQI_ad_kqDrx3MWYytHkjlgijh31fBCVjePnTXhfOZ7akpzBKKfDPNk5Mtg6-zFzK-jvj6geWgeR6mNUgwV7GLqtKTP88jL_1tLuK_2fMkPsUUlCI2nzcwPHL6x1t"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 flex items-end justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">MASTER PIT PILOT</span>
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface">CHEF MATTEO VALLARDI</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Formerly Scuderia Ferrari Hospitality &amp; 3-Star Osteria</span>
+</div>
+<span class="px-space-sm py-1 bg-surface-container/90 rounded text-primary font-label-sm text-label-sm uppercase backdrop-blur-md">
+            STATION 01 ACTIVE
+          </span>
+</div>
+</div>
+<!-- Right Column: Visual Card 2 + Quote Card -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="relative group overflow-hidden rounded-xl shadow-xl">
+<img class="w-full h-[240px] object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Gourmet Hamborghini signature burger served on an ultra modern carbon fiber composite platter beside seasoned golden fries in a miniature black steel wire basket and a cold chilled bottle with glowing amber backlight in a dark luxury hypercar showroom restaurant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPil84r_8LXKmzOq_dohTO3k5cP3p-rtdrlTWBXmbVKXU5dUDLrrOaLLKZU0uoQoXymJRS_m8uxffMzruMN63Z5WxeglHJR1N7Pg5uVVLc3w2DUnO7n96lyBD0Sl30t5BXjKTmIpNmKChTFFBtdnrwQD-qrTQTyq2jJfKTzM6G0bdFjjM8nLyqq5VqJ18WB2cwpyjyDcDStnT5Eup8dZdqesX0oKLoIUaXNg1PG7cQL_4r1cieejKc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<span class="font-label-sm text-label-sm text-primary uppercase font-mono">SPECIMEN // THE LP-770 BURGER</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-sm shadow-xl">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[20px]">format_quote</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase">THE FOUNDER'S DICTUM</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+            "When you drive a V12 down the Autostrada at 8,000 RPM, your senses are elevated to hyper-focus. We demanded that eating a burger produce the exact same adrenaline surge."
+          </p>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase">GIANLUCA FERRI</span>
+<span class="font-label-sm text-label-sm text-outline uppercase">CHIEF CULINARY ARCHITECT</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TRACK CATERING & VIP PROVING GROUNDS -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl bg-background">
+<div class="bg-surface-container p-space-xl rounded-xl shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-space-xl relative overflow-hidden">
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-sm max-w-xl">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-mono">PADDOCK OPS</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface tracking-tight">
+          SCUDERIA TRACKSIDE HOSPITALITY
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          We bring our high-temperature vulcanized grill arrays directly to FIA World Endurance races and private supercar track days. Dedicated private pit-crew catering for driver teams and VIP paddock guests.
+        </p>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<span class="px-space-sm py-1 bg-surface-container-high rounded font-label-sm text-label-sm text-secondary uppercase">MONZA GT3</span>
+<span class="px-space-sm py-1 bg-surface-container-high rounded font-label-sm text-label-sm text-secondary uppercase">SPA 24H</span>
+<span class="px-space-sm py-1 bg-surface-container-high rounded font-label-sm text-label-sm text-secondary uppercase">NÜRBURGRING NORDSCHLEIFE</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-sm shrink-0 w-full lg:w-auto">
+<a class="w-full sm:w-auto text-center px-space-md py-space-sm bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md uppercase font-bold rounded transition-colors" data-path="track-catering" href="pit_stop_locations.html">
+          INQUIRE FOR TRACK EVENT
+        </a>
+<a class="w-full sm:w-auto text-center px-space-md py-space-sm bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-md text-label-md uppercase font-bold rounded shadow-[0_0_20px_rgba(255,87,8,0.35)] transition-all" data-path="vip-lounge" href="vip_lounge.html">
+          JOIN SCUDERIA VIP
+        </a>
+</div>
+</div>
+</section>
+<!-- CALL TO ACTION: EXPERIENCE THE LEGEND -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl bg-surface-container-lowest text-center flex flex-col items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-primary-container/5 to-transparent pointer-events-none"></div>
+<div class="relative z-10 flex flex-col items-center max-w-3xl gap-space-sm">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-mono">
+        READY TO ENGAGE IGNITION?
+      </span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl uppercase text-on-surface tracking-tighter">
+        EXPERIENCE THE LEGEND
+      </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-space-md">
+        Review our full telemetry menu, select your custom chassis spec, and taste what happens when high-performance craft takes over the kitchen.
+      </p>
+<div class="flex flex-col sm:flex-row items-center gap-space-md w-full justify-center">
+<a class="w-full sm:w-auto px-space-xl py-space-sm bg-primary-container hover:bg-secondary-container text-on-primary-container hover:text-on-secondary-container font-label-lg text-label-lg uppercase font-bold rounded shadow-[0_0_28px_rgba(255,87,8,0.45)] transition-all flex items-center justify-center gap-space-xs" data-path="menu-showroom" href="menu_showroom.html">
+<span>ENTER MENU / SHOWROOM</span>
+<span class="material-symbols-outlined text-[20px]">sports_motorsports</span>
+</a>
+<a class="w-full sm:w-auto px-space-lg py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg uppercase font-bold rounded transition-colors flex items-center justify-center gap-space-xs" data-path="burger-configurator" href="menu_showroom.html">
+<span>BESPOKE CONFIGURATOR</span>
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Interactive Timeline Micro-Script -->
+<script>
+    (function initTimeline() {
+      const data = {
+        '2018': {
+          tag: 'SELECTED SPECIFICATION // 2018 ORIGIN',
+          title: 'Monza Autodromo Paddock Garage 04',
+          desc: 'Where it all began. Smashed over glowing test-bench exhaust pipes with hand-ground beef and wild rosemary from the park woods.',
+          cap: '50 Secret Patties / Race'
+        },
+        '2021': {
+          tag: 'SELECTED SPECIFICATION // 2021 PATENT',
+          title: 'Thermal Plinth Metallurgy Laboratory',
+          desc: 'Years of thermal dynamic simulations yielded a cast-iron compound that stores heat with zero temperature reduction upon cold patty impact.',
+          cap: 'Unlimited Peak Output'
+        },
+        '2023': {
+          tag: 'SELECTED SPECIFICATION // 2023 FLAGSHIP',
+          title: 'Sant\'Agata Bolognese Culinary Command',
+          desc: 'Constructed with aeronautical-grade acoustic dampening so guests hear only the violent sear of wagyu against hot iron and the low rumble of hypercars.',
+          cap: '350 Patties / Day'
+        },
+        '2026': {
+          tag: 'SELECTED SPECIFICATION // 2026 EXPANSION',
+          title: 'Global Paddock & Urban Atelier Fleet',
+          desc: 'Modular autonomous kitchen bays delivering identical 650°F Maillard crust performance across 4 continents and 12 world championships.',
+          cap: 'Worldwide Allocation'
+        }
+      };
+
+      const cards = document.querySelectorAll('.timeline-card');
+      const tagEl = document.getElementById('detail-tag');
+      const titleEl = document.getElementById('detail-title');
+      const descEl = document.getElementById('detail-desc');
+
+      cards.forEach(card => {
+        card.addEventListener('click', () => {
+          cards.forEach(c => c.classList.remove('ring-2', 'ring-primary-container', 'bg-surface-container'));
+          card.classList.add('ring-2', 'ring-primary-container', 'bg-surface-container');
+          
+          const year = card.getAttribute('data-year');
+          if (data[year]) {
+            tagEl.textContent = data[year].tag;
+            titleEl.textContent = data[year].title;
+            descEl.textContent = data[year].desc;
+          }
+        });
+      });
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest"><div class="w-full px-margin-mobile lg:px-margin py-space-xl grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-space-xl"><div class="xl:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface">HAMBORGHINI</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">ATELIER DI GOURMET AUTOMOBILI</span></div></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">Born in Sant'Agata Bolognese. Engineered at the intersection of extreme aerodynamic design and hyper-refined Michelin culinary craft. Every Wagyu blend is precision-seared at 650°F to unleash raw thermal perfection.</p><div class="flex items-center gap-space-md pt-space-xs"><span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Telemetry Channel:</span><div class="flex gap-space-xs"><a class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">rss_feed</span></a><a class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">public</span></a><a class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">podcasts</span></a></div></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-label-lg text-label-lg uppercase tracking-wider text-primary">Dynamic Navigation</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="menu-showroom" href="menu_showroom.html">Full Menu &amp; Specs</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="nutritional-telemetry" href="menu_showroom.html">Nutritional Telemetry</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="track-catering" href="pit_stop_locations.html">Track Catering Operations</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="vip-lounge" href="vip_lounge.html">Scuderia VIP Club</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="burger-configurator" href="menu_showroom.html">Bespoke Configurator</a></ul></div><div class="flex flex-col gap-space-sm"><h3 class="font-label-lg text-label-lg uppercase tracking-wider text-secondary">Culinary Lab Operations</h3><div class="font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-space-xs"><span>Via Modena 12, Sant'Agata Bolognese (BO), Italy</span><span class="text-on-surface font-semibold">Pit Bay Hours:</span><span>Mon - Thu: 11:30 - 23:00 CET</span><span>Fri - Sun: 11:30 - 02:00 CET (Late Track Shift)</span><div class="pt-space-xs flex items-center gap-space-xs text-secondary font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>ACTIVE ALLOCATION DISPATCH: LIVE</span></div></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface">The Pit Pass</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Receive confidential trackside drop dispatches, allocation access, and invitations to secret paddock dinners.</p><div class="flex flex-col gap-space-xs pt-space-xs"><div class="flex items-center bg-surface-container rounded px-space-sm py-space-xs"><input class="bg-transparent text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none w-full" placeholder="pilot@squadra.com" type="email"/><button class="bg-primary-container text-on-primary-container hover:bg-secondary-container hover:text-on-secondary-container font-label-md text-label-md px-space-sm py-space-xs rounded transition-colors uppercase font-bold shrink-0" onclick="subscribePitPass(this)" type="button">Join</button></div><span class="font-label-sm text-label-sm text-outline">Zero spam. High-octane culinary intelligence only.</span></div></div></div><div class="w-full px-margin-mobile lg:px-margin py-space-md bg-surface-container-low flex flex-col md:flex-row items-center justify-between gap-space-sm"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">© 2026 HAMBORGHINI S.P.A. ALL RIGHTS RESERVED. AUTOMOTIVE GOURMET SPECIFICATION DIVISION.</span><div class="flex items-center gap-space-md font-label-sm text-label-sm uppercase text-on-surface-variant"><a class="hover:text-on-surface transition-colors" href="our_story.html">Telemetry Privacy</a><a class="hover:text-on-surface transition-colors" href="our_story.html">Terms of Allocation</a><a class="hover:text-on-surface transition-colors" href="our_story.html">Security Protocol</a></div></div></footer><script>function subscribePitPass(btn){const wrap=btn.closest("div");const input=wrap?wrap.querySelector('input[type="email"]'):null;const email=input&&input.value.trim();if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){alert("Enter a valid pilot email to join The Pit Pass.");if(input)input.focus();return;}btn.textContent="Joined";btn.disabled=true;btn.classList.add("opacity-80");if(input){input.value="";input.placeholder="Telemetry locked in";}alert("Pit Pass armed for "+email+" — confidential drop dispatches incoming.");}</script>
+<script id="nav-responsive-js">
+(function(){/*scroll-unlock-init*/document.documentElement.classList.remove('nav-open');document.body.classList.remove('nav-open');var scrollLockY=0;
+  var toggle=document.getElementById("nav-toggle");
+  var panel=document.getElementById("mobile-nav-panel");
+  var backdrop=document.getElementById("nav-backdrop");
+  var icon=document.getElementById("nav-toggle-icon");
+  if(!toggle||!panel)return;
+  function setOpen(open){
+    toggle.setAttribute("aria-expanded",open?"true":"false");
+    toggle.setAttribute("aria-label",open?"Close menu":"Open menu");
+    panel.classList.toggle("is-open",open);
+    if(backdrop){
+      backdrop.classList.toggle("is-open",open);
+      backdrop.setAttribute("aria-hidden",open?"false":"true");
+    }
+    if(open){scrollLockY=window.scrollY||document.documentElement.scrollTop||0;document.documentElement.classList.add("nav-open");document.body.classList.add("nav-open");document.body.style.top=(-scrollLockY)+"px";}else{document.documentElement.classList.remove("nav-open");document.body.classList.remove("nav-open");document.body.style.removeProperty("top");document.body.style.removeProperty("position");document.documentElement.style.removeProperty("overflow");document.body.style.removeProperty("overflow");window.scrollTo(0,scrollLockY||0);}
+    if(icon)icon.textContent=open?"close":"menu";
+  }
+  function isOpen(){return toggle.getAttribute("aria-expanded")==="true";}
+  toggle.addEventListener("click",function(e){e.preventDefault();setOpen(!isOpen());});
+  if(backdrop)backdrop.addEventListener("click",function(){setOpen(false);});
+  panel.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){setOpen(false);});});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&isOpen())setOpen(false);});
+  window.addEventListener("resize",function(){
+    var bp=panel.classList.contains("md:hidden")?768:1024;
+    if(window.innerWidth>=bp&&isOpen())setOpen(false);
+  });
+})();
+</script></body></html>
